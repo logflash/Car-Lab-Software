@@ -1,0 +1,6 @@
+C:\Users\ianh\Documents\Car Lab\SpeedControl\Design.cydsn\Design.cyprj|cad53fee-652a-47f3-a46c-33d9d4313fdf
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|13797e59-87ab-4ab3-8e8d-1b181adb1214
+C:\Users\ianh\OneDrive\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|0f333f14-0b3d-4991-8631-c0b0f4f22164
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|14403027-0d4d-4404-a01d-91cf66d73e10
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|8dee76ab-cd65-4577-ada6-2df2713e20d8
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|9aaa0cb9-eb35-4ea3-8aff-9863e78a2d67

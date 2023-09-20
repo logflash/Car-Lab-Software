@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="SpeedControl\Design\Source Files\main.c">
+<ExpandedNodeIds>
+<v>SpeedControl</v>
+<v>SpeedControl\Design</v>
+<v>SpeedControl\Design\TopDesign</v>
+<v>SpeedControl\Design\Design.cydwr</v>
+<v>SpeedControl\Design\Design.cydwr\Pins</v>
+<v>SpeedControl\Design\Design.cydwr\Analog</v>
+<v>SpeedControl\Design\Design.cydwr\Clocks</v>
+<v>SpeedControl\Design\Design.cydwr\Interrupts</v>
+<v>SpeedControl\Design\Design.cydwr\DMA</v>
+<v>SpeedControl\Design\Design.cydwr\System</v>
+<v>SpeedControl\Design\Design.cydwr\Directives</v>
+<v>SpeedControl\Design\Design.cydwr\Flash Security</v>
+<v>SpeedControl\Design\Design.cydwr\EEPROM</v>
+<v>SpeedControl\Design\Header Files</v>
+<v>SpeedControl\Design\Header Files\cyapicallbacks.h</v>
+<v>SpeedControl\Design\Header Files\lcd_functions.h</v>
+<v>SpeedControl\Design\Header Files\pid_functions.h</v>
+<v>SpeedControl\Design\Header Files\xbee_functions.h</v>
+<v>SpeedControl\Design\Source Files</v>
+<v>SpeedControl\Design\Source Files\lcd_functions.c</v>
+<v>SpeedControl\Design\Source Files\main.c</v>
+<v>SpeedControl\Design\Source Files\pid_functions.c</v>
+<v>SpeedControl\Design\Source Files\xbee_functions.c</v>
+<v>SpeedControl\Design\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>SpeedControl</v>
+<v>SpeedControl\Design</v>
+<v>SpeedControl\Design\TopDesign</v>
+<v>SpeedControl\Design\Design.cydwr</v>
+<v>SpeedControl\Design\Design.cydwr\Pins</v>
+<v>SpeedControl\Design\Design.cydwr\Analog</v>
+<v>SpeedControl\Design\Design.cydwr\Clocks</v>
+<v>SpeedControl\Design\Design.cydwr\Interrupts</v>
+<v>SpeedControl\Design\Design.cydwr\DMA</v>
+<v>SpeedControl\Design\Design.cydwr\System</v>
+<v>SpeedControl\Design\Design.cydwr\Directives</v>
+<v>SpeedControl\Design\Design.cydwr\Flash Security</v>
+<v>SpeedControl\Design\Design.cydwr\EEPROM</v>
+<v>SpeedControl\Design\Header Files</v>
+<v>SpeedControl\Design\Header Files\cyapicallbacks.h</v>
+<v>SpeedControl\Design\Header Files\lcd_functions.h</v>
+<v>SpeedControl\Design\Header Files\pid_functions.h</v>
+<v>SpeedControl\Design\Header Files\xbee_functions.h</v>
+<v>SpeedControl\Design\Source Files</v>
+<v>SpeedControl\Design\Source Files\lcd_functions.c</v>
+<v>SpeedControl\Design\Source Files\main.c</v>
+<v>SpeedControl\Design\Source Files\pid_functions.c</v>
+<v>SpeedControl\Design\Source Files\xbee_functions.c</v>
+<v>SpeedControl\Design\Generated_Source</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>SpeedControl</v>
+<v>SpeedControl\Design</v>
+<v>SpeedControl\Design\TopDesign</v>
+<v>SpeedControl\Design\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>SpeedControl</v>
+<v>SpeedControl\Design</v>
+<v>SpeedControl\Design\TopDesign</v>
+<v>SpeedControl\Design\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>SpeedControl</v>
+<v>SpeedControl\Design</v>
+<v>SpeedControl\Design\CortexM3</v>
+<v>SpeedControl\Design\CortexM3\ARM_GCC_541</v>
+<v>SpeedControl\Design\CortexM3\ARM_GCC_541\Debug</v>
+<v>SpeedControl\Design\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>SpeedControl\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>SpeedControl\Design\CortexM3\ARM_GCC_541\Debug\Design.elf</v>
+<v>SpeedControl\Design\CortexM3\ARM_GCC_541\Debug\Design.hex</v>
+<v>SpeedControl\Design\CortexM3\ARM_GCC_541\Debug\Design.map</v>
+<v>SpeedControl\Design\Design.gpdsc</v>
+<v>SpeedControl\Design\Design.rpt</v>
+<v>SpeedControl\Design\Design_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>SpeedControl</v>
+<v>SpeedControl\Design</v>
+<v>SpeedControl\Design\CortexM3</v>
+<v>SpeedControl\Design\CortexM3\ARM_GCC_541</v>
+<v>SpeedControl\Design\CortexM3\ARM_GCC_541\Debug</v>
+<v>SpeedControl\Design\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>SpeedControl\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>SpeedControl\Design\CortexM3\ARM_GCC_541\Debug\Design.elf</v>
+<v>SpeedControl\Design\CortexM3\ARM_GCC_541\Debug\Design.hex</v>
+<v>SpeedControl\Design\CortexM3\ARM_GCC_541\Debug\Design.map</v>
+<v>SpeedControl\Design\Design.gpdsc</v>
+<v>SpeedControl\Design\Design.rpt</v>
+<v>SpeedControl\Design\Design_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>SpeedControl</v>
+<v>SpeedControl\Design</v>
+<v>SpeedControl\Design\PSoC 5LP Architecture TRM</v>
+<v>SpeedControl\Design\CY8C58LP Family Datasheet</v>
+<v>SpeedControl\Design\System Reference Guides</v>
+<v>SpeedControl\Design\System Reference Guides\cy_boot_v6_0</v>
+<v>SpeedControl\Design\CharLCD_v2_20.pdf</v>
+<v>SpeedControl\Design\cy_clock_v2_20</v>
+<v>SpeedControl\Design\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>SpeedControl\Design\cy_constant_v1_0.pdf</v>
+<v>SpeedControl\Design\cy_isr_v1_70</v>
+<v>SpeedControl\Design\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>SpeedControl\Design\cy_pins_v2_20</v>
+<v>SpeedControl\Design\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>SpeedControl\Design\PWM_v3_30</v>
+<v>SpeedControl\Design\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>SpeedControl\Design\Timer_v2_80.pdf</v>
+<v>SpeedControl\Design\UART_v2_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>SpeedControl</v>
+<v>SpeedControl\Design</v>
+<v>SpeedControl\Design\PSoC 5LP Architecture TRM</v>
+<v>SpeedControl\Design\CY8C58LP Family Datasheet</v>
+<v>SpeedControl\Design\System Reference Guides</v>
+<v>SpeedControl\Design\System Reference Guides\cy_boot_v6_0</v>
+<v>SpeedControl\Design\CharLCD_v2_20.pdf</v>
+<v>SpeedControl\Design\cy_clock_v2_20</v>
+<v>SpeedControl\Design\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>SpeedControl\Design\cy_constant_v1_0.pdf</v>
+<v>SpeedControl\Design\cy_isr_v1_70</v>
+<v>SpeedControl\Design\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>SpeedControl\Design\cy_pins_v2_20</v>
+<v>SpeedControl\Design\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>SpeedControl\Design\PWM_v3_30</v>
+<v>SpeedControl\Design\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>SpeedControl\Design\Timer_v2_80.pdf</v>
+<v>SpeedControl\Design\UART_v2_50.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Design.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Design.cydsn\main.c" />
+<name v=".\Design.cydsn\Design.cydwr" />
+<name v=".\Design.cydsn\lcd_functions.c" />
+<name v=".\Design.cydsn\lcd_functions.h" />
+<name v=".\Design.cydsn\cyapicallbacks.h" />
+<name v=".\Design.cydsn\pid_functions.h" />
+<name v=".\Design.cydsn\pid_functions.c" />
+<name v=".\Design.cydsn\xbee_functions.h" />
+<name v=".\Design.cydsn\xbee_functions.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1625, 907" SelectedTabbedMdiWindow="be79056a-4740-46de-bbf9-3462b269d19d"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="6b9b1380-943a-444b-828d-6d05b427d558" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\SpeedControl\Design.cydsn\TopDesign\TopDesign.cysch" Guid="35875993-0e8c-4ae0-90b0-73eacb00664c" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\SpeedControl\Design.cydsn\main.c" Guid="be79056a-4740-46de-bbf9-3462b269d19d" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\SpeedControl\Design.cydsn\Design.cydwr" Guid="455170fd-1b92-4524-ac87-1121f55db18b" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\SpeedControl\Design.cydsn\lcd_functions.c" Guid="6af5c93b-e6eb-4d06-bff5-ddb3fbfb5f08" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\SpeedControl\Design.cydsn\lcd_functions.h" Guid="1a8c6386-a9fc-438b-8f2f-9cd3929ae66b" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\SpeedControl\Design.cydsn\cyapicallbacks.h" Guid="e33614b7-cc4d-4e61-b923-43608ded1b76" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\SpeedControl\Design.cydsn\pid_functions.h" Guid="eb16b5b6-2e36-4a23-a52b-319e0d61424b" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\SpeedControl\Design.cydsn\pid_functions.c" Guid="141566bc-dd59-4f11-aca6-e031001b6bd2" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\SpeedControl\Design.cydsn\xbee_functions.h" Guid="571ee55b-5d0b-4f76-b150-7a5b5ed770b3" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\SpeedControl\Design.cydsn\xbee_functions.c" Guid="5cb1e436-ce0b-45b4-99af-7a73149d9697" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="Debug" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
