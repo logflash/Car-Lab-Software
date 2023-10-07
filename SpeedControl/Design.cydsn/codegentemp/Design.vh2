@@ -2,7 +2,7 @@
 --	Conversion of Design.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Sep 12 13:27:46 2023
+--	Tue Oct 03 17:05:17 2023
 --
 
 USE cypress.cypress.all;
@@ -1310,6 +1310,7 @@ SIGNAL tmpIO_0__Servo_PWM_net_0 : bit;
 TERMINAL tmpSIOVREF__Servo_PWM_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Servo_PWM_net_0 : bit;
 SIGNAL \XBee:Net_9\ : bit;
+SIGNAL Net_160 : bit;
 SIGNAL \XBee:Net_61\ : bit;
 SIGNAL \XBee:BUART:clock_op\ : bit;
 SIGNAL \XBee:BUART:reset_reg\ : bit;
@@ -1327,7 +1328,6 @@ SIGNAL Net_155 : bit;
 SIGNAL \XBee:BUART:txn\ : bit;
 SIGNAL Net_159 : bit;
 SIGNAL \XBee:BUART:tx_interrupt_out\ : bit;
-SIGNAL Net_160 : bit;
 SIGNAL \XBee:BUART:rx_interrupt_out\ : bit;
 SIGNAL \XBee:BUART:tx_state_1\ : bit;
 SIGNAL \XBee:BUART:tx_state_0\ : bit;
@@ -3001,6 +3001,10 @@ Servo_PWM:cy_psoc3_pins_v1_10
 		is_digital=>'1')
 	PORT MAP(clock_out=>\XBee:Net_9\,
 		dig_domain_out=>open);
+\XBee:RXInternalInterrupt\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_160);
 \XBee:BUART:ClkSync\:cy_psoc3_udb_clock_enable_v1_0
 	GENERIC MAP(sync_mode=>'1')
 	PORT MAP(clock_in=>\XBee:Net_9\,

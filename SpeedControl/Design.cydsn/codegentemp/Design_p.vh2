@@ -1,5 +1,5 @@
 -- Project:   Design
--- Generated: 09/12/2023 13:27:46
+-- Generated: 10/03/2023 17:05:18
 -- PSoC Creator  4.4
 
 ENTITY Design IS
@@ -1986,6 +1986,14 @@ BEGIN
             cfbi => \Servo:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
             sor => \Servo:PWMUDB:sP16:pwmdp:u1.sor__sig\,
             cmsbo => \Servo:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \XBee:RXInternalInterrupt\:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_160,
+            clock => ClockBlock_BUS_CLK);
 
     \XBee:BUART:sTX:TxShifter:u0\:datapathcell
         GENERIC MAP(

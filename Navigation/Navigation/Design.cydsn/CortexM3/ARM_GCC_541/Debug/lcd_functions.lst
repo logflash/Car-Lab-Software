@@ -1,0 +1,1455 @@
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"lcd_functions.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.initLCD,"ax",%progbits
+  20              		.align	2
+  21              		.global	initLCD
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	initLCD, %function
+  25              	initLCD:
+  26              	.LFB64:
+  27              		.file 1 "lcd_functions.c"
+   1:lcd_functions.c **** /* ========================================
+   2:lcd_functions.c ****  *
+   3:lcd_functions.c ****  * Copyright YOUR COMPANY, THE YEAR
+   4:lcd_functions.c ****  * All Rights Reserved
+   5:lcd_functions.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:lcd_functions.c ****  *
+   7:lcd_functions.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:lcd_functions.c ****  * WHICH IS THE PROPERTY OF your company.
+   9:lcd_functions.c ****  *
+  10:lcd_functions.c ****  * ========================================
+  11:lcd_functions.c **** */
+  12:lcd_functions.c **** 
+  13:lcd_functions.c **** #include "lcd_functions.h"
+  14:lcd_functions.c **** #include <stdio.h>
+  15:lcd_functions.c **** 
+  16:lcd_functions.c **** // Initialize the LCD
+  17:lcd_functions.c **** void initLCD() {
+  28              		.loc 1 17 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  18:lcd_functions.c ****     LCD_Start();
+  36              		.loc 1 18 0
+  37 0002 FFF7FEFF 		bl	LCD_Start
+  38              	.LVL0:
+  19:lcd_functions.c ****     LCD_Position(0,0);
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 2
+
+
+  39              		.loc 1 19 0
+  40 0006 0021     		movs	r1, #0
+  41 0008 0846     		mov	r0, r1
+  42 000a FFF7FEFF 		bl	LCD_Position
+  43              	.LVL1:
+  20:lcd_functions.c ****     LCD_PrintString("Navigate!");
+  44              		.loc 1 20 0
+  45 000e 0248     		ldr	r0, .L3
+  46 0010 FFF7FEFF 		bl	LCD_PrintString
+  47              	.LVL2:
+  48 0014 08BD     		pop	{r3, pc}
+  49              	.L4:
+  50 0016 00BF     		.align	2
+  51              	.L3:
+  52 0018 00000000 		.word	.LC0
+  53              		.cfi_endproc
+  54              	.LFE64:
+  55              		.size	initLCD, .-initLCD
+  56              		.section	.text.printLCD,"ax",%progbits
+  57              		.align	2
+  58              		.global	printLCD
+  59              		.thumb
+  60              		.thumb_func
+  61              		.type	printLCD, %function
+  62              	printLCD:
+  63              	.LFB65:
+  21:lcd_functions.c **** }
+  22:lcd_functions.c **** 
+  23:lcd_functions.c **** // Print a string to the LCD
+  24:lcd_functions.c **** void printLCD(char str[], int line) {
+  64              		.loc 1 24 0
+  65              		.cfi_startproc
+  66              		@ args = 0, pretend = 0, frame = 0
+  67              		@ frame_needed = 0, uses_anonymous_args = 0
+  68              	.LVL3:
+  69 0000 10B5     		push	{r4, lr}
+  70              		.cfi_def_cfa_offset 8
+  71              		.cfi_offset 4, -8
+  72              		.cfi_offset 14, -4
+  73 0002 0446     		mov	r4, r0
+  25:lcd_functions.c ****     LCD_Position(line,0);
+  74              		.loc 1 25 0
+  75 0004 C8B2     		uxtb	r0, r1
+  76              	.LVL4:
+  77 0006 0021     		movs	r1, #0
+  78              	.LVL5:
+  79 0008 FFF7FEFF 		bl	LCD_Position
+  80              	.LVL6:
+  26:lcd_functions.c ****     LCD_PrintString(str);
+  81              		.loc 1 26 0
+  82 000c 2046     		mov	r0, r4
+  83 000e FFF7FEFF 		bl	LCD_PrintString
+  84              	.LVL7:
+  85 0012 10BD     		pop	{r4, pc}
+  86              		.cfi_endproc
+  87              	.LFE65:
+  88              		.size	printLCD, .-printLCD
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 3
+
+
+  89              		.section	.text.clearLCD,"ax",%progbits
+  90              		.align	2
+  91              		.global	clearLCD
+  92              		.thumb
+  93              		.thumb_func
+  94              		.type	clearLCD, %function
+  95              	clearLCD:
+  96              	.LFB66:
+  27:lcd_functions.c **** }
+  28:lcd_functions.c **** 
+  29:lcd_functions.c **** // Clear the LCD display
+  30:lcd_functions.c **** void clearLCD() {
+  97              		.loc 1 30 0
+  98              		.cfi_startproc
+  99              		@ args = 0, pretend = 0, frame = 0
+ 100              		@ frame_needed = 0, uses_anonymous_args = 0
+ 101 0000 08B5     		push	{r3, lr}
+ 102              		.cfi_def_cfa_offset 8
+ 103              		.cfi_offset 3, -8
+ 104              		.cfi_offset 14, -4
+  31:lcd_functions.c ****     LCD_ClearDisplay();
+ 105              		.loc 1 31 0
+ 106 0002 0120     		movs	r0, #1
+ 107 0004 FFF7FEFF 		bl	LCD_WriteControl
+ 108              	.LVL8:
+ 109 0008 08BD     		pop	{r3, pc}
+ 110              		.cfi_endproc
+ 111              	.LFE66:
+ 112              		.size	clearLCD, .-clearLCD
+ 113 000a 00BF     		.section	.text.printUint32LCD,"ax",%progbits
+ 114              		.align	2
+ 115              		.global	printUint32LCD
+ 116              		.thumb
+ 117              		.thumb_func
+ 118              		.type	printUint32LCD, %function
+ 119              	printUint32LCD:
+ 120              	.LFB67:
+  32:lcd_functions.c **** }
+  33:lcd_functions.c **** 
+  34:lcd_functions.c **** // Print an integer to the LCD
+  35:lcd_functions.c **** void printUint32LCD(uint32 val, int line) {
+ 121              		.loc 1 35 0
+ 122              		.cfi_startproc
+ 123              		@ args = 0, pretend = 0, frame = 16
+ 124              		@ frame_needed = 0, uses_anonymous_args = 0
+ 125              	.LVL9:
+ 126 0000 10B5     		push	{r4, lr}
+ 127              		.cfi_def_cfa_offset 8
+ 128              		.cfi_offset 4, -8
+ 129              		.cfi_offset 14, -4
+ 130 0002 84B0     		sub	sp, sp, #16
+ 131              		.cfi_def_cfa_offset 24
+ 132 0004 0C46     		mov	r4, r1
+  36:lcd_functions.c ****     char buf[16];
+  37:lcd_functions.c ****     sprintf(buf, "%lu", val);
+ 133              		.loc 1 37 0
+ 134 0006 0246     		mov	r2, r0
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 4
+
+
+ 135 0008 0449     		ldr	r1, .L11
+ 136              	.LVL10:
+ 137 000a 6846     		mov	r0, sp
+ 138              	.LVL11:
+ 139 000c FFF7FEFF 		bl	sprintf
+ 140              	.LVL12:
+  38:lcd_functions.c ****     printLCD(buf, line);
+ 141              		.loc 1 38 0
+ 142 0010 2146     		mov	r1, r4
+ 143 0012 6846     		mov	r0, sp
+ 144 0014 FFF7FEFF 		bl	printLCD
+ 145              	.LVL13:
+  39:lcd_functions.c **** }
+ 146              		.loc 1 39 0
+ 147 0018 04B0     		add	sp, sp, #16
+ 148              		.cfi_def_cfa_offset 8
+ 149              		@ sp needed
+ 150 001a 10BD     		pop	{r4, pc}
+ 151              	.LVL14:
+ 152              	.L12:
+ 153              		.align	2
+ 154              	.L11:
+ 155 001c 0C000000 		.word	.LC1
+ 156              		.cfi_endproc
+ 157              	.LFE67:
+ 158              		.size	printUint32LCD, .-printUint32LCD
+ 159              		.section	.text.printDoubleLCD,"ax",%progbits
+ 160              		.align	2
+ 161              		.global	printDoubleLCD
+ 162              		.thumb
+ 163              		.thumb_func
+ 164              		.type	printDoubleLCD, %function
+ 165              	printDoubleLCD:
+ 166              	.LFB68:
+  40:lcd_functions.c **** 
+  41:lcd_functions.c **** // Print a double to the LCD (unused)
+  42:lcd_functions.c **** void printDoubleLCD(double val, int line) {
+ 167              		.loc 1 42 0
+ 168              		.cfi_startproc
+ 169              		@ args = 0, pretend = 0, frame = 16
+ 170              		@ frame_needed = 0, uses_anonymous_args = 0
+ 171              	.LVL15:
+ 172 0000 10B5     		push	{r4, lr}
+ 173              		.cfi_def_cfa_offset 8
+ 174              		.cfi_offset 4, -8
+ 175              		.cfi_offset 14, -4
+ 176 0002 84B0     		sub	sp, sp, #16
+ 177              		.cfi_def_cfa_offset 24
+ 178 0004 1446     		mov	r4, r2
+  43:lcd_functions.c ****     char buf[16];
+  44:lcd_functions.c ****     sprintf(buf, "%lf", val);
+ 179              		.loc 1 44 0
+ 180 0006 0246     		mov	r2, r0
+ 181              	.LVL16:
+ 182 0008 0B46     		mov	r3, r1
+ 183 000a 0549     		ldr	r1, .L15
+ 184 000c 6846     		mov	r0, sp
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 5
+
+
+ 185              	.LVL17:
+ 186 000e FFF7FEFF 		bl	sprintf
+ 187              	.LVL18:
+  45:lcd_functions.c ****     printLCD(buf, line);
+ 188              		.loc 1 45 0
+ 189 0012 2146     		mov	r1, r4
+ 190 0014 6846     		mov	r0, sp
+ 191 0016 FFF7FEFF 		bl	printLCD
+ 192              	.LVL19:
+  46:lcd_functions.c **** }
+ 193              		.loc 1 46 0
+ 194 001a 04B0     		add	sp, sp, #16
+ 195              		.cfi_def_cfa_offset 8
+ 196              		@ sp needed
+ 197 001c 10BD     		pop	{r4, pc}
+ 198              	.LVL20:
+ 199              	.L16:
+ 200 001e 00BF     		.align	2
+ 201              	.L15:
+ 202 0020 10000000 		.word	.LC2
+ 203              		.cfi_endproc
+ 204              	.LFE68:
+ 205              		.size	printDoubleLCD, .-printDoubleLCD
+ 206              		.section	.text.printIntegerLCD,"ax",%progbits
+ 207              		.align	2
+ 208              		.global	printIntegerLCD
+ 209              		.thumb
+ 210              		.thumb_func
+ 211              		.type	printIntegerLCD, %function
+ 212              	printIntegerLCD:
+ 213              	.LFB69:
+  47:lcd_functions.c **** 
+  48:lcd_functions.c **** // Print a signed integer to the LCD
+  49:lcd_functions.c **** void printIntegerLCD(int val, int line) {
+ 214              		.loc 1 49 0
+ 215              		.cfi_startproc
+ 216              		@ args = 0, pretend = 0, frame = 16
+ 217              		@ frame_needed = 0, uses_anonymous_args = 0
+ 218              	.LVL21:
+ 219 0000 10B5     		push	{r4, lr}
+ 220              		.cfi_def_cfa_offset 8
+ 221              		.cfi_offset 4, -8
+ 222              		.cfi_offset 14, -4
+ 223 0002 84B0     		sub	sp, sp, #16
+ 224              		.cfi_def_cfa_offset 24
+ 225 0004 0C46     		mov	r4, r1
+  50:lcd_functions.c ****     char buf[16];
+  51:lcd_functions.c ****     sprintf(buf, "%d", val);
+ 226              		.loc 1 51 0
+ 227 0006 0246     		mov	r2, r0
+ 228 0008 0449     		ldr	r1, .L19
+ 229              	.LVL22:
+ 230 000a 6846     		mov	r0, sp
+ 231              	.LVL23:
+ 232 000c FFF7FEFF 		bl	sprintf
+ 233              	.LVL24:
+  52:lcd_functions.c ****     printLCD(buf, line);
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 6
+
+
+ 234              		.loc 1 52 0
+ 235 0010 2146     		mov	r1, r4
+ 236 0012 6846     		mov	r0, sp
+ 237 0014 FFF7FEFF 		bl	printLCD
+ 238              	.LVL25:
+  53:lcd_functions.c **** }
+ 239              		.loc 1 53 0
+ 240 0018 04B0     		add	sp, sp, #16
+ 241              		.cfi_def_cfa_offset 8
+ 242              		@ sp needed
+ 243 001a 10BD     		pop	{r4, pc}
+ 244              	.LVL26:
+ 245              	.L20:
+ 246              		.align	2
+ 247              	.L19:
+ 248 001c 14000000 		.word	.LC3
+ 249              		.cfi_endproc
+ 250              	.LFE69:
+ 251              		.size	printIntegerLCD, .-printIntegerLCD
+ 252              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 253              		.align	2
+ 254              	.LC0:
+ 255 0000 4E617669 		.ascii	"Navigate!\000"
+ 255      67617465 
+ 255      2100
+ 256 000a 0000     		.space	2
+ 257              	.LC1:
+ 258 000c 256C7500 		.ascii	"%lu\000"
+ 259              	.LC2:
+ 260 0010 256C6600 		.ascii	"%lf\000"
+ 261              	.LC3:
+ 262 0014 256400   		.ascii	"%d\000"
+ 263              		.text
+ 264              	.Letext0:
+ 265              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 266              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 267              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 268              		.file 5 "Generated_Source\\PSoC5/LCD.h"
+ 269              		.file 6 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 270              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
+ 271              		.section	.debug_info,"",%progbits
+ 272              	.Ldebug_info0:
+ 273 0000 45030000 		.4byte	0x345
+ 274 0004 0400     		.2byte	0x4
+ 275 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 276 000a 04       		.byte	0x4
+ 277 000b 01       		.uleb128 0x1
+ 278 000c A0000000 		.4byte	.LASF29
+ 279 0010 0C       		.byte	0xc
+ 280 0011 06020000 		.4byte	.LASF30
+ 281 0015 3B000000 		.4byte	.LASF31
+ 282 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 283 001d 00000000 		.4byte	0
+ 284 0021 00000000 		.4byte	.Ldebug_line0
+ 285 0025 02       		.uleb128 0x2
+ 286 0026 08       		.byte	0x8
+ 287 0027 04       		.byte	0x4
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 7
+
+
+ 288 0028 34000000 		.4byte	.LASF0
+ 289 002c 02       		.uleb128 0x2
+ 290 002d 01       		.byte	0x1
+ 291 002e 06       		.byte	0x6
+ 292 002f 2B020000 		.4byte	.LASF1
+ 293 0033 02       		.uleb128 0x2
+ 294 0034 01       		.byte	0x1
+ 295 0035 08       		.byte	0x8
+ 296 0036 92000000 		.4byte	.LASF2
+ 297 003a 02       		.uleb128 0x2
+ 298 003b 02       		.byte	0x2
+ 299 003c 05       		.byte	0x5
+ 300 003d FC010000 		.4byte	.LASF3
+ 301 0041 02       		.uleb128 0x2
+ 302 0042 02       		.byte	0x2
+ 303 0043 07       		.byte	0x7
+ 304 0044 49010000 		.4byte	.LASF4
+ 305 0048 03       		.uleb128 0x3
+ 306 0049 1B000000 		.4byte	.LASF10
+ 307 004d 02       		.byte	0x2
+ 308 004e 3F       		.byte	0x3f
+ 309 004f 53000000 		.4byte	0x53
+ 310 0053 02       		.uleb128 0x2
+ 311 0054 04       		.byte	0x4
+ 312 0055 05       		.byte	0x5
+ 313 0056 16020000 		.4byte	.LASF5
+ 314 005a 02       		.uleb128 0x2
+ 315 005b 04       		.byte	0x4
+ 316 005c 07       		.byte	0x7
+ 317 005d 37010000 		.4byte	.LASF6
+ 318 0061 02       		.uleb128 0x2
+ 319 0062 08       		.byte	0x8
+ 320 0063 05       		.byte	0x5
+ 321 0064 E9010000 		.4byte	.LASF7
+ 322 0068 02       		.uleb128 0x2
+ 323 0069 08       		.byte	0x8
+ 324 006a 07       		.byte	0x7
+ 325 006b 9D010000 		.4byte	.LASF8
+ 326 006f 04       		.uleb128 0x4
+ 327 0070 04       		.byte	0x4
+ 328 0071 05       		.byte	0x5
+ 329 0072 696E7400 		.ascii	"int\000"
+ 330 0076 02       		.uleb128 0x2
+ 331 0077 04       		.byte	0x4
+ 332 0078 07       		.byte	0x7
+ 333 0079 90010000 		.4byte	.LASF9
+ 334 007d 03       		.uleb128 0x3
+ 335 007e D8010000 		.4byte	.LASF11
+ 336 0082 03       		.byte	0x3
+ 337 0083 2C       		.byte	0x2c
+ 338 0084 48000000 		.4byte	0x48
+ 339 0088 05       		.uleb128 0x5
+ 340 0089 89010000 		.4byte	.LASF12
+ 341 008d 04       		.byte	0x4
+ 342 008e EA01     		.2byte	0x1ea
+ 343 0090 5A000000 		.4byte	0x5a
+ 344 0094 02       		.uleb128 0x2
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 8
+
+
+ 345 0095 04       		.byte	0x4
+ 346 0096 04       		.byte	0x4
+ 347 0097 7E000000 		.4byte	.LASF13
+ 348 009b 02       		.uleb128 0x2
+ 349 009c 01       		.byte	0x1
+ 350 009d 08       		.byte	0x8
+ 351 009e F7010000 		.4byte	.LASF14
+ 352 00a2 02       		.uleb128 0x2
+ 353 00a3 08       		.byte	0x8
+ 354 00a4 04       		.byte	0x4
+ 355 00a5 1F020000 		.4byte	.LASF15
+ 356 00a9 02       		.uleb128 0x2
+ 357 00aa 04       		.byte	0x4
+ 358 00ab 07       		.byte	0x7
+ 359 00ac E0010000 		.4byte	.LASF16
+ 360 00b0 06       		.uleb128 0x6
+ 361 00b1 04       		.byte	0x4
+ 362 00b2 9B000000 		.4byte	0x9b
+ 363 00b6 07       		.uleb128 0x7
+ 364 00b7 D0010000 		.4byte	.LASF18
+ 365 00bb 01       		.byte	0x1
+ 366 00bc 11       		.byte	0x11
+ 367 00bd 00000000 		.4byte	.LFB64
+ 368 00c1 1C000000 		.4byte	.LFE64-.LFB64
+ 369 00c5 01       		.uleb128 0x1
+ 370 00c6 9C       		.byte	0x9c
+ 371 00c7 00010000 		.4byte	0x100
+ 372 00cb 08       		.uleb128 0x8
+ 373 00cc 06000000 		.4byte	.LVL0
+ 374 00d0 11030000 		.4byte	0x311
+ 375 00d4 09       		.uleb128 0x9
+ 376 00d5 0E000000 		.4byte	.LVL1
+ 377 00d9 1C030000 		.4byte	0x31c
+ 378 00dd EC000000 		.4byte	0xec
+ 379 00e1 0A       		.uleb128 0xa
+ 380 00e2 01       		.uleb128 0x1
+ 381 00e3 50       		.byte	0x50
+ 382 00e4 01       		.uleb128 0x1
+ 383 00e5 30       		.byte	0x30
+ 384 00e6 0A       		.uleb128 0xa
+ 385 00e7 01       		.uleb128 0x1
+ 386 00e8 51       		.byte	0x51
+ 387 00e9 01       		.uleb128 0x1
+ 388 00ea 30       		.byte	0x30
+ 389 00eb 00       		.byte	0
+ 390 00ec 0B       		.uleb128 0xb
+ 391 00ed 14000000 		.4byte	.LVL2
+ 392 00f1 27030000 		.4byte	0x327
+ 393 00f5 0A       		.uleb128 0xa
+ 394 00f6 01       		.uleb128 0x1
+ 395 00f7 50       		.byte	0x50
+ 396 00f8 05       		.uleb128 0x5
+ 397 00f9 03       		.byte	0x3
+ 398 00fa 00000000 		.4byte	.LC0
+ 399 00fe 00       		.byte	0
+ 400 00ff 00       		.byte	0
+ 401 0100 0C       		.uleb128 0xc
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 9
+
+
+ 402 0101 84000000 		.4byte	.LASF20
+ 403 0105 01       		.byte	0x1
+ 404 0106 18       		.byte	0x18
+ 405 0107 00000000 		.4byte	.LFB65
+ 406 010b 14000000 		.4byte	.LFE65-.LFB65
+ 407 010f 01       		.uleb128 0x1
+ 408 0110 9C       		.byte	0x9c
+ 409 0111 5E010000 		.4byte	0x15e
+ 410 0115 0D       		.uleb128 0xd
+ 411 0116 73747200 		.ascii	"str\000"
+ 412 011a 01       		.byte	0x1
+ 413 011b 18       		.byte	0x18
+ 414 011c B0000000 		.4byte	0xb0
+ 415 0120 00000000 		.4byte	.LLST0
+ 416 0124 0E       		.uleb128 0xe
+ 417 0125 8D000000 		.4byte	.LASF17
+ 418 0129 01       		.byte	0x1
+ 419 012a 18       		.byte	0x18
+ 420 012b 6F000000 		.4byte	0x6f
+ 421 012f 1E000000 		.4byte	.LLST1
+ 422 0133 09       		.uleb128 0x9
+ 423 0134 0C000000 		.4byte	.LVL6
+ 424 0138 1C030000 		.4byte	0x31c
+ 425 013c 4D010000 		.4byte	0x14d
+ 426 0140 0A       		.uleb128 0xa
+ 427 0141 01       		.uleb128 0x1
+ 428 0142 50       		.byte	0x50
+ 429 0143 03       		.uleb128 0x3
+ 430 0144 F3       		.byte	0xf3
+ 431 0145 01       		.uleb128 0x1
+ 432 0146 51       		.byte	0x51
+ 433 0147 0A       		.uleb128 0xa
+ 434 0148 01       		.uleb128 0x1
+ 435 0149 51       		.byte	0x51
+ 436 014a 01       		.uleb128 0x1
+ 437 014b 30       		.byte	0x30
+ 438 014c 00       		.byte	0
+ 439 014d 0B       		.uleb128 0xb
+ 440 014e 12000000 		.4byte	.LVL7
+ 441 0152 27030000 		.4byte	0x327
+ 442 0156 0A       		.uleb128 0xa
+ 443 0157 01       		.uleb128 0x1
+ 444 0158 50       		.byte	0x50
+ 445 0159 02       		.uleb128 0x2
+ 446 015a 74       		.byte	0x74
+ 447 015b 00       		.sleb128 0
+ 448 015c 00       		.byte	0
+ 449 015d 00       		.byte	0
+ 450 015e 07       		.uleb128 0x7
+ 451 015f 2E010000 		.4byte	.LASF19
+ 452 0163 01       		.byte	0x1
+ 453 0164 1E       		.byte	0x1e
+ 454 0165 00000000 		.4byte	.LFB66
+ 455 0169 0A000000 		.4byte	.LFE66-.LFB66
+ 456 016d 01       		.uleb128 0x1
+ 457 016e 9C       		.byte	0x9c
+ 458 016f 83010000 		.4byte	0x183
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 10
+
+
+ 459 0173 0B       		.uleb128 0xb
+ 460 0174 08000000 		.4byte	.LVL8
+ 461 0178 32030000 		.4byte	0x332
+ 462 017c 0A       		.uleb128 0xa
+ 463 017d 01       		.uleb128 0x1
+ 464 017e 50       		.byte	0x50
+ 465 017f 01       		.uleb128 0x1
+ 466 0180 31       		.byte	0x31
+ 467 0181 00       		.byte	0
+ 468 0182 00       		.byte	0
+ 469 0183 0C       		.uleb128 0xc
+ 470 0184 C1010000 		.4byte	.LASF21
+ 471 0188 01       		.byte	0x1
+ 472 0189 23       		.byte	0x23
+ 473 018a 00000000 		.4byte	.LFB67
+ 474 018e 20000000 		.4byte	.LFE67-.LFB67
+ 475 0192 01       		.uleb128 0x1
+ 476 0193 9C       		.byte	0x9c
+ 477 0194 FF010000 		.4byte	0x1ff
+ 478 0198 0D       		.uleb128 0xd
+ 479 0199 76616C00 		.ascii	"val\000"
+ 480 019d 01       		.byte	0x1
+ 481 019e 23       		.byte	0x23
+ 482 019f 88000000 		.4byte	0x88
+ 483 01a3 3F000000 		.4byte	.LLST2
+ 484 01a7 0E       		.uleb128 0xe
+ 485 01a8 8D000000 		.4byte	.LASF17
+ 486 01ac 01       		.byte	0x1
+ 487 01ad 23       		.byte	0x23
+ 488 01ae 6F000000 		.4byte	0x6f
+ 489 01b2 6B000000 		.4byte	.LLST3
+ 490 01b6 0F       		.uleb128 0xf
+ 491 01b7 62756600 		.ascii	"buf\000"
+ 492 01bb 01       		.byte	0x1
+ 493 01bc 24       		.byte	0x24
+ 494 01bd FF010000 		.4byte	0x1ff
+ 495 01c1 02       		.uleb128 0x2
+ 496 01c2 91       		.byte	0x91
+ 497 01c3 68       		.sleb128 -24
+ 498 01c4 09       		.uleb128 0x9
+ 499 01c5 10000000 		.4byte	.LVL12
+ 500 01c9 3D030000 		.4byte	0x33d
+ 501 01cd E8010000 		.4byte	0x1e8
+ 502 01d1 0A       		.uleb128 0xa
+ 503 01d2 01       		.uleb128 0x1
+ 504 01d3 50       		.byte	0x50
+ 505 01d4 02       		.uleb128 0x2
+ 506 01d5 7D       		.byte	0x7d
+ 507 01d6 00       		.sleb128 0
+ 508 01d7 0A       		.uleb128 0xa
+ 509 01d8 01       		.uleb128 0x1
+ 510 01d9 51       		.byte	0x51
+ 511 01da 05       		.uleb128 0x5
+ 512 01db 03       		.byte	0x3
+ 513 01dc 0C000000 		.4byte	.LC1
+ 514 01e0 0A       		.uleb128 0xa
+ 515 01e1 01       		.uleb128 0x1
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 11
+
+
+ 516 01e2 52       		.byte	0x52
+ 517 01e3 03       		.uleb128 0x3
+ 518 01e4 F3       		.byte	0xf3
+ 519 01e5 01       		.uleb128 0x1
+ 520 01e6 50       		.byte	0x50
+ 521 01e7 00       		.byte	0
+ 522 01e8 0B       		.uleb128 0xb
+ 523 01e9 18000000 		.4byte	.LVL13
+ 524 01ed 00010000 		.4byte	0x100
+ 525 01f1 0A       		.uleb128 0xa
+ 526 01f2 01       		.uleb128 0x1
+ 527 01f3 50       		.byte	0x50
+ 528 01f4 02       		.uleb128 0x2
+ 529 01f5 7D       		.byte	0x7d
+ 530 01f6 00       		.sleb128 0
+ 531 01f7 0A       		.uleb128 0xa
+ 532 01f8 01       		.uleb128 0x1
+ 533 01f9 51       		.byte	0x51
+ 534 01fa 02       		.uleb128 0x2
+ 535 01fb 74       		.byte	0x74
+ 536 01fc 00       		.sleb128 0
+ 537 01fd 00       		.byte	0
+ 538 01fe 00       		.byte	0
+ 539 01ff 10       		.uleb128 0x10
+ 540 0200 9B000000 		.4byte	0x9b
+ 541 0204 0F020000 		.4byte	0x20f
+ 542 0208 11       		.uleb128 0x11
+ 543 0209 A9000000 		.4byte	0xa9
+ 544 020d 0F       		.byte	0xf
+ 545 020e 00       		.byte	0
+ 546 020f 0C       		.uleb128 0xc
+ 547 0210 25000000 		.4byte	.LASF22
+ 548 0214 01       		.byte	0x1
+ 549 0215 2A       		.byte	0x2a
+ 550 0216 00000000 		.4byte	.LFB68
+ 551 021a 24000000 		.4byte	.LFE68-.LFB68
+ 552 021e 01       		.uleb128 0x1
+ 553 021f 9C       		.byte	0x9c
+ 554 0220 84020000 		.4byte	0x284
+ 555 0224 0D       		.uleb128 0xd
+ 556 0225 76616C00 		.ascii	"val\000"
+ 557 0229 01       		.byte	0x1
+ 558 022a 2A       		.byte	0x2a
+ 559 022b 25000000 		.4byte	0x25
+ 560 022f 97000000 		.4byte	.LLST4
+ 561 0233 0E       		.uleb128 0xe
+ 562 0234 8D000000 		.4byte	.LASF17
+ 563 0238 01       		.byte	0x1
+ 564 0239 2A       		.byte	0x2a
+ 565 023a 6F000000 		.4byte	0x6f
+ 566 023e BF000000 		.4byte	.LLST5
+ 567 0242 0F       		.uleb128 0xf
+ 568 0243 62756600 		.ascii	"buf\000"
+ 569 0247 01       		.byte	0x1
+ 570 0248 2B       		.byte	0x2b
+ 571 0249 FF010000 		.4byte	0x1ff
+ 572 024d 02       		.uleb128 0x2
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 12
+
+
+ 573 024e 91       		.byte	0x91
+ 574 024f 68       		.sleb128 -24
+ 575 0250 09       		.uleb128 0x9
+ 576 0251 12000000 		.4byte	.LVL18
+ 577 0255 3D030000 		.4byte	0x33d
+ 578 0259 6D020000 		.4byte	0x26d
+ 579 025d 0A       		.uleb128 0xa
+ 580 025e 01       		.uleb128 0x1
+ 581 025f 50       		.byte	0x50
+ 582 0260 02       		.uleb128 0x2
+ 583 0261 7D       		.byte	0x7d
+ 584 0262 00       		.sleb128 0
+ 585 0263 0A       		.uleb128 0xa
+ 586 0264 01       		.uleb128 0x1
+ 587 0265 51       		.byte	0x51
+ 588 0266 05       		.uleb128 0x5
+ 589 0267 03       		.byte	0x3
+ 590 0268 10000000 		.4byte	.LC2
+ 591 026c 00       		.byte	0
+ 592 026d 0B       		.uleb128 0xb
+ 593 026e 1A000000 		.4byte	.LVL19
+ 594 0272 00010000 		.4byte	0x100
+ 595 0276 0A       		.uleb128 0xa
+ 596 0277 01       		.uleb128 0x1
+ 597 0278 50       		.byte	0x50
+ 598 0279 02       		.uleb128 0x2
+ 599 027a 7D       		.byte	0x7d
+ 600 027b 00       		.sleb128 0
+ 601 027c 0A       		.uleb128 0xa
+ 602 027d 01       		.uleb128 0x1
+ 603 027e 51       		.byte	0x51
+ 604 027f 02       		.uleb128 0x2
+ 605 0280 74       		.byte	0x74
+ 606 0281 00       		.sleb128 0
+ 607 0282 00       		.byte	0
+ 608 0283 00       		.byte	0
+ 609 0284 0C       		.uleb128 0xc
+ 610 0285 69010000 		.4byte	.LASF23
+ 611 0289 01       		.byte	0x1
+ 612 028a 31       		.byte	0x31
+ 613 028b 00000000 		.4byte	.LFB69
+ 614 028f 20000000 		.4byte	.LFE69-.LFB69
+ 615 0293 01       		.uleb128 0x1
+ 616 0294 9C       		.byte	0x9c
+ 617 0295 00030000 		.4byte	0x300
+ 618 0299 0D       		.uleb128 0xd
+ 619 029a 76616C00 		.ascii	"val\000"
+ 620 029e 01       		.byte	0x1
+ 621 029f 31       		.byte	0x31
+ 622 02a0 6F000000 		.4byte	0x6f
+ 623 02a4 EB000000 		.4byte	.LLST6
+ 624 02a8 0E       		.uleb128 0xe
+ 625 02a9 8D000000 		.4byte	.LASF17
+ 626 02ad 01       		.byte	0x1
+ 627 02ae 31       		.byte	0x31
+ 628 02af 6F000000 		.4byte	0x6f
+ 629 02b3 17010000 		.4byte	.LLST7
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 13
+
+
+ 630 02b7 0F       		.uleb128 0xf
+ 631 02b8 62756600 		.ascii	"buf\000"
+ 632 02bc 01       		.byte	0x1
+ 633 02bd 32       		.byte	0x32
+ 634 02be FF010000 		.4byte	0x1ff
+ 635 02c2 02       		.uleb128 0x2
+ 636 02c3 91       		.byte	0x91
+ 637 02c4 68       		.sleb128 -24
+ 638 02c5 09       		.uleb128 0x9
+ 639 02c6 10000000 		.4byte	.LVL24
+ 640 02ca 3D030000 		.4byte	0x33d
+ 641 02ce E9020000 		.4byte	0x2e9
+ 642 02d2 0A       		.uleb128 0xa
+ 643 02d3 01       		.uleb128 0x1
+ 644 02d4 50       		.byte	0x50
+ 645 02d5 02       		.uleb128 0x2
+ 646 02d6 7D       		.byte	0x7d
+ 647 02d7 00       		.sleb128 0
+ 648 02d8 0A       		.uleb128 0xa
+ 649 02d9 01       		.uleb128 0x1
+ 650 02da 51       		.byte	0x51
+ 651 02db 05       		.uleb128 0x5
+ 652 02dc 03       		.byte	0x3
+ 653 02dd 14000000 		.4byte	.LC3
+ 654 02e1 0A       		.uleb128 0xa
+ 655 02e2 01       		.uleb128 0x1
+ 656 02e3 52       		.byte	0x52
+ 657 02e4 03       		.uleb128 0x3
+ 658 02e5 F3       		.byte	0xf3
+ 659 02e6 01       		.uleb128 0x1
+ 660 02e7 50       		.byte	0x50
+ 661 02e8 00       		.byte	0
+ 662 02e9 0B       		.uleb128 0xb
+ 663 02ea 18000000 		.4byte	.LVL25
+ 664 02ee 00010000 		.4byte	0x100
+ 665 02f2 0A       		.uleb128 0xa
+ 666 02f3 01       		.uleb128 0x1
+ 667 02f4 50       		.byte	0x50
+ 668 02f5 02       		.uleb128 0x2
+ 669 02f6 7D       		.byte	0x7d
+ 670 02f7 00       		.sleb128 0
+ 671 02f8 0A       		.uleb128 0xa
+ 672 02f9 01       		.uleb128 0x1
+ 673 02fa 51       		.byte	0x51
+ 674 02fb 02       		.uleb128 0x2
+ 675 02fc 74       		.byte	0x74
+ 676 02fd 00       		.sleb128 0
+ 677 02fe 00       		.byte	0
+ 678 02ff 00       		.byte	0
+ 679 0300 12       		.uleb128 0x12
+ 680 0301 5C010000 		.4byte	.LASF32
+ 681 0305 07       		.byte	0x7
+ 682 0306 1207     		.2byte	0x712
+ 683 0308 0C030000 		.4byte	0x30c
+ 684 030c 13       		.uleb128 0x13
+ 685 030d 7D000000 		.4byte	0x7d
+ 686 0311 14       		.uleb128 0x14
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 14
+
+
+ 687 0312 11000000 		.4byte	.LASF24
+ 688 0316 11000000 		.4byte	.LASF24
+ 689 031a 05       		.byte	0x5
+ 690 031b 38       		.byte	0x38
+ 691 031c 14       		.uleb128 0x14
+ 692 031d B4010000 		.4byte	.LASF25
+ 693 0321 B4010000 		.4byte	.LASF25
+ 694 0325 05       		.byte	0x5
+ 695 0326 3D       		.byte	0x3d
+ 696 0327 14       		.uleb128 0x14
+ 697 0328 79010000 		.4byte	.LASF26
+ 698 032c 79010000 		.4byte	.LASF26
+ 699 0330 05       		.byte	0x5
+ 700 0331 3C       		.byte	0x3c
+ 701 0332 14       		.uleb128 0x14
+ 702 0333 00000000 		.4byte	.LASF27
+ 703 0337 00000000 		.4byte	.LASF27
+ 704 033b 05       		.byte	0x5
+ 705 033c 3A       		.byte	0x3a
+ 706 033d 14       		.uleb128 0x14
+ 707 033e 37020000 		.4byte	.LASF28
+ 708 0342 37020000 		.4byte	.LASF28
+ 709 0346 06       		.byte	0x6
+ 710 0347 E7       		.byte	0xe7
+ 711 0348 00       		.byte	0
+ 712              		.section	.debug_abbrev,"",%progbits
+ 713              	.Ldebug_abbrev0:
+ 714 0000 01       		.uleb128 0x1
+ 715 0001 11       		.uleb128 0x11
+ 716 0002 01       		.byte	0x1
+ 717 0003 25       		.uleb128 0x25
+ 718 0004 0E       		.uleb128 0xe
+ 719 0005 13       		.uleb128 0x13
+ 720 0006 0B       		.uleb128 0xb
+ 721 0007 03       		.uleb128 0x3
+ 722 0008 0E       		.uleb128 0xe
+ 723 0009 1B       		.uleb128 0x1b
+ 724 000a 0E       		.uleb128 0xe
+ 725 000b 55       		.uleb128 0x55
+ 726 000c 17       		.uleb128 0x17
+ 727 000d 11       		.uleb128 0x11
+ 728 000e 01       		.uleb128 0x1
+ 729 000f 10       		.uleb128 0x10
+ 730 0010 17       		.uleb128 0x17
+ 731 0011 00       		.byte	0
+ 732 0012 00       		.byte	0
+ 733 0013 02       		.uleb128 0x2
+ 734 0014 24       		.uleb128 0x24
+ 735 0015 00       		.byte	0
+ 736 0016 0B       		.uleb128 0xb
+ 737 0017 0B       		.uleb128 0xb
+ 738 0018 3E       		.uleb128 0x3e
+ 739 0019 0B       		.uleb128 0xb
+ 740 001a 03       		.uleb128 0x3
+ 741 001b 0E       		.uleb128 0xe
+ 742 001c 00       		.byte	0
+ 743 001d 00       		.byte	0
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 15
+
+
+ 744 001e 03       		.uleb128 0x3
+ 745 001f 16       		.uleb128 0x16
+ 746 0020 00       		.byte	0
+ 747 0021 03       		.uleb128 0x3
+ 748 0022 0E       		.uleb128 0xe
+ 749 0023 3A       		.uleb128 0x3a
+ 750 0024 0B       		.uleb128 0xb
+ 751 0025 3B       		.uleb128 0x3b
+ 752 0026 0B       		.uleb128 0xb
+ 753 0027 49       		.uleb128 0x49
+ 754 0028 13       		.uleb128 0x13
+ 755 0029 00       		.byte	0
+ 756 002a 00       		.byte	0
+ 757 002b 04       		.uleb128 0x4
+ 758 002c 24       		.uleb128 0x24
+ 759 002d 00       		.byte	0
+ 760 002e 0B       		.uleb128 0xb
+ 761 002f 0B       		.uleb128 0xb
+ 762 0030 3E       		.uleb128 0x3e
+ 763 0031 0B       		.uleb128 0xb
+ 764 0032 03       		.uleb128 0x3
+ 765 0033 08       		.uleb128 0x8
+ 766 0034 00       		.byte	0
+ 767 0035 00       		.byte	0
+ 768 0036 05       		.uleb128 0x5
+ 769 0037 16       		.uleb128 0x16
+ 770 0038 00       		.byte	0
+ 771 0039 03       		.uleb128 0x3
+ 772 003a 0E       		.uleb128 0xe
+ 773 003b 3A       		.uleb128 0x3a
+ 774 003c 0B       		.uleb128 0xb
+ 775 003d 3B       		.uleb128 0x3b
+ 776 003e 05       		.uleb128 0x5
+ 777 003f 49       		.uleb128 0x49
+ 778 0040 13       		.uleb128 0x13
+ 779 0041 00       		.byte	0
+ 780 0042 00       		.byte	0
+ 781 0043 06       		.uleb128 0x6
+ 782 0044 0F       		.uleb128 0xf
+ 783 0045 00       		.byte	0
+ 784 0046 0B       		.uleb128 0xb
+ 785 0047 0B       		.uleb128 0xb
+ 786 0048 49       		.uleb128 0x49
+ 787 0049 13       		.uleb128 0x13
+ 788 004a 00       		.byte	0
+ 789 004b 00       		.byte	0
+ 790 004c 07       		.uleb128 0x7
+ 791 004d 2E       		.uleb128 0x2e
+ 792 004e 01       		.byte	0x1
+ 793 004f 3F       		.uleb128 0x3f
+ 794 0050 19       		.uleb128 0x19
+ 795 0051 03       		.uleb128 0x3
+ 796 0052 0E       		.uleb128 0xe
+ 797 0053 3A       		.uleb128 0x3a
+ 798 0054 0B       		.uleb128 0xb
+ 799 0055 3B       		.uleb128 0x3b
+ 800 0056 0B       		.uleb128 0xb
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 16
+
+
+ 801 0057 11       		.uleb128 0x11
+ 802 0058 01       		.uleb128 0x1
+ 803 0059 12       		.uleb128 0x12
+ 804 005a 06       		.uleb128 0x6
+ 805 005b 40       		.uleb128 0x40
+ 806 005c 18       		.uleb128 0x18
+ 807 005d 9742     		.uleb128 0x2117
+ 808 005f 19       		.uleb128 0x19
+ 809 0060 01       		.uleb128 0x1
+ 810 0061 13       		.uleb128 0x13
+ 811 0062 00       		.byte	0
+ 812 0063 00       		.byte	0
+ 813 0064 08       		.uleb128 0x8
+ 814 0065 898201   		.uleb128 0x4109
+ 815 0068 00       		.byte	0
+ 816 0069 11       		.uleb128 0x11
+ 817 006a 01       		.uleb128 0x1
+ 818 006b 31       		.uleb128 0x31
+ 819 006c 13       		.uleb128 0x13
+ 820 006d 00       		.byte	0
+ 821 006e 00       		.byte	0
+ 822 006f 09       		.uleb128 0x9
+ 823 0070 898201   		.uleb128 0x4109
+ 824 0073 01       		.byte	0x1
+ 825 0074 11       		.uleb128 0x11
+ 826 0075 01       		.uleb128 0x1
+ 827 0076 31       		.uleb128 0x31
+ 828 0077 13       		.uleb128 0x13
+ 829 0078 01       		.uleb128 0x1
+ 830 0079 13       		.uleb128 0x13
+ 831 007a 00       		.byte	0
+ 832 007b 00       		.byte	0
+ 833 007c 0A       		.uleb128 0xa
+ 834 007d 8A8201   		.uleb128 0x410a
+ 835 0080 00       		.byte	0
+ 836 0081 02       		.uleb128 0x2
+ 837 0082 18       		.uleb128 0x18
+ 838 0083 9142     		.uleb128 0x2111
+ 839 0085 18       		.uleb128 0x18
+ 840 0086 00       		.byte	0
+ 841 0087 00       		.byte	0
+ 842 0088 0B       		.uleb128 0xb
+ 843 0089 898201   		.uleb128 0x4109
+ 844 008c 01       		.byte	0x1
+ 845 008d 11       		.uleb128 0x11
+ 846 008e 01       		.uleb128 0x1
+ 847 008f 31       		.uleb128 0x31
+ 848 0090 13       		.uleb128 0x13
+ 849 0091 00       		.byte	0
+ 850 0092 00       		.byte	0
+ 851 0093 0C       		.uleb128 0xc
+ 852 0094 2E       		.uleb128 0x2e
+ 853 0095 01       		.byte	0x1
+ 854 0096 3F       		.uleb128 0x3f
+ 855 0097 19       		.uleb128 0x19
+ 856 0098 03       		.uleb128 0x3
+ 857 0099 0E       		.uleb128 0xe
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 17
+
+
+ 858 009a 3A       		.uleb128 0x3a
+ 859 009b 0B       		.uleb128 0xb
+ 860 009c 3B       		.uleb128 0x3b
+ 861 009d 0B       		.uleb128 0xb
+ 862 009e 27       		.uleb128 0x27
+ 863 009f 19       		.uleb128 0x19
+ 864 00a0 11       		.uleb128 0x11
+ 865 00a1 01       		.uleb128 0x1
+ 866 00a2 12       		.uleb128 0x12
+ 867 00a3 06       		.uleb128 0x6
+ 868 00a4 40       		.uleb128 0x40
+ 869 00a5 18       		.uleb128 0x18
+ 870 00a6 9742     		.uleb128 0x2117
+ 871 00a8 19       		.uleb128 0x19
+ 872 00a9 01       		.uleb128 0x1
+ 873 00aa 13       		.uleb128 0x13
+ 874 00ab 00       		.byte	0
+ 875 00ac 00       		.byte	0
+ 876 00ad 0D       		.uleb128 0xd
+ 877 00ae 05       		.uleb128 0x5
+ 878 00af 00       		.byte	0
+ 879 00b0 03       		.uleb128 0x3
+ 880 00b1 08       		.uleb128 0x8
+ 881 00b2 3A       		.uleb128 0x3a
+ 882 00b3 0B       		.uleb128 0xb
+ 883 00b4 3B       		.uleb128 0x3b
+ 884 00b5 0B       		.uleb128 0xb
+ 885 00b6 49       		.uleb128 0x49
+ 886 00b7 13       		.uleb128 0x13
+ 887 00b8 02       		.uleb128 0x2
+ 888 00b9 17       		.uleb128 0x17
+ 889 00ba 00       		.byte	0
+ 890 00bb 00       		.byte	0
+ 891 00bc 0E       		.uleb128 0xe
+ 892 00bd 05       		.uleb128 0x5
+ 893 00be 00       		.byte	0
+ 894 00bf 03       		.uleb128 0x3
+ 895 00c0 0E       		.uleb128 0xe
+ 896 00c1 3A       		.uleb128 0x3a
+ 897 00c2 0B       		.uleb128 0xb
+ 898 00c3 3B       		.uleb128 0x3b
+ 899 00c4 0B       		.uleb128 0xb
+ 900 00c5 49       		.uleb128 0x49
+ 901 00c6 13       		.uleb128 0x13
+ 902 00c7 02       		.uleb128 0x2
+ 903 00c8 17       		.uleb128 0x17
+ 904 00c9 00       		.byte	0
+ 905 00ca 00       		.byte	0
+ 906 00cb 0F       		.uleb128 0xf
+ 907 00cc 34       		.uleb128 0x34
+ 908 00cd 00       		.byte	0
+ 909 00ce 03       		.uleb128 0x3
+ 910 00cf 08       		.uleb128 0x8
+ 911 00d0 3A       		.uleb128 0x3a
+ 912 00d1 0B       		.uleb128 0xb
+ 913 00d2 3B       		.uleb128 0x3b
+ 914 00d3 0B       		.uleb128 0xb
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 18
+
+
+ 915 00d4 49       		.uleb128 0x49
+ 916 00d5 13       		.uleb128 0x13
+ 917 00d6 02       		.uleb128 0x2
+ 918 00d7 18       		.uleb128 0x18
+ 919 00d8 00       		.byte	0
+ 920 00d9 00       		.byte	0
+ 921 00da 10       		.uleb128 0x10
+ 922 00db 01       		.uleb128 0x1
+ 923 00dc 01       		.byte	0x1
+ 924 00dd 49       		.uleb128 0x49
+ 925 00de 13       		.uleb128 0x13
+ 926 00df 01       		.uleb128 0x1
+ 927 00e0 13       		.uleb128 0x13
+ 928 00e1 00       		.byte	0
+ 929 00e2 00       		.byte	0
+ 930 00e3 11       		.uleb128 0x11
+ 931 00e4 21       		.uleb128 0x21
+ 932 00e5 00       		.byte	0
+ 933 00e6 49       		.uleb128 0x49
+ 934 00e7 13       		.uleb128 0x13
+ 935 00e8 2F       		.uleb128 0x2f
+ 936 00e9 0B       		.uleb128 0xb
+ 937 00ea 00       		.byte	0
+ 938 00eb 00       		.byte	0
+ 939 00ec 12       		.uleb128 0x12
+ 940 00ed 34       		.uleb128 0x34
+ 941 00ee 00       		.byte	0
+ 942 00ef 03       		.uleb128 0x3
+ 943 00f0 0E       		.uleb128 0xe
+ 944 00f1 3A       		.uleb128 0x3a
+ 945 00f2 0B       		.uleb128 0xb
+ 946 00f3 3B       		.uleb128 0x3b
+ 947 00f4 05       		.uleb128 0x5
+ 948 00f5 49       		.uleb128 0x49
+ 949 00f6 13       		.uleb128 0x13
+ 950 00f7 3F       		.uleb128 0x3f
+ 951 00f8 19       		.uleb128 0x19
+ 952 00f9 3C       		.uleb128 0x3c
+ 953 00fa 19       		.uleb128 0x19
+ 954 00fb 00       		.byte	0
+ 955 00fc 00       		.byte	0
+ 956 00fd 13       		.uleb128 0x13
+ 957 00fe 35       		.uleb128 0x35
+ 958 00ff 00       		.byte	0
+ 959 0100 49       		.uleb128 0x49
+ 960 0101 13       		.uleb128 0x13
+ 961 0102 00       		.byte	0
+ 962 0103 00       		.byte	0
+ 963 0104 14       		.uleb128 0x14
+ 964 0105 2E       		.uleb128 0x2e
+ 965 0106 00       		.byte	0
+ 966 0107 3F       		.uleb128 0x3f
+ 967 0108 19       		.uleb128 0x19
+ 968 0109 3C       		.uleb128 0x3c
+ 969 010a 19       		.uleb128 0x19
+ 970 010b 6E       		.uleb128 0x6e
+ 971 010c 0E       		.uleb128 0xe
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 19
+
+
+ 972 010d 03       		.uleb128 0x3
+ 973 010e 0E       		.uleb128 0xe
+ 974 010f 3A       		.uleb128 0x3a
+ 975 0110 0B       		.uleb128 0xb
+ 976 0111 3B       		.uleb128 0x3b
+ 977 0112 0B       		.uleb128 0xb
+ 978 0113 00       		.byte	0
+ 979 0114 00       		.byte	0
+ 980 0115 00       		.byte	0
+ 981              		.section	.debug_loc,"",%progbits
+ 982              	.Ldebug_loc0:
+ 983              	.LLST0:
+ 984 0000 00000000 		.4byte	.LVL3
+ 985 0004 06000000 		.4byte	.LVL4
+ 986 0008 0100     		.2byte	0x1
+ 987 000a 50       		.byte	0x50
+ 988 000b 06000000 		.4byte	.LVL4
+ 989 000f 14000000 		.4byte	.LFE65
+ 990 0013 0100     		.2byte	0x1
+ 991 0015 54       		.byte	0x54
+ 992 0016 00000000 		.4byte	0
+ 993 001a 00000000 		.4byte	0
+ 994              	.LLST1:
+ 995 001e 00000000 		.4byte	.LVL3
+ 996 0022 08000000 		.4byte	.LVL5
+ 997 0026 0100     		.2byte	0x1
+ 998 0028 51       		.byte	0x51
+ 999 0029 08000000 		.4byte	.LVL5
+ 1000 002d 14000000 		.4byte	.LFE65
+ 1001 0031 0400     		.2byte	0x4
+ 1002 0033 F3       		.byte	0xf3
+ 1003 0034 01       		.uleb128 0x1
+ 1004 0035 51       		.byte	0x51
+ 1005 0036 9F       		.byte	0x9f
+ 1006 0037 00000000 		.4byte	0
+ 1007 003b 00000000 		.4byte	0
+ 1008              	.LLST2:
+ 1009 003f 00000000 		.4byte	.LVL9
+ 1010 0043 0C000000 		.4byte	.LVL11
+ 1011 0047 0100     		.2byte	0x1
+ 1012 0049 50       		.byte	0x50
+ 1013 004a 0C000000 		.4byte	.LVL11
+ 1014 004e 0F000000 		.4byte	.LVL12-1
+ 1015 0052 0100     		.2byte	0x1
+ 1016 0054 52       		.byte	0x52
+ 1017 0055 0F000000 		.4byte	.LVL12-1
+ 1018 0059 20000000 		.4byte	.LFE67
+ 1019 005d 0400     		.2byte	0x4
+ 1020 005f F3       		.byte	0xf3
+ 1021 0060 01       		.uleb128 0x1
+ 1022 0061 50       		.byte	0x50
+ 1023 0062 9F       		.byte	0x9f
+ 1024 0063 00000000 		.4byte	0
+ 1025 0067 00000000 		.4byte	0
+ 1026              	.LLST3:
+ 1027 006b 00000000 		.4byte	.LVL9
+ 1028 006f 0A000000 		.4byte	.LVL10
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 20
+
+
+ 1029 0073 0100     		.2byte	0x1
+ 1030 0075 51       		.byte	0x51
+ 1031 0076 0A000000 		.4byte	.LVL10
+ 1032 007a 1C000000 		.4byte	.LVL14
+ 1033 007e 0100     		.2byte	0x1
+ 1034 0080 54       		.byte	0x54
+ 1035 0081 1C000000 		.4byte	.LVL14
+ 1036 0085 20000000 		.4byte	.LFE67
+ 1037 0089 0400     		.2byte	0x4
+ 1038 008b F3       		.byte	0xf3
+ 1039 008c 01       		.uleb128 0x1
+ 1040 008d 51       		.byte	0x51
+ 1041 008e 9F       		.byte	0x9f
+ 1042 008f 00000000 		.4byte	0
+ 1043 0093 00000000 		.4byte	0
+ 1044              	.LLST4:
+ 1045 0097 00000000 		.4byte	.LVL15
+ 1046 009b 0E000000 		.4byte	.LVL17
+ 1047 009f 0600     		.2byte	0x6
+ 1048 00a1 50       		.byte	0x50
+ 1049 00a2 93       		.byte	0x93
+ 1050 00a3 04       		.uleb128 0x4
+ 1051 00a4 51       		.byte	0x51
+ 1052 00a5 93       		.byte	0x93
+ 1053 00a6 04       		.uleb128 0x4
+ 1054 00a7 0E000000 		.4byte	.LVL17
+ 1055 00ab 24000000 		.4byte	.LFE68
+ 1056 00af 0600     		.2byte	0x6
+ 1057 00b1 F3       		.byte	0xf3
+ 1058 00b2 03       		.uleb128 0x3
+ 1059 00b3 F5       		.byte	0xf5
+ 1060 00b4 00       		.uleb128 0
+ 1061 00b5 25       		.uleb128 0x25
+ 1062 00b6 9F       		.byte	0x9f
+ 1063 00b7 00000000 		.4byte	0
+ 1064 00bb 00000000 		.4byte	0
+ 1065              	.LLST5:
+ 1066 00bf 00000000 		.4byte	.LVL15
+ 1067 00c3 08000000 		.4byte	.LVL16
+ 1068 00c7 0100     		.2byte	0x1
+ 1069 00c9 52       		.byte	0x52
+ 1070 00ca 08000000 		.4byte	.LVL16
+ 1071 00ce 1E000000 		.4byte	.LVL20
+ 1072 00d2 0100     		.2byte	0x1
+ 1073 00d4 54       		.byte	0x54
+ 1074 00d5 1E000000 		.4byte	.LVL20
+ 1075 00d9 24000000 		.4byte	.LFE68
+ 1076 00dd 0400     		.2byte	0x4
+ 1077 00df F3       		.byte	0xf3
+ 1078 00e0 01       		.uleb128 0x1
+ 1079 00e1 52       		.byte	0x52
+ 1080 00e2 9F       		.byte	0x9f
+ 1081 00e3 00000000 		.4byte	0
+ 1082 00e7 00000000 		.4byte	0
+ 1083              	.LLST6:
+ 1084 00eb 00000000 		.4byte	.LVL21
+ 1085 00ef 0C000000 		.4byte	.LVL23
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 21
+
+
+ 1086 00f3 0100     		.2byte	0x1
+ 1087 00f5 50       		.byte	0x50
+ 1088 00f6 0C000000 		.4byte	.LVL23
+ 1089 00fa 0F000000 		.4byte	.LVL24-1
+ 1090 00fe 0100     		.2byte	0x1
+ 1091 0100 52       		.byte	0x52
+ 1092 0101 0F000000 		.4byte	.LVL24-1
+ 1093 0105 20000000 		.4byte	.LFE69
+ 1094 0109 0400     		.2byte	0x4
+ 1095 010b F3       		.byte	0xf3
+ 1096 010c 01       		.uleb128 0x1
+ 1097 010d 50       		.byte	0x50
+ 1098 010e 9F       		.byte	0x9f
+ 1099 010f 00000000 		.4byte	0
+ 1100 0113 00000000 		.4byte	0
+ 1101              	.LLST7:
+ 1102 0117 00000000 		.4byte	.LVL21
+ 1103 011b 0A000000 		.4byte	.LVL22
+ 1104 011f 0100     		.2byte	0x1
+ 1105 0121 51       		.byte	0x51
+ 1106 0122 0A000000 		.4byte	.LVL22
+ 1107 0126 1C000000 		.4byte	.LVL26
+ 1108 012a 0100     		.2byte	0x1
+ 1109 012c 54       		.byte	0x54
+ 1110 012d 1C000000 		.4byte	.LVL26
+ 1111 0131 20000000 		.4byte	.LFE69
+ 1112 0135 0400     		.2byte	0x4
+ 1113 0137 F3       		.byte	0xf3
+ 1114 0138 01       		.uleb128 0x1
+ 1115 0139 51       		.byte	0x51
+ 1116 013a 9F       		.byte	0x9f
+ 1117 013b 00000000 		.4byte	0
+ 1118 013f 00000000 		.4byte	0
+ 1119              		.section	.debug_aranges,"",%progbits
+ 1120 0000 44000000 		.4byte	0x44
+ 1121 0004 0200     		.2byte	0x2
+ 1122 0006 00000000 		.4byte	.Ldebug_info0
+ 1123 000a 04       		.byte	0x4
+ 1124 000b 00       		.byte	0
+ 1125 000c 0000     		.2byte	0
+ 1126 000e 0000     		.2byte	0
+ 1127 0010 00000000 		.4byte	.LFB64
+ 1128 0014 1C000000 		.4byte	.LFE64-.LFB64
+ 1129 0018 00000000 		.4byte	.LFB65
+ 1130 001c 14000000 		.4byte	.LFE65-.LFB65
+ 1131 0020 00000000 		.4byte	.LFB66
+ 1132 0024 0A000000 		.4byte	.LFE66-.LFB66
+ 1133 0028 00000000 		.4byte	.LFB67
+ 1134 002c 20000000 		.4byte	.LFE67-.LFB67
+ 1135 0030 00000000 		.4byte	.LFB68
+ 1136 0034 24000000 		.4byte	.LFE68-.LFB68
+ 1137 0038 00000000 		.4byte	.LFB69
+ 1138 003c 20000000 		.4byte	.LFE69-.LFB69
+ 1139 0040 00000000 		.4byte	0
+ 1140 0044 00000000 		.4byte	0
+ 1141              		.section	.debug_ranges,"",%progbits
+ 1142              	.Ldebug_ranges0:
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 22
+
+
+ 1143 0000 00000000 		.4byte	.LFB64
+ 1144 0004 1C000000 		.4byte	.LFE64
+ 1145 0008 00000000 		.4byte	.LFB65
+ 1146 000c 14000000 		.4byte	.LFE65
+ 1147 0010 00000000 		.4byte	.LFB66
+ 1148 0014 0A000000 		.4byte	.LFE66
+ 1149 0018 00000000 		.4byte	.LFB67
+ 1150 001c 20000000 		.4byte	.LFE67
+ 1151 0020 00000000 		.4byte	.LFB68
+ 1152 0024 24000000 		.4byte	.LFE68
+ 1153 0028 00000000 		.4byte	.LFB69
+ 1154 002c 20000000 		.4byte	.LFE69
+ 1155 0030 00000000 		.4byte	0
+ 1156 0034 00000000 		.4byte	0
+ 1157              		.section	.debug_line,"",%progbits
+ 1158              	.Ldebug_line0:
+ 1159 0000 40020000 		.section	.debug_str,"MS",%progbits,1
+ 1159      0200D101 
+ 1159      00000201 
+ 1159      FB0E0D00 
+ 1159      01010101 
+ 1160              	.LASF27:
+ 1161 0000 4C43445F 		.ascii	"LCD_WriteControl\000"
+ 1161      57726974 
+ 1161      65436F6E 
+ 1161      74726F6C 
+ 1161      00
+ 1162              	.LASF24:
+ 1163 0011 4C43445F 		.ascii	"LCD_Start\000"
+ 1163      53746172 
+ 1163      7400
+ 1164              	.LASF10:
+ 1165 001b 5F5F696E 		.ascii	"__int32_t\000"
+ 1165      7433325F 
+ 1165      7400
+ 1166              	.LASF22:
+ 1167 0025 7072696E 		.ascii	"printDoubleLCD\000"
+ 1167      74446F75 
+ 1167      626C654C 
+ 1167      434400
+ 1168              	.LASF0:
+ 1169 0034 646F7562 		.ascii	"double\000"
+ 1169      6C6500
+ 1170              	.LASF31:
+ 1171 003b 433A5C55 		.ascii	"C:\\Users\\ianh\\Documents\\Car Lab\\Navigation\\Na"
+ 1171      73657273 
+ 1171      5C69616E 
+ 1171      685C446F 
+ 1171      63756D65 
+ 1172 0068 76696761 		.ascii	"vigation\\Design.cydsn\000"
+ 1172      74696F6E 
+ 1172      5C446573 
+ 1172      69676E2E 
+ 1172      63796473 
+ 1173              	.LASF13:
+ 1174 007e 666C6F61 		.ascii	"float\000"
+ 1174      7400
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 23
+
+
+ 1175              	.LASF20:
+ 1176 0084 7072696E 		.ascii	"printLCD\000"
+ 1176      744C4344 
+ 1176      00
+ 1177              	.LASF17:
+ 1178 008d 6C696E65 		.ascii	"line\000"
+ 1178      00
+ 1179              	.LASF2:
+ 1180 0092 756E7369 		.ascii	"unsigned char\000"
+ 1180      676E6564 
+ 1180      20636861 
+ 1180      7200
+ 1181              	.LASF29:
+ 1182 00a0 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1182      43313120 
+ 1182      352E342E 
+ 1182      31203230 
+ 1182      31363036 
+ 1183 00d3 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1183      20726576 
+ 1183      6973696F 
+ 1183      6E203233 
+ 1183      37373135 
+ 1184 0106 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1184      66756E63 
+ 1184      74696F6E 
+ 1184      2D736563 
+ 1184      74696F6E 
+ 1185              	.LASF19:
+ 1186 012e 636C6561 		.ascii	"clearLCD\000"
+ 1186      724C4344 
+ 1186      00
+ 1187              	.LASF6:
+ 1188 0137 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1188      20756E73 
+ 1188      69676E65 
+ 1188      6420696E 
+ 1188      7400
+ 1189              	.LASF4:
+ 1190 0149 73686F72 		.ascii	"short unsigned int\000"
+ 1190      7420756E 
+ 1190      7369676E 
+ 1190      65642069 
+ 1190      6E7400
+ 1191              	.LASF32:
+ 1192 015c 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1192      52784275 
+ 1192      66666572 
+ 1192      00
+ 1193              	.LASF23:
+ 1194 0169 7072696E 		.ascii	"printIntegerLCD\000"
+ 1194      74496E74 
+ 1194      65676572 
+ 1194      4C434400 
+ 1195              	.LASF26:
+ 1196 0179 4C43445F 		.ascii	"LCD_PrintString\000"
+ 1196      5072696E 
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 24
+
+
+ 1196      74537472 
+ 1196      696E6700 
+ 1197              	.LASF12:
+ 1198 0189 75696E74 		.ascii	"uint32\000"
+ 1198      333200
+ 1199              	.LASF9:
+ 1200 0190 756E7369 		.ascii	"unsigned int\000"
+ 1200      676E6564 
+ 1200      20696E74 
+ 1200      00
+ 1201              	.LASF8:
+ 1202 019d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1202      206C6F6E 
+ 1202      6720756E 
+ 1202      7369676E 
+ 1202      65642069 
+ 1203              	.LASF25:
+ 1204 01b4 4C43445F 		.ascii	"LCD_Position\000"
+ 1204      506F7369 
+ 1204      74696F6E 
+ 1204      00
+ 1205              	.LASF21:
+ 1206 01c1 7072696E 		.ascii	"printUint32LCD\000"
+ 1206      7455696E 
+ 1206      7433324C 
+ 1206      434400
+ 1207              	.LASF18:
+ 1208 01d0 696E6974 		.ascii	"initLCD\000"
+ 1208      4C434400 
+ 1209              	.LASF11:
+ 1210 01d8 696E7433 		.ascii	"int32_t\000"
+ 1210      325F7400 
+ 1211              	.LASF16:
+ 1212 01e0 73697A65 		.ascii	"sizetype\000"
+ 1212      74797065 
+ 1212      00
+ 1213              	.LASF7:
+ 1214 01e9 6C6F6E67 		.ascii	"long long int\000"
+ 1214      206C6F6E 
+ 1214      6720696E 
+ 1214      7400
+ 1215              	.LASF14:
+ 1216 01f7 63686172 		.ascii	"char\000"
+ 1216      00
+ 1217              	.LASF3:
+ 1218 01fc 73686F72 		.ascii	"short int\000"
+ 1218      7420696E 
+ 1218      7400
+ 1219              	.LASF30:
+ 1220 0206 6C63645F 		.ascii	"lcd_functions.c\000"
+ 1220      66756E63 
+ 1220      74696F6E 
+ 1220      732E6300 
+ 1221              	.LASF5:
+ 1222 0216 6C6F6E67 		.ascii	"long int\000"
+ 1222      20696E74 
+ 1222      00
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccA7DSK6.s 			page 25
+
+
+ 1223              	.LASF15:
+ 1224 021f 6C6F6E67 		.ascii	"long double\000"
+ 1224      20646F75 
+ 1224      626C6500 
+ 1225              	.LASF1:
+ 1226 022b 7369676E 		.ascii	"signed char\000"
+ 1226      65642063 
+ 1226      68617200 
+ 1227              	.LASF28:
+ 1228 0237 73707269 		.ascii	"sprintf\000"
+ 1228      6E746600 
+ 1229              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

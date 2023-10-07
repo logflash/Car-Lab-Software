@@ -31,7 +31,7 @@
 #define XBee_RX_ENABLED                     (1u)
 #define XBee_TX_ENABLED                     (1u)
 #define XBee_HD_ENABLED                     (0u)
-#define XBee_RX_INTERRUPT_ENABLED           (0u)
+#define XBee_RX_INTERRUPT_ENABLED           (1u)
 #define XBee_TX_INTERRUPT_ENABLED           (0u)
 #define XBee_INTERNAL_CLOCK_USED            (1u)
 #define XBee_RXHW_ADDRESS_ENABLED           (0u)
@@ -46,7 +46,7 @@
 #define XBee_FLOW_CONTROL                   (0u)
 #define XBee_CLK_FREQ                       (0u)
 #define XBee_TX_BUFFER_SIZE                 (4u)
-#define XBee_RX_BUFFER_SIZE                 (4u)
+#define XBee_RX_BUFFER_SIZE                 (100u)
 
 /* Check to see if required defines such as CY_PSOC5LP are available */
 /* They are defined starting with cy_boot v3.0 */

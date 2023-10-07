@@ -1,4 +1,4 @@
---------------- Build Started: 09/20/2023 16:49:42 Project: Design, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 10/03/2023 17:42:04 Project: Design, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
 arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\Design.a .\CortexM3\ARM_GCC_541\Debug\Hall_Sensor.o .\CortexM3\ARM_GCC_541\Debug\LCD.o .\CortexM3\ARM_GCC_541\Debug\LCD_PM.o .\CortexM3\ARM_GCC_541\Debug\LCD_LCDPort.o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\Hall_Interrupt.o .\CortexM3\ARM_GCC_541\Debug\Timer.o .\CortexM3\ARM_GCC_541\Debug\Timer_PM.o .\CortexM3\ARM_GCC_541\Debug\Motor_PWM.o .\CortexM3\ARM_GCC_541\Debug\PWM.o .\CortexM3\ARM_GCC_541\Debug\PWM_PM.o .\CortexM3\ARM_GCC_541\Debug\Timer_Clock.o .\CortexM3\ARM_GCC_541\Debug\PWM_Clock.o .\CortexM3\ARM_GCC_541\Debug\Servo.o .\CortexM3\ARM_GCC_541\Debug\Servo_PM.o .\CortexM3\ARM_GCC_541\Debug\Servo_Clock.o .\CortexM3\ARM_GCC_541\Debug\Servo_PWM.o .\CortexM3\ARM_GCC_541\Debug\XBee.o .\CortexM3\ARM_GCC_541\Debug\XBee_PM.o .\CortexM3\ARM_GCC_541\Debug\XBee_INT.o .\CortexM3\ARM_GCC_541\Debug\XBee_BOOT.o .\CortexM3\ARM_GCC_541\Debug\XBee_IntClock.o .\CortexM3\ARM_GCC_541\Debug\XBee_Interrupt.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
@@ -9,6 +9,6 @@ No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S "C:\Users\ianh\Documents\Car Lab\SpeedControl\Design.cydsn\CortexM3\ARM_GCC_541\Debug\Design.elf"
-Flash used: 16088 of 262144 bytes (6.1%).
-SRAM used: 6785 of 65536 bytes (10.4%). Stack: 2048 bytes. Heap: 4096 bytes.
---------------- Build Succeeded: 09/20/2023 16:49:44 ---------------
+Flash used: 16576 of 262144 bytes (6.3%).
+SRAM used: 6889 of 65536 bytes (10.5%). Stack: 2048 bytes. Heap: 4096 bytes.
+--------------- Build Succeeded: 10/03/2023 17:42:04 ---------------

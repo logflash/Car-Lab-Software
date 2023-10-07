@@ -43,7 +43,7 @@ uint32 goalScaledSpeed = 10000;
 uint32 lpWindowSum = 0;
 
 // Magic speed number
-#define MAGIC_SPEED_NUMBER 3926390000 // 3243198138
+#define MAGIC_SPEED_NUMBER 3926390000
 
 // Hall Effect sensor
 CY_ISR(hall_int) {
@@ -151,6 +151,9 @@ int main(void)
     // Set a variable for the number of cycles left before the next update
     int waitCyclesLeft = WAIT_CYCLES;
     
+    // XBee Telemetry Output
+    char xBeeOut[128];
+    
     // Main for loop
     for(;;)
     {        
@@ -159,6 +162,9 @@ int main(void)
             waitCyclesLeft--;
             continue;
         }
+        
+        sprintf(xBeeOut, "%lu", avgdScaledSpeed);
+        xBeeWrite(xBeeOut);
         
         // Decide the speed
         motorDutyCmp = pidOutput(avgdScaledSpeed, goalScaledSpeed, motorDutyCmp, 0, 4095);
