@@ -150,25 +150,6 @@
 <v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
 <v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\lcd_functions.lst</v>
 <v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Reference.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Reference_PM.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Target_Interrupt.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Video.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\VSync.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\XBee.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\XBee_BOOT.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\XBee_INT.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\XBee_IntClock.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\XBee_PM.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Design.elf</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Design.hex</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Design.map</v>
-<v>Navigation\Design\Design.gpdsc</v>
-<v>Navigation\Design\Design.rpt</v>
-<v>Navigation\Design\Design_timing.html</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
