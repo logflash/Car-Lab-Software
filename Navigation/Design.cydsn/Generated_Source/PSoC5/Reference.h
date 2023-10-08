@@ -90,7 +90,7 @@ void Reference_Wakeup(void)          ;
 /* Default Strobe mode */
 #define Reference_DEFAULT_STRB     0u
  /* Initial DAC value */
-#define Reference_DEFAULT_DATA     125u
+#define Reference_DEFAULT_DATA     100u
  /* Default Data Source */
 #define Reference_DEFAULT_DATA_SRC 0u
 

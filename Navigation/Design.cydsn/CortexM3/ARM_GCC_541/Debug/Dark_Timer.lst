@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
   28:Generated_Source\PSoC5/Dark_Timer.c **** 
   29:Generated_Source\PSoC5/Dark_Timer.c **** /*******************************************************************************
   30:Generated_Source\PSoC5/Dark_Timer.c **** * Function Name: Dark_Timer_Init
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 2
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 2
 
 
   31:Generated_Source\PSoC5/Dark_Timer.c **** ********************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
   85:Generated_Source\PSoC5/Dark_Timer.c ****             #if (CY_PSOC5A)
   86:Generated_Source\PSoC5/Dark_Timer.c ****                 /* Set the default Run Mode of the Timer to Continuous */
   87:Generated_Source\PSoC5/Dark_Timer.c ****                 Dark_Timer_CONTROL2 |= Dark_Timer_CTRL_MODE_PULSEWIDTH;
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 3
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 3
 
 
   88:Generated_Source\PSoC5/Dark_Timer.c ****             #endif /* Set Continuous Run Mode in CONTROL2 for PSoC5A */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  142:Generated_Source\PSoC5/Dark_Timer.c ****         Dark_Timer_interruptState = CyEnterCriticalSection();
  143:Generated_Source\PSoC5/Dark_Timer.c **** 
  144:Generated_Source\PSoC5/Dark_Timer.c ****         /* Use the interrupt output of the status register for IRQ output */
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 4
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 4
 
 
  145:Generated_Source\PSoC5/Dark_Timer.c ****         Dark_Timer_STATUS_AUX_CTRL |= Dark_Timer_STATUS_ACTL_INT_EN_MASK;
@@ -238,13 +238,13 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
   36 0004 43F08003 		orr	r3, r3, #128
   37 0008 1370     		strb	r3, [r2]
   38 000a 7047     		bx	lr
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 5
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 5
 
 
   39              	.L3:
   40              		.align	2
   41              	.L2:
-  42 000c 73640040 		.word	1073767539
+  42 000c 70640040 		.word	1073767536
   43              		.cfi_endproc
   44              	.LFE1:
   45              		.size	Dark_Timer_Enable, .-Dark_Timer_Enable
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  230:Generated_Source\PSoC5/Dark_Timer.c **** * Function Name: Dark_Timer_Stop
  231:Generated_Source\PSoC5/Dark_Timer.c **** ********************************************************************************
  232:Generated_Source\PSoC5/Dark_Timer.c **** *
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 6
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 6
 
 
  233:Generated_Source\PSoC5/Dark_Timer.c **** * Summary:
@@ -334,7 +334,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
   65              	.L6:
   66              		.align	2
   67              	.L5:
-  68 000c 73640040 		.word	1073767539
+  68 000c 70640040 		.word	1073767536
   69              		.cfi_endproc
   70              	.LFE3:
   71              		.size	Dark_Timer_Stop, .-Dark_Timer_Stop
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  261:Generated_Source\PSoC5/Dark_Timer.c **** 
  262:Generated_Source\PSoC5/Dark_Timer.c **** /*******************************************************************************
  263:Generated_Source\PSoC5/Dark_Timer.c **** * Function Name: Dark_Timer_SetInterruptMode
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 7
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 7
 
 
  264:Generated_Source\PSoC5/Dark_Timer.c **** ********************************************************************************
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  293:Generated_Source\PSoC5/Dark_Timer.c **** *  void
  294:Generated_Source\PSoC5/Dark_Timer.c **** *
  295:Generated_Source\PSoC5/Dark_Timer.c **** * Return:
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 8
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 8
 
 
  296:Generated_Source\PSoC5/Dark_Timer.c **** *  void
@@ -446,7 +446,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  114              	.L12:
  115 0006 00BF     		.align	2
  116              	.L11:
- 117 0008 04640040 		.word	1073767428
+ 117 0008 00640040 		.word	1073767424
  118              		.cfi_endproc
  119              	.LFE5:
  120              		.size	Dark_Timer_SoftwareCapture, .-Dark_Timer_SoftwareCapture
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  326:Generated_Source\PSoC5/Dark_Timer.c **** * Return:
  327:Generated_Source\PSoC5/Dark_Timer.c **** *  The contents of the status register
  328:Generated_Source\PSoC5/Dark_Timer.c **** *
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 9
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 9
 
 
  329:Generated_Source\PSoC5/Dark_Timer.c **** * Side Effects:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  154              		.loc 1 357 0
  155              		.cfi_startproc
  156              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 10
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 10
 
 
  157              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -557,7 +557,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  164              	.L18:
  165 0006 00BF     		.align	2
  166              	.L17:
- 167 0008 73640040 		.word	1073767539
+ 167 0008 70640040 		.word	1073767536
  168              		.cfi_endproc
  169              	.LFE7:
  170              		.size	Dark_Timer_ReadControlRegister, .-Dark_Timer_ReadControlRegister
@@ -598,13 +598,13 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  186 0000 014B     		ldr	r3, .L20
  187 0002 1870     		strb	r0, [r3]
  188 0004 7047     		bx	lr
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 11
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 11
 
 
  189              	.L21:
  190 0006 00BF     		.align	2
  191              	.L20:
- 192 0008 73640040 		.word	1073767539
+ 192 0008 70640040 		.word	1073767536
  193              		.cfi_endproc
  194              	.LFE8:
  195              		.size	Dark_Timer_WriteControlRegister, .-Dark_Timer_WriteControlRegister
@@ -658,11 +658,11 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  213 0004 7047     		bx	lr
  214              	.L24:
  215 0006 00BF     		.align	2
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 12
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 12
 
 
  216              	.L23:
- 217 0008 24640040 		.word	1073767460
+ 217 0008 20640040 		.word	1073767456
  218              		.cfi_endproc
  219              	.LFE9:
  220              		.size	Dark_Timer_ReadPeriod, .-Dark_Timer_ReadPeriod
@@ -712,13 +712,13 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  239              	.L27:
  240 0006 00BF     		.align	2
  241              	.L26:
- 242 0008 24640040 		.word	1073767460
+ 242 0008 20640040 		.word	1073767456
  243              		.cfi_endproc
  244              	.LFE10:
  245              		.size	Dark_Timer_WritePeriod, .-Dark_Timer_WritePeriod
  246              		.section	.text.Dark_Timer_ReadCapture,"ax",%progbits
  247              		.align	2
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 13
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 13
 
 
  248              		.global	Dark_Timer_ReadCapture
@@ -766,7 +766,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  264              	.L30:
  265 0006 00BF     		.align	2
  266              	.L29:
- 267 0008 44640040 		.word	1073767492
+ 267 0008 40640040 		.word	1073767488
  268              		.cfi_endproc
  269              	.LFE11:
  270              		.size	Dark_Timer_ReadCapture, .-Dark_Timer_ReadCapture
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  276              		.type	Dark_Timer_WriteCounter, %function
  277              	Dark_Timer_WriteCounter:
  278              	.LFB12:
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 14
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 14
 
 
  464:Generated_Source\PSoC5/Dark_Timer.c **** 
@@ -820,7 +820,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  289              	.L33:
  290 0006 00BF     		.align	2
  291              	.L32:
- 292 0008 04640040 		.word	1073767428
+ 292 0008 00640040 		.word	1073767424
  293              		.cfi_endproc
  294              	.LFE12:
  295              		.size	Dark_Timer_WriteCounter, .-Dark_Timer_WriteCounter
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  493:Generated_Source\PSoC5/Dark_Timer.c **** 
  494:Generated_Source\PSoC5/Dark_Timer.c **** /*******************************************************************************
  495:Generated_Source\PSoC5/Dark_Timer.c **** * Function Name: Dark_Timer_ReadCounter
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 15
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 15
 
 
  496:Generated_Source\PSoC5/Dark_Timer.c **** ********************************************************************************
@@ -887,8 +887,8 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  317              	.L36:
  318 000a 00BF     		.align	2
  319              	.L35:
- 320 000c 04640040 		.word	1073767428
- 321 0010 44640040 		.word	1073767492
+ 320 000c 00640040 		.word	1073767424
+ 321 0010 40640040 		.word	1073767488
  322              		.cfi_endproc
  323              	.LFE13:
  324              		.size	Dark_Timer_ReadCounter, .-Dark_Timer_ReadCounter
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  328              		.thumb
  329              		.thumb_func
  330              		.type	Dark_Timer_SetInterruptCount, %function
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 16
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 16
 
 
  331              	Dark_Timer_SetInterruptCount:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  578:Generated_Source\PSoC5/Dark_Timer.c ****     #endif /* (!Dark_Timer_UDB_CONTROL_REG_REMOVED) */
  579:Generated_Source\PSoC5/Dark_Timer.c **** }
  580:Generated_Source\PSoC5/Dark_Timer.c **** #endif /* Remove API if Capture Mode is not Software Controlled */
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 17
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 17
 
 
  581:Generated_Source\PSoC5/Dark_Timer.c **** 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  635:Generated_Source\PSoC5/Dark_Timer.c **** *  void
  636:Generated_Source\PSoC5/Dark_Timer.c **** *
  637:Generated_Source\PSoC5/Dark_Timer.c **** *******************************************************************************/
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 18
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 18
 
 
  638:Generated_Source\PSoC5/Dark_Timer.c **** void Dark_Timer_EnableTrigger(void) 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  335              		@ args = 0, pretend = 0, frame = 0
  336              		@ frame_needed = 0, uses_anonymous_args = 0
  337              		@ link register save eliminated.
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 19
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 19
 
 
  338              	.LVL4:
@@ -1107,7 +1107,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  353              	.L39:
  354 0016 00BF     		.align	2
  355              	.L38:
- 356 0018 73640040 		.word	1073767539
+ 356 0018 70640040 		.word	1073767536
  357              		.cfi_endproc
  358              	.LFE14:
  359              		.size	Dark_Timer_SetInterruptCount, .-Dark_Timer_SetInterruptCount
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  714:Generated_Source\PSoC5/Dark_Timer.c **** *  captureCount: A value between 2 and 127 inclusive is valid.  A value of 1
  715:Generated_Source\PSoC5/Dark_Timer.c **** *                to 127 will cause the interrupt to delay by the same number of
  716:Generated_Source\PSoC5/Dark_Timer.c **** *                captures.
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 20
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 20
 
 
  717:Generated_Source\PSoC5/Dark_Timer.c **** *
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  374              		.cfi_offset 3, -8
  375              		.cfi_offset 14, -4
  765:Generated_Source\PSoC5/Dark_Timer.c ****     while(0u != (Dark_Timer_ReadStatusRegister() & Dark_Timer_STATUS_FIFONEMP))
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 21
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 21
 
 
  376              		.loc 1 765 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  420              		.loc 1 145 0
  421 0016 084A     		ldr	r2, .L46
  422 0018 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 22
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 22
 
 
  423 001a 43F01003 		orr	r3, r3, #16
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  221:Generated_Source\PSoC5/Dark_Timer.c ****     }
  470              		.loc 1 221 0
  471 000c 0122     		movs	r2, #1
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 23
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 23
 
 
  472 000e 024B     		ldr	r3, .L51
@@ -1357,14 +1357,14 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  504 000c DD000000 		.4byte	.LASF41
  505 0010 0C       		.byte	0xc
  506 0011 77000000 		.4byte	.LASF42
- 507 0015 6B010000 		.4byte	.LASF43
+ 507 0015 97020000 		.4byte	.LASF43
  508 0019 00000000 		.4byte	.Ldebug_ranges0+0
  509 001d 00000000 		.4byte	0
  510 0021 00000000 		.4byte	.Ldebug_line0
  511 0025 02       		.uleb128 0x2
  512 0026 01       		.byte	0x1
  513 0027 06       		.byte	0x6
- 514 0028 7A030000 		.4byte	.LASF0
+ 514 0028 6F030000 		.4byte	.LASF0
  515 002c 02       		.uleb128 0x2
  516 002d 01       		.byte	0x1
  517 002e 08       		.byte	0x8
@@ -1372,26 +1372,26 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  519 0033 02       		.uleb128 0x2
  520 0034 02       		.byte	0x2
  521 0035 05       		.byte	0x5
- 522 0036 1F030000 		.4byte	.LASF2
+ 522 0036 14030000 		.4byte	.LASF2
  523 003a 02       		.uleb128 0x2
  524 003b 02       		.byte	0x2
  525 003c 07       		.byte	0x7
  526 003d 4E000000 		.4byte	.LASF3
  527 0041 02       		.uleb128 0x2
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 24
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 24
 
 
  528 0042 04       		.byte	0x4
  529 0043 05       		.byte	0x5
- 530 0044 60030000 		.4byte	.LASF4
+ 530 0044 55030000 		.4byte	.LASF4
  531 0048 02       		.uleb128 0x2
  532 0049 04       		.byte	0x4
  533 004a 07       		.byte	0x7
- 534 004b EA010000 		.4byte	.LASF5
+ 534 004b C5010000 		.4byte	.LASF5
  535 004f 02       		.uleb128 0x2
  536 0050 08       		.byte	0x8
  537 0051 05       		.byte	0x5
- 538 0052 03030000 		.4byte	.LASF6
+ 538 0052 F8020000 		.4byte	.LASF6
  539 0056 02       		.uleb128 0x2
  540 0057 08       		.byte	0x8
  541 0058 07       		.byte	0x7
@@ -1403,14 +1403,14 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  547 0064 02       		.uleb128 0x2
  548 0065 04       		.byte	0x4
  549 0066 07       		.byte	0x7
- 550 0067 99020000 		.4byte	.LASF8
+ 550 0067 74020000 		.4byte	.LASF8
  551 006b 04       		.uleb128 0x4
- 552 006c FC010000 		.4byte	.LASF9
+ 552 006c D7010000 		.4byte	.LASF9
  553 0070 02       		.byte	0x2
  554 0071 E801     		.2byte	0x1e8
  555 0073 2C000000 		.4byte	0x2c
  556 0077 04       		.uleb128 0x4
- 557 0078 64020000 		.4byte	.LASF10
+ 557 0078 3F020000 		.4byte	.LASF10
  558 007c 02       		.byte	0x2
  559 007d EA01     		.2byte	0x1ea
  560 007f 48000000 		.4byte	0x48
@@ -1421,13 +1421,13 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  565 008a 02       		.uleb128 0x2
  566 008b 08       		.byte	0x8
  567 008c 04       		.byte	0x4
- 568 008d 32020000 		.4byte	.LASF12
+ 568 008d 0D020000 		.4byte	.LASF12
  569 0091 02       		.uleb128 0x2
  570 0092 01       		.byte	0x1
  571 0093 08       		.byte	0x8
- 572 0094 69030000 		.4byte	.LASF13
+ 572 0094 5E030000 		.4byte	.LASF13
  573 0098 04       		.uleb128 0x4
- 574 0099 AE010000 		.4byte	.LASF14
+ 574 0099 89010000 		.4byte	.LASF14
  575 009d 02       		.byte	0x2
  576 009e 9202     		.2byte	0x292
  577 00a0 A4000000 		.4byte	0xa4
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  582 00ae 02       		.byte	0x2
  583 00af 9402     		.2byte	0x294
  584 00b1 B5000000 		.4byte	0xb5
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 25
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 25
 
 
  585 00b5 05       		.uleb128 0x5
@@ -1446,11 +1446,11 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  587 00ba 02       		.uleb128 0x2
  588 00bb 08       		.byte	0x8
  589 00bc 04       		.byte	0x4
- 590 00bd 6E030000 		.4byte	.LASF16
+ 590 00bd 63030000 		.4byte	.LASF16
  591 00c1 02       		.uleb128 0x2
  592 00c2 04       		.byte	0x4
  593 00c3 07       		.byte	0x7
- 594 00c4 EA020000 		.4byte	.LASF17
+ 594 00c4 DF020000 		.4byte	.LASF17
  595 00c8 06       		.uleb128 0x6
  596 00c9 00000000 		.4byte	.LASF18
  597 00cd 01       		.byte	0x1
@@ -1460,7 +1460,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  601 00d7 01       		.uleb128 0x1
  602 00d8 9C       		.byte	0x9c
  603 00d9 06       		.uleb128 0x6
- 604 00da F3020000 		.4byte	.LASF19
+ 604 00da E8020000 		.4byte	.LASF19
  605 00de 01       		.byte	0x1
  606 00df F7       		.byte	0xf7
  607 00e0 00000000 		.4byte	.LFB3
@@ -1468,7 +1468,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  609 00e8 01       		.uleb128 0x1
  610 00e9 9C       		.byte	0x9c
  611 00ea 07       		.uleb128 0x7
- 612 00eb B3010000 		.4byte	.LASF23
+ 612 00eb 8E010000 		.4byte	.LASF23
  613 00ef 01       		.byte	0x1
  614 00f0 1701     		.2byte	0x117
  615 00f2 00000000 		.4byte	.LFB4
@@ -1477,7 +1477,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  618 00fb 9C       		.byte	0x9c
  619 00fc 0F010000 		.4byte	0x10f
  620 0100 08       		.uleb128 0x8
- 621 0101 11030000 		.4byte	.LASF25
+ 621 0101 06030000 		.4byte	.LASF25
  622 0105 01       		.byte	0x1
  623 0106 1701     		.2byte	0x117
  624 0108 6B000000 		.4byte	0x6b
@@ -1485,7 +1485,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  626 010d 50       		.byte	0x50
  627 010e 00       		.byte	0
  628 010f 09       		.uleb128 0x9
- 629 0110 CF010000 		.4byte	.LASF20
+ 629 0110 AA010000 		.4byte	.LASF20
  630 0114 01       		.byte	0x1
  631 0115 2E01     		.2byte	0x12e
  632 0117 00000000 		.4byte	.LFB5
@@ -1493,19 +1493,19 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  634 011f 01       		.uleb128 0x1
  635 0120 9C       		.byte	0x9c
  636 0121 0A       		.uleb128 0xa
- 637 0122 BC020000 		.4byte	.LASF21
+ 637 0122 6B010000 		.4byte	.LASF21
  638 0126 01       		.byte	0x1
  639 0127 4D01     		.2byte	0x14d
  640 0129 6B000000 		.4byte	0x6b
  641 012d 00000000 		.4byte	.LFB6
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 26
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 26
 
 
  642 0131 0C000000 		.4byte	.LFE6-.LFB6
  643 0135 01       		.uleb128 0x1
  644 0136 9C       		.byte	0x9c
  645 0137 0A       		.uleb128 0xa
- 646 0138 86030000 		.4byte	.LASF22
+ 646 0138 7B030000 		.4byte	.LASF22
  647 013c 01       		.byte	0x1
  648 013d 6401     		.2byte	0x164
  649 013f 6B000000 		.4byte	0x6b
@@ -1514,7 +1514,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  652 014b 01       		.uleb128 0x1
  653 014c 9C       		.byte	0x9c
  654 014d 07       		.uleb128 0x7
- 655 014e 29030000 		.4byte	.LASF24
+ 655 014e 1E030000 		.4byte	.LASF24
  656 0152 01       		.byte	0x1
  657 0153 7B01     		.2byte	0x17b
  658 0155 00000000 		.4byte	.LFB8
@@ -1523,7 +1523,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  661 015e 9C       		.byte	0x9c
  662 015f 72010000 		.4byte	0x172
  663 0163 08       		.uleb128 0x8
- 664 0164 02020000 		.4byte	.LASF26
+ 664 0164 DD010000 		.4byte	.LASF26
  665 0168 01       		.byte	0x1
  666 0169 7B01     		.2byte	0x17b
  667 016b 6B000000 		.4byte	0x6b
@@ -1557,8 +1557,8 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  695 01ab 50       		.byte	0x50
  696 01ac 00       		.byte	0
  697 01ad 0A       		.uleb128 0xa
- 698 01ae 6B020000 		.4byte	.LASF30
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 27
+ 698 01ae 46020000 		.4byte	.LASF30
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 27
 
 
  699 01b2 01       		.byte	0x1
@@ -1586,7 +1586,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  721 01e6 50       		.byte	0x50
  722 01e7 00       		.byte	0
  723 01e8 0A       		.uleb128 0xa
- 724 01e9 49030000 		.4byte	.LASF33
+ 724 01e9 3E030000 		.4byte	.LASF33
  725 01ed 01       		.byte	0x1
  726 01ee FC01     		.2byte	0x1fc
  727 01f0 77000000 		.4byte	0x77
@@ -1595,7 +1595,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  730 01fc 01       		.uleb128 0x1
  731 01fd 9C       		.byte	0x9c
  732 01fe 07       		.uleb128 0x7
- 733 01ff A5030000 		.4byte	.LASF34
+ 733 01ff 9A030000 		.4byte	.LASF34
  734 0203 01       		.byte	0x1
  735 0204 B002     		.2byte	0x2b0
  736 0206 00000000 		.4byte	.LFB14
@@ -1611,14 +1611,14 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  746 0220 00000000 		.4byte	.LLST0
  747 0224 00       		.byte	0
  748 0225 07       		.uleb128 0x7
- 749 0226 1D020000 		.4byte	.LASF36
+ 749 0226 F8010000 		.4byte	.LASF36
  750 022a 01       		.byte	0x1
  751 022b FB02     		.2byte	0x2fb
  752 022d 00000000 		.4byte	.LFB15
  753 0231 14000000 		.4byte	.LFE15-.LFB15
  754 0235 01       		.uleb128 0x1
  755 0236 9C       		.byte	0x9c
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 28
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 28
 
 
  756 0237 4E020000 		.4byte	0x24e
@@ -1630,7 +1630,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  762 0249 21010000 		.4byte	0x121
  763 024d 00       		.byte	0
  764 024e 0D       		.uleb128 0xd
- 765 024f DA020000 		.4byte	.LASF37
+ 765 024f CF020000 		.4byte	.LASF37
  766 0253 01       		.byte	0x1
  767 0254 2B       		.byte	0x2b
  768 0255 00000000 		.4byte	.LFB0
@@ -1639,7 +1639,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  771 025e 9C       		.byte	0x9c
  772 025f D8020000 		.4byte	0x2d8
  773 0263 0E       		.uleb128 0xe
- 774 0264 39020000 		.4byte	.LASF44
+ 774 0264 14020000 		.4byte	.LASF44
  775 0268 01       		.byte	0x1
  776 0269 2F       		.byte	0x2f
  777 026a 6B000000 		.4byte	0x6b
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  810 02b5 BF020000 		.4byte	0x2bf
  811 02b9 10       		.uleb128 0x10
  812 02ba 01       		.uleb128 0x1
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 29
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 29
 
 
  813 02bb 50       		.byte	0x50
@@ -1699,7 +1699,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  828 02d6 00       		.byte	0
  829 02d7 00       		.byte	0
  830 02d8 0D       		.uleb128 0xd
- 831 02d9 53020000 		.4byte	.LASF38
+ 831 02d9 2E020000 		.4byte	.LASF38
  832 02dd 01       		.byte	0x1
  833 02de D7       		.byte	0xd7
  834 02df 00000000 		.4byte	.LFB2
@@ -1715,7 +1715,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  844 02fb C8000000 		.4byte	0xc8
  845 02ff 00       		.byte	0
  846 0300 12       		.uleb128 0x12
- 847 0301 0A020000 		.4byte	.LASF45
+ 847 0301 E5010000 		.4byte	.LASF45
  848 0305 01       		.byte	0x1
  849 0306 1A       		.byte	0x1a
  850 0307 6B000000 		.4byte	0x6b
@@ -1723,13 +1723,13 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  852 030c 03       		.byte	0x3
  853 030d 00000000 		.4byte	Dark_Timer_initVar
  854 0311 13       		.uleb128 0x13
- 855 0312 82020000 		.4byte	.LASF39
- 856 0316 82020000 		.4byte	.LASF39
+ 855 0312 5D020000 		.4byte	.LASF39
+ 856 0316 5D020000 		.4byte	.LASF39
  857 031a 03       		.byte	0x3
  858 031b 7D       		.byte	0x7d
  859 031c 13       		.uleb128 0x13
- 860 031d A6020000 		.4byte	.LASF40
- 861 0321 A6020000 		.4byte	.LASF40
+ 860 031d 81020000 		.4byte	.LASF40
+ 861 0321 81020000 		.4byte	.LASF40
  862 0325 03       		.byte	0x3
  863 0326 7E       		.byte	0x7e
  864 0327 00       		.byte	0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  867 0000 01       		.uleb128 0x1
  868 0001 11       		.uleb128 0x11
  869 0002 01       		.byte	0x1
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 30
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 30
 
 
  870 0003 25       		.uleb128 0x25
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  924 0039 49       		.uleb128 0x49
  925 003a 13       		.uleb128 0x13
  926 003b 00       		.byte	0
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 31
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 31
 
 
  927 003c 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  981 0074 3A       		.uleb128 0x3a
  982 0075 0B       		.uleb128 0xb
  983 0076 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 32
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 32
 
 
  984 0077 05       		.uleb128 0x5
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  1038 00af 00       		.byte	0
  1039 00b0 0B       		.uleb128 0xb
  1040 00b1 05       		.uleb128 0x5
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 33
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 33
 
 
  1041 00b2 00       		.byte	0
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  1095 00eb 3B       		.uleb128 0x3b
  1096 00ec 0B       		.uleb128 0xb
  1097 00ed 49       		.uleb128 0x49
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 34
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 34
 
 
  1098 00ee 13       		.uleb128 0x13
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  1152 012b 3F       		.uleb128 0x3f
  1153 012c 19       		.uleb128 0x19
  1154 012d 3C       		.uleb128 0x3c
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 35
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 35
 
 
  1155 012e 19       		.uleb128 0x19
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  1209 0048 00000000 		.4byte	.LFB9
  1210 004c 0C000000 		.4byte	.LFE9-.LFB9
  1211 0050 00000000 		.4byte	.LFB10
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 36
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 36
 
 
  1212 0054 0C000000 		.4byte	.LFE10-.LFB10
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  1266              	.Ldebug_line0:
  1267 0000 83010000 		.section	.debug_str,"MS",%progbits,1
  1267      02005200 
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 37
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 37
 
 
  1267      00000201 
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  1289 00b0 636F756E 		.ascii	"counter\000"
  1289      74657200 
  1290              	.LASF7:
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 38
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 38
 
 
  1291 00b8 6C6F6E67 		.ascii	"long long unsigned int\000"
@@ -2247,175 +2247,173 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 1
  1297      74696F6E 
  1297      2D736563 
  1297      74696F6E 
- 1298              	.LASF43:
- 1299 016b 433A5C55 		.ascii	"C:\\Users\\ianh\\Documents\\Car Lab\\Navigation\\Na"
- 1299      73657273 
- 1299      5C69616E 
- 1299      685C446F 
- 1299      63756D65 
- 1300 0198 76696761 		.ascii	"vigation\\Design.cydsn\000"
- 1300      74696F6E 
- 1300      5C446573 
- 1300      69676E2E 
- 1300      63796473 
- 1301              	.LASF14:
- 1302 01ae 72656738 		.ascii	"reg8\000"
- 1302      00
- 1303              	.LASF23:
- 1304 01b3 4461726B 		.ascii	"Dark_Timer_SetInterruptMode\000"
- 1304      5F54696D 
- 1304      65725F53 
- 1304      6574496E 
- 1304      74657272 
- 1305              	.LASF20:
- 1306 01cf 4461726B 		.ascii	"Dark_Timer_SoftwareCapture\000"
- 1306      5F54696D 
- 1306      65725F53 
- 1306      6F667477 
- 1306      61726543 
- 1307              	.LASF5:
- 1308 01ea 6C6F6E67 		.ascii	"long unsigned int\000"
- 1308      20756E73 
- 1308      69676E65 
- 1308      6420696E 
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 39
+ 1298              	.LASF21:
+ 1299 016b 4461726B 		.ascii	"Dark_Timer_ReadStatusRegister\000"
+ 1299      5F54696D 
+ 1299      65725F52 
+ 1299      65616453 
+ 1299      74617475 
+ 1300              	.LASF14:
+ 1301 0189 72656738 		.ascii	"reg8\000"
+ 1301      00
+ 1302              	.LASF23:
+ 1303 018e 4461726B 		.ascii	"Dark_Timer_SetInterruptMode\000"
+ 1303      5F54696D 
+ 1303      65725F53 
+ 1303      6574496E 
+ 1303      74657272 
+ 1304              	.LASF20:
+ 1305 01aa 4461726B 		.ascii	"Dark_Timer_SoftwareCapture\000"
+ 1305      5F54696D 
+ 1305      65725F53 
+ 1305      6F667477 
+ 1305      61726543 
+ 1306              	.LASF5:
+ 1307 01c5 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1307      20756E73 
+ 1307      69676E65 
+ 1307      6420696E 
+ 1307      7400
+ 1308              	.LASF9:
+ 1309 01d7 75696E74 		.ascii	"uint8\000"
+ 1309      3800
+ 1310              	.LASF26:
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 39
 
 
- 1308      7400
- 1309              	.LASF9:
- 1310 01fc 75696E74 		.ascii	"uint8\000"
- 1310      3800
- 1311              	.LASF26:
- 1312 0202 636F6E74 		.ascii	"control\000"
- 1312      726F6C00 
- 1313              	.LASF45:
- 1314 020a 4461726B 		.ascii	"Dark_Timer_initVar\000"
- 1314      5F54696D 
- 1314      65725F69 
- 1314      6E697456 
- 1314      617200
- 1315              	.LASF36:
- 1316 021d 4461726B 		.ascii	"Dark_Timer_ClearFIFO\000"
- 1316      5F54696D 
- 1316      65725F43 
- 1316      6C656172 
- 1316      4649464F 
- 1317              	.LASF12:
- 1318 0232 646F7562 		.ascii	"double\000"
- 1318      6C6500
- 1319              	.LASF44:
- 1320 0239 4461726B 		.ascii	"Dark_Timer_interruptState\000"
- 1320      5F54696D 
- 1320      65725F69 
- 1320      6E746572 
- 1320      72757074 
- 1321              	.LASF38:
- 1322 0253 4461726B 		.ascii	"Dark_Timer_Start\000"
- 1322      5F54696D 
- 1322      65725F53 
- 1322      74617274 
- 1322      00
- 1323              	.LASF10:
- 1324 0264 75696E74 		.ascii	"uint32\000"
- 1324      333200
- 1325              	.LASF30:
- 1326 026b 4461726B 		.ascii	"Dark_Timer_ReadCapture\000"
- 1326      5F54696D 
- 1326      65725F52 
- 1326      65616443 
- 1326      61707475 
- 1327              	.LASF39:
- 1328 0282 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 1328      74657243 
- 1328      72697469 
- 1328      63616C53 
- 1328      65637469 
- 1329              	.LASF8:
- 1330 0299 756E7369 		.ascii	"unsigned int\000"
- 1330      676E6564 
- 1330      20696E74 
- 1330      00
- 1331              	.LASF40:
- 1332 02a6 43794578 		.ascii	"CyExitCriticalSection\000"
- 1332      69744372 
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 40
+ 1311 01dd 636F6E74 		.ascii	"control\000"
+ 1311      726F6C00 
+ 1312              	.LASF45:
+ 1313 01e5 4461726B 		.ascii	"Dark_Timer_initVar\000"
+ 1313      5F54696D 
+ 1313      65725F69 
+ 1313      6E697456 
+ 1313      617200
+ 1314              	.LASF36:
+ 1315 01f8 4461726B 		.ascii	"Dark_Timer_ClearFIFO\000"
+ 1315      5F54696D 
+ 1315      65725F43 
+ 1315      6C656172 
+ 1315      4649464F 
+ 1316              	.LASF12:
+ 1317 020d 646F7562 		.ascii	"double\000"
+ 1317      6C6500
+ 1318              	.LASF44:
+ 1319 0214 4461726B 		.ascii	"Dark_Timer_interruptState\000"
+ 1319      5F54696D 
+ 1319      65725F69 
+ 1319      6E746572 
+ 1319      72757074 
+ 1320              	.LASF38:
+ 1321 022e 4461726B 		.ascii	"Dark_Timer_Start\000"
+ 1321      5F54696D 
+ 1321      65725F53 
+ 1321      74617274 
+ 1321      00
+ 1322              	.LASF10:
+ 1323 023f 75696E74 		.ascii	"uint32\000"
+ 1323      333200
+ 1324              	.LASF30:
+ 1325 0246 4461726B 		.ascii	"Dark_Timer_ReadCapture\000"
+ 1325      5F54696D 
+ 1325      65725F52 
+ 1325      65616443 
+ 1325      61707475 
+ 1326              	.LASF39:
+ 1327 025d 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1327      74657243 
+ 1327      72697469 
+ 1327      63616C53 
+ 1327      65637469 
+ 1328              	.LASF8:
+ 1329 0274 756E7369 		.ascii	"unsigned int\000"
+ 1329      676E6564 
+ 1329      20696E74 
+ 1329      00
+ 1330              	.LASF40:
+ 1331 0281 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1331      69744372 
+ 1331      69746963 
+ 1331      616C5365 
+ 1331      6374696F 
+ 1332              	.LASF43:
+ 1333 0297 433A5C55 		.ascii	"C:\\Users\\ianh\\Documents\\Car Lab\\Navigation\\De"
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 40
 
 
- 1332      69746963 
- 1332      616C5365 
- 1332      6374696F 
- 1333              	.LASF21:
- 1334 02bc 4461726B 		.ascii	"Dark_Timer_ReadStatusRegister\000"
- 1334      5F54696D 
- 1334      65725F52 
- 1334      65616453 
- 1334      74617475 
+ 1333      73657273 
+ 1333      5C69616E 
+ 1333      685C446F 
+ 1333      63756D65 
+ 1334 02c4 7369676E 		.ascii	"sign.cydsn\000"
+ 1334      2E637964 
+ 1334      736E00
  1335              	.LASF37:
- 1336 02da 4461726B 		.ascii	"Dark_Timer_Init\000"
+ 1336 02cf 4461726B 		.ascii	"Dark_Timer_Init\000"
  1336      5F54696D 
  1336      65725F49 
  1336      6E697400 
  1337              	.LASF17:
- 1338 02ea 73697A65 		.ascii	"sizetype\000"
+ 1338 02df 73697A65 		.ascii	"sizetype\000"
  1338      74797065 
  1338      00
  1339              	.LASF19:
- 1340 02f3 4461726B 		.ascii	"Dark_Timer_Stop\000"
+ 1340 02e8 4461726B 		.ascii	"Dark_Timer_Stop\000"
  1340      5F54696D 
  1340      65725F53 
  1340      746F7000 
  1341              	.LASF6:
- 1342 0303 6C6F6E67 		.ascii	"long long int\000"
+ 1342 02f8 6C6F6E67 		.ascii	"long long int\000"
  1342      206C6F6E 
  1342      6720696E 
  1342      7400
  1343              	.LASF25:
- 1344 0311 696E7465 		.ascii	"interruptMode\000"
+ 1344 0306 696E7465 		.ascii	"interruptMode\000"
  1344      72727570 
  1344      744D6F64 
  1344      6500
  1345              	.LASF2:
- 1346 031f 73686F72 		.ascii	"short int\000"
+ 1346 0314 73686F72 		.ascii	"short int\000"
  1346      7420696E 
  1346      7400
  1347              	.LASF24:
- 1348 0329 4461726B 		.ascii	"Dark_Timer_WriteControlRegister\000"
+ 1348 031e 4461726B 		.ascii	"Dark_Timer_WriteControlRegister\000"
  1348      5F54696D 
  1348      65725F57 
  1348      72697465 
  1348      436F6E74 
  1349              	.LASF33:
- 1350 0349 4461726B 		.ascii	"Dark_Timer_ReadCounter\000"
+ 1350 033e 4461726B 		.ascii	"Dark_Timer_ReadCounter\000"
  1350      5F54696D 
  1350      65725F52 
  1350      65616443 
  1350      6F756E74 
  1351              	.LASF4:
- 1352 0360 6C6F6E67 		.ascii	"long int\000"
+ 1352 0355 6C6F6E67 		.ascii	"long int\000"
  1352      20696E74 
  1352      00
  1353              	.LASF13:
- 1354 0369 63686172 		.ascii	"char\000"
+ 1354 035e 63686172 		.ascii	"char\000"
  1354      00
  1355              	.LASF16:
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccGyWQDM.s 			page 41
-
-
- 1356 036e 6C6F6E67 		.ascii	"long double\000"
+ 1356 0363 6C6F6E67 		.ascii	"long double\000"
  1356      20646F75 
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\ccyvhqkb.s 			page 41
+
+
  1356      626C6500 
  1357              	.LASF0:
- 1358 037a 7369676E 		.ascii	"signed char\000"
+ 1358 036f 7369676E 		.ascii	"signed char\000"
  1358      65642063 
  1358      68617200 
  1359              	.LASF22:
- 1360 0386 4461726B 		.ascii	"Dark_Timer_ReadControlRegister\000"
+ 1360 037b 4461726B 		.ascii	"Dark_Timer_ReadControlRegister\000"
  1360      5F54696D 
  1360      65725F52 
  1360      65616443 
  1360      6F6E7472 
  1361              	.LASF34:
- 1362 03a5 4461726B 		.ascii	"Dark_Timer_SetInterruptCount\000"
+ 1362 039a 4461726B 		.ascii	"Dark_Timer_SetInterruptCount\000"
  1362      5F54696D 
  1362      65725F53 
  1362      6574496E 

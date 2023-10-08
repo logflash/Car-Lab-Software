@@ -251,12 +251,15 @@
   <Data key="DataVersionKey" value="2" />
   <Group key="DWRInstGuidMapping">
     <Group key="Pin">
-      <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="Burst" />
+      <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="Hall_Sensor" />
+      <Data key="794a7877-e277-43d8-9697-a9bd3bf5bfa4" value="Hall_LED" />
       <Data key="520864c0-a351-43e2-95e6-823d25b78e95/ed092b9b-d398-4703-be89-cebf998501f6" value="LCD_LCDPort" />
       <Data key="1425177d-0d0e-4468-8bcc-e638e5509a9b" value="Rx_1" />
       <Data key="53218928-59ec-47f0-97fe-9db48712dabe" value="CSync" />
       <Data key="77715107-f8d5-47e5-a629-0fb83101ac6b" value="Video" />
       <Data key="b8ebca9c-d3cd-4c81-b7a6-027f7f32ccd1" value="VSync" />
+      <Data key="b374ce79-6011-4087-b756-859d5e6f93b9" value="Motor_PWM" />
+      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="Servo" />
       <Data key="ed092b9b-d398-4703-be89-cebf998501f6" value="Tx_1" />
     </Group>
   </Group>
@@ -3346,7 +3349,12 @@
   <Group key="Pin2">
     <Group key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba">
       <Group key="0">
-        <Data key="Port Format" value="0,2" />
+        <Data key="Port Format" value="3,6" />
+      </Group>
+    </Group>
+    <Group key="794a7877-e277-43d8-9697-a9bd3bf5bfa4">
+      <Group key="0">
+        <Data key="Port Format" value="6,3" />
       </Group>
     </Group>
     <Group key="520864c0-a351-43e2-95e6-823d25b78e95/ed092b9b-d398-4703-be89-cebf998501f6">
@@ -3390,6 +3398,16 @@
     <Group key="b8ebca9c-d3cd-4c81-b7a6-027f7f32ccd1">
       <Group key="0">
         <Data key="Port Format" value="0,4" />
+      </Group>
+    </Group>
+    <Group key="b374ce79-6011-4087-b756-859d5e6f93b9">
+      <Group key="0">
+        <Data key="Port Format" value="3,4" />
+      </Group>
+    </Group>
+    <Group key="e851a3b9-efb8-48be-bbb8-b303b216c393">
+      <Group key="0">
+        <Data key="Port Format" value="3,2" />
       </Group>
     </Group>
     <Group key="ed092b9b-d398-4703-be89-cebf998501f6">

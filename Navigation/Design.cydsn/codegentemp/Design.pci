@@ -1,5 +1,5 @@
 # Design
-# 2023-10-07 03:02:12Z
+# 2023-10-08 19:14:14Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -17,7 +17,11 @@ set_io "\LCD:LCDPort(6)\" iocell 2 6
 set_io "VSync(0)" iocell 0 4
 set_io "Rx_1(0)" iocell 6 6
 set_io "Tx_1(0)" iocell 6 0
+set_io "Hall_Sensor(0)" iocell 3 6
 set_io "CSync(0)" iocell 0 6
 set_io "Video(0)" iocell 4 2
+set_io "Servo(0)" iocell 3 2
+set_io "Hall_LED(0)" iocell 6 3
+set_io "Throttle(0)" iocell 3 4
 set_location "\Reference:viDAC8\" vidaccell -1 -1 2
 set_location "\Analog_CMP:ctComp\" comparatorcell -1 -1 0

@@ -1,73 +1,117 @@
 dont_use_io iocell 1 0
 dont_use_io iocell 1 1
 dont_use_io iocell 1 3
-set_location "\XBee:BUART:tx_status_0\" macrocell 2 3 1 2
-set_location "\XBee:BUART:tx_ctrl_mark_last\" macrocell 2 4 1 1
-set_location "Net_104_7" macrocell 3 5 0 3
-set_location "\XBee:BUART:rx_last\" macrocell 2 5 1 3
-set_location "\XBee:BUART:sRX:RxShifter:u0\" datapathcell 2 4 2 
-set_location "\Dark_Timer:TimerUDB:capture_last\" macrocell 2 5 0 2
-set_location "\XBee:BUART:tx_bitclk\" macrocell 3 2 0 3
-set_location "\Dark_Timer:TimerUDB:int_capt_count_1\" macrocell 2 5 0 3
-set_location "\XBee:BUART:sTX:TxSts\" statusicell 2 3 4 
-set_location "\Dark_Timer:TimerUDB:sT32:timerdp:u1\" datapathcell 3 3 2 
-set_location "\XBee:BUART:txn\" macrocell 2 2 0 2
-set_location "Net_104_5" macrocell 3 3 1 0
-set_location "\XBee:BUART:sRX:RxBitCounter\" count7cell 2 1 7 
-set_location "\Dark_Timer:TimerUDB:sT32:timerdp:u2\" datapathcell 3 2 2 
+set_location "\XBee:BUART:counter_load_not\" macrocell 1 4 1 2
+set_location "\XBee:BUART:txn\" macrocell 1 4 1 3
+set_location "\Hall_Timer:TimerUDB:status_tc\" macrocell 2 1 1 2
+set_location "Net_104_7" macrocell 3 4 0 1
+set_location "\Throttle_PWM:PWMUDB:runmode_enable\" macrocell 1 1 1 0
+set_location "Net_45" macrocell 1 5 0 3
+set_location "\Dark_Timer:TimerUDB:capt_int_temp\" macrocell 2 5 0 0
+set_location "\XBee:BUART:rx_state_stop1_reg\" macrocell 0 5 0 3
+set_location "\Throttle_PWM:PWMUDB:genblk8:stsreg\" statusicell 1 2 4 
+set_location "Net_793" macrocell 1 0 1 3
+set_location "\Dark_Timer:TimerUDB:capture_last\" macrocell 2 4 1 3
+set_location "\Servo_PWM:PWMUDB:status_2\" macrocell 0 2 0 0
+set_location "\Throttle_PWM:PWMUDB:status_2\" macrocell 1 2 1 2
+set_location "\XBee:BUART:tx_state_1\" macrocell 1 3 0 2
+set_location "\XBee:BUART:rx_status_3\" macrocell 0 4 0 0
+set_location "\Dark_Timer:TimerUDB:sT32:timerdp:u2\" datapathcell 3 4 2 
+set_location "\XBee:BUART:sTX:TxSts\" statusicell 0 3 4 
+set_location "\XBee:BUART:rx_status_5\" macrocell 1 5 1 1
+set_location "\Dark_Timer:TimerUDB:sT32:timerdp:u0\" datapathcell 2 5 2 
+set_location "\Hall_Timer:TimerUDB:rstSts:stsreg\" statusicell 2 1 4 
+set_location "\Hall_Timer:TimerUDB:capture_last\" macrocell 2 0 0 2
+set_location "Net_104_5" macrocell 3 5 0 3
+set_location "\Hall_Timer:TimerUDB:capt_int_temp\" macrocell 3 1 0 0
+set_location "\PID_Timer:TimerUDB:sT32:timerdp:u2\" datapathcell 0 0 2 
+set_location "\Dark_Timer:TimerUDB:sT32:timerdp:u1\" datapathcell 3 5 2 
+set_location "MODIN6_0" macrocell 2 5 0 2
+set_location "MODIN10_0" macrocell 3 0 0 1
 set_location "\Dark_Timer:TimerUDB:rstSts:stsreg\" statusicell 2 4 4 
-set_location "\Dark_Timer:TimerUDB:status_tc\" macrocell 2 5 1 0
-set_location "\Dark_Timer:TimerUDB:capt_int_temp\" macrocell 2 4 0 0
-set_location "\XBee:BUART:tx_status_2\" macrocell 2 3 1 3
-set_location "Net_45" macrocell 2 1 0 1
-set_location "\XBee:BUART:tx_state_2\" macrocell 2 3 1 0
-set_location "Net_104_3" macrocell 3 4 1 1
-set_location "\XBee:BUART:pollcount_0\" macrocell 2 3 0 2
-set_location "\Dark_Timer:TimerUDB:sT32:timerdp:u0\" datapathcell 2 3 2 
-set_location "\XBee:BUART:rx_state_0\" macrocell 2 2 1 0
-set_location "\Dark_Timer:TimerUDB:capt_fifo_load\" macrocell 2 5 0 1
-set_location "Net_293" macrocell 3 5 1 1
-set_location "Net_278" macrocell 3 5 1 0
-set_location "\XBee:BUART:rx_counter_load\" macrocell 2 1 0 3
-set_location "Net_104_6" macrocell 3 5 0 2
-set_location "\XBee:BUART:pollcount_1\" macrocell 2 5 1 1
-set_location "\XBee:BUART:rx_postpoll\" macrocell 2 4 0 2
-set_location "\XBee:BUART:rx_bitclk_enable\" macrocell 2 4 1 0
-set_location "\XBee:BUART:rx_load_fifo\" macrocell 2 1 1 1
-set_location "Net_104_0" macrocell 3 2 1 2
-set_location "\XBee:BUART:tx_state_1\" macrocell 3 1 0 1
-set_location "\XBee:BUART:rx_state_2\" macrocell 2 1 1 0
-set_location "\XBee:BUART:tx_state_0\" macrocell 2 1 0 0
-set_location "\XBee:BUART:rx_status_3\" macrocell 2 2 1 2
-set_location "\XBee:BUART:rx_state_stop1_reg\" macrocell 2 2 0 0
-set_location "\XBee:BUART:sTX:TxShifter:u0\" datapathcell 2 1 2 
-set_location "\XBee:BUART:counter_load_not\" macrocell 2 3 1 1
-set_location "\Dark_Timer:TimerUDB:sT32:timerdp:u3\" datapathcell 2 2 2 
-set_location "\XBee:BUART:sRX:RxSts\" statusicell 2 2 4 
-set_location "\XBee:BUART:rx_status_4\" macrocell 2 4 1 2
-set_location "Net_104_2" macrocell 3 3 0 0
-set_location "Net_104_4" macrocell 3 5 0 1
-set_location "\XBee:BUART:rx_state_3\" macrocell 2 1 1 2
-set_location "Net_104_1" macrocell 3 3 1 3
-set_location "\XBee:BUART:sTX:sCLOCK:TxBitClkGen\" datapathcell 2 5 2 
-set_location "\Dark_Timer:TimerUDB:int_capt_count_0\" macrocell 3 4 0 2
-set_location "\XBee:BUART:rx_status_5\" macrocell 2 3 0 1
+set_location "\Dark_Timer:TimerUDB:status_tc\" macrocell 2 4 0 0
+set_location "\Servo_PWM:PWMUDB:status_0\" macrocell 0 2 1 0
+set_location "\XBee:BUART:tx_status_2\" macrocell 0 3 0 0
+set_location "\Hall_Timer:TimerUDB:sT32:timerdp:u3\" datapathcell 2 1 2 
+set_location "\Hall_Timer:TimerUDB:capt_fifo_load\" macrocell 2 0 1 0
+set_location "\XBee:BUART:tx_bitclk\" macrocell 1 3 0 3
+set_location "Net_104_3" macrocell 3 5 1 0
+set_location "\Hall_Timer:TimerUDB:sT32:timerdp:u0\" datapathcell 2 0 2 
+set_location "\XBee:BUART:tx_ctrl_mark_last\" macrocell 0 5 1 1
+set_location "\XBee:BUART:sRX:RxBitCounter\" count7cell 0 4 7 
+set_location "\Servo_PWM:PWMUDB:genblk8:stsreg\" statusicell 0 2 4 
+set_location "\XBee:BUART:sTX:TxShifter:u0\" datapathcell 0 4 2 
+set_location "\Servo_PWM:PWMUDB:sP16:pwmdp:u1\" datapathcell 0 2 2 
+set_location "Net_293" macrocell 3 4 1 0
+set_location "\XBee:BUART:pollcount_0\" macrocell 0 4 0 1
+set_location "Net_278" macrocell 3 4 0 0
+set_location "\PID_Timer:TimerUDB:sT32:timerdp:u1\" datapathcell 0 1 2 
+set_location "\XBee:BUART:rx_counter_load\" macrocell 0 4 1 2
+set_location "\Throttle_PWM:PWMUDB:status_0\" macrocell 1 2 1 0
+set_location "Net_104_6" macrocell 3 4 0 3
+set_location "\XBee:BUART:tx_state_0\" macrocell 0 3 1 2
+set_location "\Dark_Timer:TimerUDB:capt_fifo_load\" macrocell 2 4 0 1
+set_location "\XBee:BUART:rx_status_4\" macrocell 0 5 0 2
+set_location "\XBee:BUART:pollcount_1\" macrocell 0 4 0 2
+set_location "\XBee:BUART:rx_load_fifo\" macrocell 0 5 0 1
+set_location "\Servo_PWM:PWMUDB:prevCompare1\" macrocell 0 2 0 3
+set_location "\Servo_PWM:PWMUDB:runmode_enable\" macrocell 0 1 0 0
+set_location "Net_104_0" macrocell 3 5 0 0
+set_location "\Throttle_PWM:PWMUDB:prevCompare1\" macrocell 1 2 0 2
+set_location "\PID_Timer:TimerUDB:sT32:timerdp:u0\" datapathcell 1 1 2 
+set_location "\XBee:BUART:rx_state_0\" macrocell 0 5 1 0
+set_location "MODIN6_1" macrocell 2 5 1 0
+set_location "MODIN10_1" macrocell 3 0 1 0
+set_location "\Servo_PWM:PWMUDB:sP16:pwmdp:u0\" datapathcell 1 2 2 
+set_location "\Throttle_PWM:PWMUDB:sP16:pwmdp:u1\" datapathcell 1 3 2 
+set_location "\XBee:BUART:rx_last\" macrocell 0 4 0 3
+set_location "\XBee:BUART:sTX:sCLOCK:TxBitClkGen\" datapathcell 1 4 2 
+set_location "\XBee:BUART:tx_status_0\" macrocell 0 3 0 1
+set_location "\PID_Timer:TimerUDB:status_tc\" macrocell 1 0 0 2
+set_location "\Hall_Timer:TimerUDB:sT32:timerdp:u1\" datapathcell 3 0 2 
+set_location "\XBee:BUART:rx_state_3\" macrocell 0 5 1 2
+set_location "\XBee:BUART:rx_postpoll\" macrocell 0 5 1 3
+set_location "\XBee:BUART:rx_bitclk_enable\" macrocell 0 4 1 1
+set_location "\PID_Timer:TimerUDB:sT32:timerdp:u3\" datapathcell 1 0 2 
+set_location "Net_104_2" macrocell 3 5 1 3
+set_location "Net_104_4" macrocell 3 5 1 2
+set_location "\XBee:BUART:rx_state_2\" macrocell 0 5 0 0
+set_location "Net_104_1" macrocell 3 5 0 2
+set_location "\XBee:BUART:sRX:RxSts\" statusicell 0 5 4 
+set_location "\Dark_Timer:TimerUDB:sT32:timerdp:u3\" datapathcell 2 4 2 
+set_location "\PID_Timer:TimerUDB:rstSts:stsreg\" statusicell 1 0 4 
+set_location "Net_467" macrocell 0 1 0 1
+set_location "\Hall_Timer:TimerUDB:sT32:timerdp:u2\" datapathcell 3 1 2 
+set_location "\XBee:BUART:sRX:RxShifter:u0\" datapathcell 0 5 2 
+set_location "\Throttle_PWM:PWMUDB:sP16:pwmdp:u0\" datapathcell 0 3 2 
+set_location "\XBee:BUART:tx_state_2\" macrocell 1 3 1 1
+set_location "Net_105" macrocell 1 1 0 1
 set_io "CSync(0)" iocell 0 6
 set_io "\LCD:LCDPort(6)\" iocell 2 6
 set_io "\LCD:LCDPort(5)\" iocell 2 5
 set_io "\LCD:LCDPort(3)\" iocell 2 3
 set_io "\LCD:LCDPort(4)\" iocell 2 4
 set_io "Rx_1(0)" iocell 6 6
-set_location "ClockBlock" clockblockcell -1 -1 0
+set_location "\Hall_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" controlcell 3 1 6 
+set_io "Servo(0)" iocell 3 2
 set_io "VSync(0)" iocell 0 4
 set_location "\Reference:viDAC8\" vidaccell -1 -1 2
-set_location "Target_Interrupt" interrupt -1 -1 2
+set_location "\Throttle_PWM:PWMUDB:genblk1:ctrlreg\" controlcell 1 1 6 
+set_location "\PID_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" controlcell 0 0 6 
+set_io "Throttle(0)" iocell 3 4
+set_location "Target_Interrupt" interrupt -1 -1 4
+set_location "PID_Interrupt" interrupt -1 -1 3
+set_io "Hall_Sensor(0)" iocell 3 6
+set_location "\Servo_PWM:PWMUDB:genblk1:ctrlreg\" controlcell 0 1 6 
+set_location "\Dark_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" controlcell 2 5 6 
 set_location "\Analog_CMP:ctComp\" comparatorcell -1 -1 0
+set_io "Hall_LED(0)" iocell 6 3
 set_io "Tx_1(0)" iocell 6 0
+set_location "Hall_Interrupt" interrupt -1 -1 2
 set_location "Dark_Interrupt" interrupt -1 -1 0
-set_location "\Dark_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" controlcell 2 4 6 
 set_io "\LCD:LCDPort(0)\" iocell 2 0
 set_io "Video(0)" iocell 4 2
 set_location "Frame_Interrupt" interrupt -1 -1 1
+set_location "ClockBlock" clockblockcell -1 -1 0
 set_io "\LCD:LCDPort(2)\" iocell 2 2
 set_io "\LCD:LCDPort(1)\" iocell 2 1

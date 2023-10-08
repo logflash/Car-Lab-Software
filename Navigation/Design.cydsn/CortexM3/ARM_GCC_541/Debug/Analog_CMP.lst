@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
   29:Generated_Source\PSoC5/Analog_CMP.c **** 
   30:Generated_Source\PSoC5/Analog_CMP.c **** /* variable to decide whether or not to restore the control register in 
   31:Generated_Source\PSoC5/Analog_CMP.c ****    Enable() API for PSoC5A only */
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 2
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 2
 
 
   32:Generated_Source\PSoC5/Analog_CMP.c **** #if (CY_PSOC5A)
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
   86:Generated_Source\PSoC5/Analog_CMP.c **** * Function Name: Analog_CMP_Enable
   87:Generated_Source\PSoC5/Analog_CMP.c **** ********************************************************************************
   88:Generated_Source\PSoC5/Analog_CMP.c **** *
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 3
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 3
 
 
   89:Generated_Source\PSoC5/Analog_CMP.c **** * Summary:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  143:Generated_Source\PSoC5/Analog_CMP.c ****         Analog_CMP_initVar = 1u;
  144:Generated_Source\PSoC5/Analog_CMP.c ****     }   
  145:Generated_Source\PSoC5/Analog_CMP.c **** 
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 4
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 4
 
 
  146:Generated_Source\PSoC5/Analog_CMP.c ****     /* Enable power to comparator */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  200:Generated_Source\PSoC5/Analog_CMP.c ****     Analog_CMP_CR = (Analog_CMP_CR & (uint8)(~Analog_CMP_PWR_MODE_MASK)) |
  201:Generated_Source\PSoC5/Analog_CMP.c ****                            (speed & Analog_CMP_PWR_MODE_MASK);
  202:Generated_Source\PSoC5/Analog_CMP.c **** 
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 5
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 5
 
 
  203:Generated_Source\PSoC5/Analog_CMP.c ****     /* Set trim value for high speed comparator */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  257:Generated_Source\PSoC5/Analog_CMP.c **** /*******************************************************************************
  258:Generated_Source\PSoC5/Analog_CMP.c **** * Function Name: Analog_CMP_trimAdjust
  259:Generated_Source\PSoC5/Analog_CMP.c **** ********************************************************************************
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 6
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 6
 
 
  260:Generated_Source\PSoC5/Analog_CMP.c **** *
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  293:Generated_Source\PSoC5/Analog_CMP.c ****         if ( cmpState != 0u )
   48              		.loc 1 293 0
   49 000e 5DB1     		cbz	r5, .L3
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 7
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 7
 
 
  294:Generated_Source\PSoC5/Analog_CMP.c ****         {
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
   65              		.loc 1 332 0
   66 0028 0EB9     		cbnz	r6, .L10
  333:Generated_Source\PSoC5/Analog_CMP.c ****     	{
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 8
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 8
 
 
  334:Generated_Source\PSoC5/Analog_CMP.c ****     		trimCntMax = 15u;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  365:Generated_Source\PSoC5/Analog_CMP.c ****                 Analog_CMP_TR1 += 1u;
   90              		.loc 1 365 0
   91 0042 0B4A     		ldr	r2, .L12+8
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 9
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 9
 
 
   92 0044 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  136              		.loc 1 100 0 is_stmt 1
  137              		.cfi_startproc
  138              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 10
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 10
 
 
  139              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  188              	.LFE3:
  189              		.size	Analog_CMP_Stop, .-Analog_CMP_Stop
  190              		.section	.text.Analog_CMP_SetSpeed,"ax",%progbits
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 11
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 11
 
 
  191              		.align	2
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  238 003a 0132     		adds	r2, r2, #1
  239 003c 1370     		strb	r3, [r2]
  240 003e 7047     		bx	lr
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 12
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 12
 
 
  241              	.L24:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  289 0028 02F0E702 		and	r2, r2, #231
  290 002c 1A70     		strb	r2, [r3]
   80:Generated_Source\PSoC5/Analog_CMP.c ****     #endif /* Analog_CMP_DEFAULT_BYPASS_SYNC == 0u */
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 13
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 13
 
 
  291              		.loc 1 80 0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  340              	.LFE2:
  341              		.size	Analog_CMP_Start, .-Analog_CMP_Start
  342              		.section	.text.Analog_CMP_GetCompare,"ax",%progbits
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 14
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 14
 
 
  343              		.align	2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  391:Generated_Source\PSoC5/Analog_CMP.c **** *  (uint16)  value written in trim register when calibration complete.
  392:Generated_Source\PSoC5/Analog_CMP.c **** *
  393:Generated_Source\PSoC5/Analog_CMP.c **** * Theory: 
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 15
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 15
 
 
  394:Generated_Source\PSoC5/Analog_CMP.c **** *  This function is used to optimize the calibration for user specific voltage
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  448:Generated_Source\PSoC5/Analog_CMP.c **** {
  376              		.loc 1 448 0
  377              		.cfi_startproc
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 16
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 16
 
 
  378              		@ args = 0, pretend = 0, frame = 0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  412 0020 A3F28323 		subw	r3, r3, #643
  413 0024 1F78     		ldrb	r7, [r3]	@ zero_extendqisi2
  414 0026 FFB2     		uxtb	r7, r7
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 17
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 17
 
 
  415              	.LVL15:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  492:Generated_Source\PSoC5/Analog_CMP.c ****     }
  493:Generated_Source\PSoC5/Analog_CMP.c ****    
  494:Generated_Source\PSoC5/Analog_CMP.c ****     /* Restore Config Register */
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 18
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 18
 
 
  495:Generated_Source\PSoC5/Analog_CMP.c ****     Analog_CMP_CR = tmpCR;
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  483              		.thumb_func
  484              		.type	Analog_CMP_LoadTrim, %function
  485              	Analog_CMP_LoadTrim:
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 19
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 19
 
 
  486              	.LFB8:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  508              	.LFE8:
  509              		.size	Analog_CMP_LoadTrim, .-Analog_CMP_LoadTrim
  510              		.section	.text.Analog_CMP_PwrDwnOverrideEnable,"ax",%progbits
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 20
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 20
 
 
  511              		.align	2
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  540              		.thumb_func
  541              		.type	Analog_CMP_PwrDwnOverrideDisable, %function
  542              	Analog_CMP_PwrDwnOverrideDisable:
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 21
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 21
 
 
  543              	.LFB10:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  575 0000 C4020000 		.4byte	0x2c4
  576 0004 0400     		.2byte	0x4
  577 0006 00000000 		.4byte	.Ldebug_abbrev0
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 22
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 22
 
 
  578 000a 04       		.byte	0x4
@@ -1266,14 +1266,14 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  580 000c 0D010000 		.4byte	.LASF36
  581 0010 0C       		.byte	0xc
  582 0011 08000000 		.4byte	.LASF37
- 583 0015 9B010000 		.4byte	.LASF38
+ 583 0015 2F020000 		.4byte	.LASF38
  584 0019 00000000 		.4byte	.Ldebug_ranges0+0
  585 001d 00000000 		.4byte	0
  586 0021 00000000 		.4byte	.Ldebug_line0
  587 0025 02       		.uleb128 0x2
  588 0026 01       		.byte	0x1
  589 0027 06       		.byte	0x6
- 590 0028 FA020000 		.4byte	.LASF0
+ 590 0028 EF020000 		.4byte	.LASF0
  591 002c 02       		.uleb128 0x2
  592 002d 01       		.byte	0x1
  593 002e 08       		.byte	0x8
@@ -1281,7 +1281,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  595 0033 02       		.uleb128 0x2
  596 0034 02       		.byte	0x2
  597 0035 05       		.byte	0x5
- 598 0036 DB020000 		.4byte	.LASF2
+ 598 0036 D0020000 		.4byte	.LASF2
  599 003a 02       		.uleb128 0x2
  600 003b 02       		.byte	0x2
  601 003c 07       		.byte	0x7
@@ -1289,15 +1289,15 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  603 0041 02       		.uleb128 0x2
  604 0042 04       		.byte	0x4
  605 0043 05       		.byte	0x5
- 606 0044 E5020000 		.4byte	.LASF4
+ 606 0044 DA020000 		.4byte	.LASF4
  607 0048 02       		.uleb128 0x2
  608 0049 04       		.byte	0x4
  609 004a 07       		.byte	0x7
- 610 004b EB010000 		.4byte	.LASF5
+ 610 004b A8010000 		.4byte	.LASF5
  611 004f 02       		.uleb128 0x2
  612 0050 08       		.byte	0x8
  613 0051 05       		.byte	0x5
- 614 0052 8C020000 		.4byte	.LASF6
+ 614 0052 81020000 		.4byte	.LASF6
  615 0056 02       		.uleb128 0x2
  616 0057 08       		.byte	0x8
  617 0058 07       		.byte	0x7
@@ -1309,22 +1309,22 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  623 0064 02       		.uleb128 0x2
  624 0065 04       		.byte	0x4
  625 0066 07       		.byte	0x7
- 626 0067 18020000 		.4byte	.LASF8
+ 626 0067 D5010000 		.4byte	.LASF8
  627 006b 04       		.uleb128 0x4
- 628 006c FD010000 		.4byte	.LASF9
+ 628 006c BA010000 		.4byte	.LASF9
  629 0070 02       		.byte	0x2
  630 0071 E801     		.2byte	0x1e8
  631 0073 2C000000 		.4byte	0x2c
  632 0077 04       		.uleb128 0x4
- 633 0078 0A020000 		.4byte	.LASF10
+ 633 0078 C7010000 		.4byte	.LASF10
  634 007c 02       		.byte	0x2
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 23
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 23
 
 
  635 007d E901     		.2byte	0x1e9
  636 007f 3A000000 		.4byte	0x3a
  637 0083 04       		.uleb128 0x4
- 638 0084 11020000 		.4byte	.LASF11
+ 638 0084 CE010000 		.4byte	.LASF11
  639 0088 02       		.byte	0x2
  640 0089 EA01     		.2byte	0x1ea
  641 008b 48000000 		.4byte	0x48
@@ -1335,13 +1335,13 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  646 0096 02       		.uleb128 0x2
  647 0097 08       		.byte	0x8
  648 0098 04       		.byte	0x4
- 649 0099 03020000 		.4byte	.LASF13
+ 649 0099 C0010000 		.4byte	.LASF13
  650 009d 02       		.uleb128 0x2
  651 009e 01       		.byte	0x1
  652 009f 08       		.byte	0x8
- 653 00a0 C4020000 		.4byte	.LASF14
+ 653 00a0 B9020000 		.4byte	.LASF14
  654 00a4 04       		.uleb128 0x4
- 655 00a5 DE010000 		.4byte	.LASF15
+ 655 00a5 9B010000 		.4byte	.LASF15
  656 00a9 02       		.byte	0x2
  657 00aa 9202     		.2byte	0x292
  658 00ac B0000000 		.4byte	0xb0
@@ -1350,11 +1350,11 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  661 00b5 02       		.uleb128 0x2
  662 00b6 08       		.byte	0x8
  663 00b7 04       		.byte	0x4
- 664 00b8 EE020000 		.4byte	.LASF16
+ 664 00b8 E3020000 		.4byte	.LASF16
  665 00bc 02       		.uleb128 0x2
  666 00bd 04       		.byte	0x4
  667 00be 07       		.byte	0x7
- 668 00bf 78020000 		.4byte	.LASF17
+ 668 00bf 6D020000 		.4byte	.LASF17
  669 00c3 06       		.uleb128 0x6
  670 00c4 7C000000 		.4byte	.LASF39
  671 00c8 01       		.byte	0x1
@@ -1365,20 +1365,20 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  676 00d4 9C       		.byte	0x9c
  677 00d5 29010000 		.4byte	0x129
  678 00d9 07       		.uleb128 0x7
- 679 00da 06030000 		.4byte	.LASF23
+ 679 00da FB020000 		.4byte	.LASF23
  680 00de 01       		.byte	0x1
  681 00df 1A01     		.2byte	0x11a
  682 00e1 6B000000 		.4byte	0x6b
  683 00e5 00000000 		.4byte	.LLST0
  684 00e9 08       		.uleb128 0x8
- 685 00ea E3010000 		.4byte	.LASF18
+ 685 00ea A0010000 		.4byte	.LASF18
  686 00ee 01       		.byte	0x1
  687 00ef 1C01     		.2byte	0x11c
  688 00f1 6B000000 		.4byte	0x6b
  689 00f5 21000000 		.4byte	.LLST1
  690 00f9 08       		.uleb128 0x8
- 691 00fa 81020000 		.4byte	.LASF19
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 24
+ 691 00fa 76020000 		.4byte	.LASF19
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 24
 
 
  692 00fe 01       		.byte	0x1
@@ -1386,7 +1386,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  694 0101 6B000000 		.4byte	0x6b
  695 0105 4B000000 		.4byte	.LLST2
  696 0109 08       		.uleb128 0x8
- 697 010a 25020000 		.4byte	.LASF20
+ 697 010a E2010000 		.4byte	.LASF20
  698 010e 01       		.byte	0x1
  699 010f 1D01     		.2byte	0x11d
  700 0111 6B000000 		.4byte	0x6b
@@ -1402,7 +1402,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  710 0127 00       		.byte	0
  711 0128 00       		.byte	0
  712 0129 0B       		.uleb128 0xb
- 713 012a C9020000 		.4byte	.LASF21
+ 713 012a BE020000 		.4byte	.LASF21
  714 012e 01       		.byte	0x1
  715 012f 63       		.byte	0x63
  716 0130 00000000 		.4byte	.LFB1
@@ -1410,7 +1410,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  718 0138 01       		.uleb128 0x1
  719 0139 9C       		.byte	0x9c
  720 013a 0B       		.uleb128 0xb
- 721 013b 4F020000 		.4byte	.LASF22
+ 721 013b 0C020000 		.4byte	.LASF22
  722 013f 01       		.byte	0x1
  723 0140 A5       		.byte	0xa5
  724 0141 00000000 		.4byte	.LFB3
@@ -1427,7 +1427,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  735 015b 9C       		.byte	0x9c
  736 015c 6E010000 		.4byte	0x16e
  737 0160 0D       		.uleb128 0xd
- 738 0161 72020000 		.4byte	.LASF24
+ 738 0161 67020000 		.4byte	.LASF24
  739 0165 01       		.byte	0x1
  740 0166 C5       		.byte	0xc5
  741 0167 6B000000 		.4byte	0x6b
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  746 016f AC000000 		.4byte	.LASF26
  747 0173 01       		.byte	0x1
  748 0174 33       		.byte	0x33
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 25
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 25
 
 
  749 0175 00000000 		.4byte	.LFB0
@@ -1482,7 +1482,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  787 01ce 01       		.uleb128 0x1
  788 01cf 9C       		.byte	0x9c
  789 01d0 10       		.uleb128 0x10
- 790 01d1 5F020000 		.4byte	.LASF41
+ 790 01d1 1C020000 		.4byte	.LASF41
  791 01d5 01       		.byte	0x1
  792 01d6 BF01     		.2byte	0x1bf
  793 01d8 77000000 		.4byte	0x77
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  803 01f2 6B000000 		.4byte	0x6b
  804 01f6 71000000 		.4byte	.LLST4
  805 01fa 08       		.uleb128 0x8
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 26
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 26
 
 
  806 01fb 32000000 		.4byte	.LASF29
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  860 0271 9C       		.byte	0x9c
  861 0272 87020000 		.4byte	0x287
  862 0276 07       		.uleb128 0x7
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 27
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 27
 
 
  863 0277 00000000 		.4byte	.LASF33
@@ -1568,7 +1568,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  867 0282 CC000000 		.4byte	.LLST8
  868 0286 00       		.byte	0
  869 0287 13       		.uleb128 0x13
- 870 0288 9A020000 		.4byte	.LASF34
+ 870 0288 8F020000 		.4byte	.LASF34
  871 028c 01       		.byte	0x1
  872 028d 3502     		.2byte	0x235
  873 028f 00000000 		.4byte	.LFB9
@@ -1576,7 +1576,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  875 0297 01       		.uleb128 0x1
  876 0298 9C       		.byte	0x9c
  877 0299 13       		.uleb128 0x13
- 878 029a 2E020000 		.4byte	.LASF35
+ 878 029a EB010000 		.4byte	.LASF35
  879 029e 01       		.byte	0x1
  880 029f 4B02     		.2byte	0x24b
  881 02a1 00000000 		.4byte	.LFB10
@@ -1592,8 +1592,8 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  891 02b7 03       		.byte	0x3
  892 02b8 00000000 		.4byte	Analog_CMP_initVar
  893 02bc 15       		.uleb128 0x15
- 894 02bd BA020000 		.4byte	.LASF43
- 895 02c1 BA020000 		.4byte	.LASF43
+ 894 02bd AF020000 		.4byte	.LASF43
+ 895 02c1 AF020000 		.4byte	.LASF43
  896 02c5 03       		.byte	0x3
  897 02c6 77       		.byte	0x77
  898 02c7 00       		.byte	0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  917 0010 17       		.uleb128 0x17
  918 0011 00       		.byte	0
  919 0012 00       		.byte	0
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 28
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 28
 
 
  920 0013 02       		.uleb128 0x2
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  974 0049 01       		.uleb128 0x1
  975 004a 12       		.uleb128 0x12
  976 004b 06       		.uleb128 0x6
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 29
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 29
 
 
  977 004c 40       		.uleb128 0x40
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  1031 0088 00       		.byte	0
  1032 0089 00       		.byte	0
  1033 008a 0B       		.uleb128 0xb
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 30
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 30
 
 
  1034 008b 2E       		.uleb128 0x2e
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  1088 00c3 3B       		.uleb128 0x3b
  1089 00c4 0B       		.uleb128 0xb
  1090 00c5 49       		.uleb128 0x49
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 31
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 31
 
 
  1091 00c6 13       		.uleb128 0x13
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  1145 00ff 11       		.uleb128 0x11
  1146 0100 01       		.uleb128 0x1
  1147 0101 12       		.uleb128 0x12
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 32
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 32
 
 
  1148 0102 06       		.uleb128 0x6
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  1202 013c 3B       		.uleb128 0x3b
  1203 013d 05       		.uleb128 0x5
  1204 013e 27       		.uleb128 0x27
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 33
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 33
 
 
  1205 013f 19       		.uleb128 0x19
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  1259 000f 74000000 		.4byte	.LFE6
  1260 0013 0400     		.2byte	0x4
  1261 0015 F3       		.byte	0xf3
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 34
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 34
 
 
  1262 0016 01       		.uleb128 0x1
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  1316 00a2 7A000000 		.4byte	.LVL19
  1317 00a6 90000000 		.4byte	.LFE7
  1318 00aa 0500     		.2byte	0x5
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 35
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 35
 
 
  1319 00ac 0C       		.byte	0xc
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  1373 0064 10000000 		.4byte	.LFE10-.LFB10
  1374 0068 00000000 		.4byte	0
  1375 006c 00000000 		.4byte	0
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 36
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 36
 
 
  1376              		.section	.debug_ranges,"",%progbits
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  1415              	.LASF12:
  1416 004d 666C6F61 		.ascii	"float\000"
  1416      7400
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 37
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 37
 
 
  1417              	.LASF40:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  1438 00ff 756E7369 		.ascii	"unsigned char\000"
  1438      676E6564 
  1438      20636861 
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 38
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 38
 
 
  1438      7200
@@ -2238,125 +2238,123 @@ ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 1
  1442      74696F6E 
  1442      2D736563 
  1442      74696F6E 
- 1443              	.LASF38:
- 1444 019b 433A5C55 		.ascii	"C:\\Users\\ianh\\Documents\\Car Lab\\Navigation\\Na"
- 1444      73657273 
- 1444      5C69616E 
- 1444      685C446F 
- 1444      63756D65 
- 1445 01c8 76696761 		.ascii	"vigation\\Design.cydsn\000"
- 1445      74696F6E 
- 1445      5C446573 
- 1445      69676E2E 
- 1445      63796473 
- 1446              	.LASF15:
- 1447 01de 72656738 		.ascii	"reg8\000"
- 1447      00
- 1448              	.LASF18:
- 1449 01e3 7472696D 		.ascii	"trimCnt\000"
- 1449      436E7400 
- 1450              	.LASF5:
- 1451 01eb 6C6F6E67 		.ascii	"long unsigned int\000"
- 1451      20756E73 
- 1451      69676E65 
- 1451      6420696E 
- 1451      7400
- 1452              	.LASF9:
- 1453 01fd 75696E74 		.ascii	"uint8\000"
- 1453      3800
- 1454              	.LASF13:
- 1455 0203 646F7562 		.ascii	"double\000"
- 1455      6C6500
- 1456              	.LASF10:
- 1457 020a 75696E74 		.ascii	"uint16\000"
- 1457      313600
- 1458              	.LASF11:
- 1459 0211 75696E74 		.ascii	"uint32\000"
- 1459      333200
- 1460              	.LASF8:
- 1461 0218 756E7369 		.ascii	"unsigned int\000"
- 1461      676E6564 
- 1461      20696E74 
- 1461      00
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 39
+ 1443              	.LASF15:
+ 1444 019b 72656738 		.ascii	"reg8\000"
+ 1444      00
+ 1445              	.LASF18:
+ 1446 01a0 7472696D 		.ascii	"trimCnt\000"
+ 1446      436E7400 
+ 1447              	.LASF5:
+ 1448 01a8 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1448      20756E73 
+ 1448      69676E65 
+ 1448      6420696E 
+ 1448      7400
+ 1449              	.LASF9:
+ 1450 01ba 75696E74 		.ascii	"uint8\000"
+ 1450      3800
+ 1451              	.LASF13:
+ 1452 01c0 646F7562 		.ascii	"double\000"
+ 1452      6C6500
+ 1453              	.LASF10:
+ 1454 01c7 75696E74 		.ascii	"uint16\000"
+ 1454      313600
+ 1455              	.LASF11:
+ 1456 01ce 75696E74 		.ascii	"uint32\000"
+ 1456      333200
+ 1457              	.LASF8:
+ 1458 01d5 756E7369 		.ascii	"unsigned int\000"
+ 1458      676E6564 
+ 1458      20696E74 
+ 1458      00
+ 1459              	.LASF20:
+ 1460 01e2 636D7053 		.ascii	"cmpState\000"
+ 1460      74617465 
+ 1460      00
+ 1461              	.LASF35:
+ 1462 01eb 416E616C 		.ascii	"Analog_CMP_PwrDwnOverrideDisable\000"
+ 1462      6F675F43 
+ 1462      4D505F50 
+ 1462      77724477 
+ 1462      6E4F7665 
+ 1463              	.LASF22:
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 39
 
 
- 1462              	.LASF20:
- 1463 0225 636D7053 		.ascii	"cmpState\000"
- 1463      74617465 
- 1463      00
- 1464              	.LASF35:
- 1465 022e 416E616C 		.ascii	"Analog_CMP_PwrDwnOverrideDisable\000"
- 1465      6F675F43 
- 1465      4D505F50 
- 1465      77724477 
- 1465      6E4F7665 
- 1466              	.LASF22:
- 1467 024f 416E616C 		.ascii	"Analog_CMP_Stop\000"
- 1467      6F675F43 
- 1467      4D505F53 
- 1467      746F7000 
- 1468              	.LASF41:
- 1469 025f 416E616C 		.ascii	"Analog_CMP_ZeroCal\000"
- 1469      6F675F43 
- 1469      4D505F5A 
- 1469      65726F43 
- 1469      616C00
+ 1464 020c 416E616C 		.ascii	"Analog_CMP_Stop\000"
+ 1464      6F675F43 
+ 1464      4D505F53 
+ 1464      746F7000 
+ 1465              	.LASF41:
+ 1466 021c 416E616C 		.ascii	"Analog_CMP_ZeroCal\000"
+ 1466      6F675F43 
+ 1466      4D505F5A 
+ 1466      65726F43 
+ 1466      616C00
+ 1467              	.LASF38:
+ 1468 022f 433A5C55 		.ascii	"C:\\Users\\ianh\\Documents\\Car Lab\\Navigation\\De"
+ 1468      73657273 
+ 1468      5C69616E 
+ 1468      685C446F 
+ 1468      63756D65 
+ 1469 025c 7369676E 		.ascii	"sign.cydsn\000"
+ 1469      2E637964 
+ 1469      736E00
  1470              	.LASF24:
- 1471 0272 73706565 		.ascii	"speed\000"
+ 1471 0267 73706565 		.ascii	"speed\000"
  1471      6400
  1472              	.LASF17:
- 1473 0278 73697A65 		.ascii	"sizetype\000"
+ 1473 026d 73697A65 		.ascii	"sizetype\000"
  1473      74797065 
  1473      00
  1474              	.LASF19:
- 1475 0281 7472696D 		.ascii	"trimCntMax\000"
+ 1475 0276 7472696D 		.ascii	"trimCntMax\000"
  1475      436E744D 
  1475      617800
  1476              	.LASF6:
- 1477 028c 6C6F6E67 		.ascii	"long long int\000"
+ 1477 0281 6C6F6E67 		.ascii	"long long int\000"
  1477      206C6F6E 
  1477      6720696E 
  1477      7400
  1478              	.LASF34:
- 1479 029a 416E616C 		.ascii	"Analog_CMP_PwrDwnOverrideEnable\000"
+ 1479 028f 416E616C 		.ascii	"Analog_CMP_PwrDwnOverrideEnable\000"
  1479      6F675F43 
  1479      4D505F50 
  1479      77724477 
  1479      6E4F7665 
  1480              	.LASF43:
- 1481 02ba 43794465 		.ascii	"CyDelayUs\000"
+ 1481 02af 43794465 		.ascii	"CyDelayUs\000"
  1481      6C617955 
  1481      7300
  1482              	.LASF14:
- 1483 02c4 63686172 		.ascii	"char\000"
+ 1483 02b9 63686172 		.ascii	"char\000"
  1483      00
  1484              	.LASF21:
- 1485 02c9 416E616C 		.ascii	"Analog_CMP_Enable\000"
+ 1485 02be 416E616C 		.ascii	"Analog_CMP_Enable\000"
  1485      6F675F43 
  1485      4D505F45 
  1485      6E61626C 
  1485      6500
  1486              	.LASF2:
-ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc6NbdPz.s 			page 40
-
-
- 1487 02db 73686F72 		.ascii	"short int\000"
+ 1487 02d0 73686F72 		.ascii	"short int\000"
  1487      7420696E 
+ARM GAS  C:\Users\ianh\AppData\Local\Temp\cc2kkA0S.s 			page 40
+
+
  1487      7400
  1488              	.LASF4:
- 1489 02e5 6C6F6E67 		.ascii	"long int\000"
+ 1489 02da 6C6F6E67 		.ascii	"long int\000"
  1489      20696E74 
  1489      00
  1490              	.LASF16:
- 1491 02ee 6C6F6E67 		.ascii	"long double\000"
+ 1491 02e3 6C6F6E67 		.ascii	"long double\000"
  1491      20646F75 
  1491      626C6500 
  1492              	.LASF0:
- 1493 02fa 7369676E 		.ascii	"signed char\000"
+ 1493 02ef 7369676E 		.ascii	"signed char\000"
  1493      65642063 
  1493      68617200 
  1494              	.LASF23:
- 1495 0306 6E696262 		.ascii	"nibble\000"
+ 1495 02fb 6E696262 		.ascii	"nibble\000"
  1495      6C6500
  1496              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
