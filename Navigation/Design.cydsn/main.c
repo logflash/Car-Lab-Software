@@ -111,7 +111,8 @@ double lastErr_speed = 0.0;
 double sumErr_speed = 0.0;
 
 // Goal (speed) rpm
-double goalRpm = 410.0;
+double goalRpmMax = 500.0;
+double goalRpm = 0;
 
 // PID constants (speed)
 double kp_speed = 2.00;
@@ -128,9 +129,9 @@ double sumErr_steer = 0.0;
 double goalDarkTime = 380.0;
 
 // PID constants (steering)
-double kp_steer = 1.15; //1.0
+double kp_steer = 1.6; //1.0
 double ki_steer = 0.0;  // 0.8;
-double kd_steer = 0.0; // 02; // 0.0;
+double kd_steer = 0.4; // 02; // 0.0;
 
 // PID period (sec)
 double pid_period = 0.020;
@@ -232,6 +233,7 @@ CY_ISR(pid_int) {
     
     // Update the steering as a result of the PID
     Servo_PWM_WriteCompare(pidOutput_steer);
+    goalRpm = goalRpmMax - 0.4 * ((pidOutput_steer > 1500) ? (pidOutput_steer - 1500) : (1500 - pidOutput_steer));
 }
 
 int main(void)

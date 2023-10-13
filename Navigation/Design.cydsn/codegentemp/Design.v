@@ -1,6 +1,6 @@
 // ======================================================================
 // Design.v generated from TopDesign.cysch
-// 10/08/2023 at 15:14
+// 10/13/2023 at 19:05
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -406,7 +406,7 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v"
 `endif
 
-// VDAC8_v1_90(Data_Source=0, Initial_Value=100, Strobe_Mode=0, VDAC_Range=0, VDAC_Speed=2, Voltage=400, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=VDAC8_v1_90, CY_CONFIG_TITLE=Reference, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Reference, CY_INSTANCE_SHORT_NAME=Reference, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=90, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=Reference, )
+// VDAC8_v1_90(Data_Source=0, Initial_Value=94, Strobe_Mode=0, VDAC_Range=0, VDAC_Speed=2, Voltage=376, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=VDAC8_v1_90, CY_CONFIG_TITLE=Reference, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Reference, CY_INSTANCE_SHORT_NAME=Reference, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=90, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=Reference, )
 module VDAC8_v1_90_2 (
     data,
     strobe,
@@ -417,7 +417,7 @@ module VDAC8_v1_90_2 (
     electrical  vOut;
 
     parameter Data_Source = 0;
-    parameter Initial_Value = 100;
+    parameter Initial_Value = 94;
     parameter Strobe_Mode = 0;
 
     electrical  Net_77;
@@ -1322,7 +1322,7 @@ module top ;
         .strobe(1'b0),
         .vOut(Net_258));
     defparam Reference.Data_Source = 0;
-    defparam Reference.Initial_Value = 100;
+    defparam Reference.Initial_Value = 94;
     defparam Reference.Strobe_Mode = 0;
 
 	wire [0:0] tmpOE__Hall_Sensor_net;
