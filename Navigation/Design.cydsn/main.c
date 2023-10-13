@@ -26,7 +26,10 @@ volatile lpFilter hallFilter;
 uint32 lastHallTime = 0-1;
 
 // Average mprm of the DC motor
-double avgRpm;
+volatile double avgRpm;
+
+// The number of milliseconds before the video detects a dark pixel
+volatile double darkTime;
 
 // A timeout (if 0.2 seconds pass before a Hall update, clear the rpm)
 uint32 timeOutCounter = 0;
@@ -73,23 +76,21 @@ CY_ISR(dark_int) {
     
     // Get the elapsed time, and if applicable, send it to the lp filter
     uint32 timeElapsed = 0-1-Dark_Timer_ReadCapture();
-    if (timeElapsed > 800 || timeElapsed < 20) {
+    if (timeElapsed > 630 || timeElapsed < 70) {
         return;
-    }
-    if (timeElapsed > 600) {
-        timeElapsed = 320;
     }
     filterPush(&darkFilter, timeElapsed);
     
     // Center (median) time
-    uint32 centerTime = darkFilter.median;
+    darkTime = darkFilter.median;
 
     // Write the center elapsed time to the XBee
-    // char buf[128];
-    // sprintf(buf, "%-10d %-20lu\r\n", numFrames, centerTime);
+    //char buf[128];
+    //sprintf(buf, "%ld\r\n", (int32)darkTime);
     
+    /*
     // Servo PWM Input
-    int servoPWM = centerTime * 2 + 824;
+    int servoPWM = darkTime * 2 + 824;
     
     // Servo Limits
     if (servoPWM > 1900) {
@@ -97,12 +98,10 @@ CY_ISR(dark_int) {
     } else if (servoPWM < 1100) {
         servoPWM = 1100;
     }
-    
-    // Write to the Servo PWM Pin
-    Servo_PWM_WriteCompare(servoPWM);
+    */
     
     // Write the value to the screen
-    // XBee_PutString(buf);
+    //XBee_PutString(buf);
 }
 
 // PID (speed) last
@@ -112,14 +111,26 @@ double lastErr_speed = 0.0;
 double sumErr_speed = 0.0;
 
 // Goal (speed) rpm
-double goalRpm = 400.0;
+double goalRpm = 410.0;
 
 // PID constants (speed)
-//double kp_speed = 0.07;
-//double ki_speed = 0.60;
-double kp_speed = 0.10;
-double ki_speed = 0.30;
+double kp_speed = 2.00;
+double ki_speed = 2.00;// 0.30;
 double kd_speed = 0.00;
+
+// PID (steering) last
+double lastErr_steer = 0.0;
+
+// PID (steering) sum
+double sumErr_steer = 0.0;
+
+// Goal (speed) rpm
+double goalDarkTime = 380.0;
+
+// PID constants (steering)
+double kp_steer = 1.15; //1.0
+double ki_steer = 0.0;  // 0.8;
+double kd_steer = 0.0; // 02; // 0.0;
 
 // PID period (sec)
 double pid_period = 0.020;
@@ -130,32 +141,34 @@ CY_ISR(pid_int) {
     // Time out counter increment
     timeOutCounter++;
     if (timeOutCounter >= 10) {
-        avgRpm = 0.0;
+        avgRpm = 0;
     }
     
+    // Calculate the current speed error
     double currErr_speed = goalRpm - avgRpm;
     
     // Integral calculation (and windup protection)
     sumErr_speed += currErr_speed;
     double integralTerm_speed = (ki_speed * sumErr_speed * pid_period);
-    if (integralTerm_speed > 2048) {
-        integralTerm_speed = 2048;
-    } else if (integralTerm_speed < -2048) {
-        integralTerm_speed = -2048;
+    if (integralTerm_speed > 1024) {
+        integralTerm_speed = 1024;
+    } else if (integralTerm_speed < -1024) {
+        integralTerm_speed = -1024;
     }
     
-    if (currErr_speed * lastErr_speed < 0) {
-        sumErr_speed = 0;
-    }
+    // Integral reset when the error direction changes
+    //if (currErr_speed * lastErr_speed < 0) {
+    //    sumErr_speed = 0;
+    //}
     
     // Proportional calculation
-    double proportionalTerm_speed = (kp_speed * sumErr_speed);
+    double proportionalTerm_speed = (kp_speed * currErr_speed);
     
     // Derivative calculation
     double derivativeTerm_speed = (kd_speed * (currErr_speed - lastErr_speed) / pid_period);
     
     // PID sum
-    double pidOutput_speed = (uint32)(2.2 * goalRpm + proportionalTerm_speed + integralTerm_speed + derivativeTerm_speed);
+    double pidOutput_speed = (uint32)(1.8 * goalRpm + proportionalTerm_speed + integralTerm_speed + derivativeTerm_speed);
     
     // Store the previous error
     lastErr_speed = currErr_speed;
@@ -171,14 +184,67 @@ CY_ISR(pid_int) {
     Throttle_PWM_WriteCompare((uint16)pidOutput_speed);
     
     // Print to show the ISR has been triggered and the PID has been calculated
+    //char buf[128];
+    //sprintf(buf, "%10ld %10u %10ld\r\n", (int32)avgRpm, (uint16)pidOutput_speed, (int32)integralTerm_speed);
+    //XBee_PutString(buf);
+    
+    // Calculate the current steering error
+    double currErr_steer = (darkTime - goalDarkTime);
+    
+    // Integral calculation (and windup protection)
+    sumErr_steer += currErr_steer;
+    double integralTerm_steer = (ki_steer * sumErr_steer * pid_period);
+    if (integralTerm_steer > 500) {
+        integralTerm_steer = 500;
+    } else if (integralTerm_steer < -500) {
+        integralTerm_steer = -500;
+    }
+    
+    // Integral reset when the error direction changes
+    // if (currErr_steer * lastErr_steer < 0) {
+    //     sumErr_steer = 0;
+    // }
+    
+    // Proportional calculation
+    double proportionalTerm_steer = (kp_steer * currErr_steer);
+    
+    double cubicProportional_steer = 0.0; //(kp_steer * 4e-5 * currErr_steer * currErr_steer * currErr_steer);
+    
+    // Derivative calculation
+    double derivativeTerm_steer = (kd_steer * (currErr_steer - lastErr_steer) / pid_period);
+    
+    // PID sum
+    double pidOutput_steer = (uint32)(1500 + proportionalTerm_steer + cubicProportional_steer + integralTerm_steer + derivativeTerm_steer);
+    
+    // Store the previous error
+    lastErr_steer = currErr_steer;
+    
+    // Bound the PID output
+    if (pidOutput_steer < 1000) {
+        pidOutput_steer = 1000;
+    } else if (pidOutput_steer > 2000) {
+        pidOutput_steer = 2000;
+    }
+    
     char buf[128];
-    //sprintf(buf, "%10ld %10d\r\n", (int32)avgRpm, (uint16)pidOutput_speed);
-    sprintf(buf, "%10ld %10u %10ld\r\n", (int32)avgRpm, (uint16)pidOutput_speed, (int32)integralTerm_speed);
+    sprintf(buf, "err = %5ld ; cube = %5ld ; output = %4ld\r\n", (int32)currErr_steer, (int32)cubicProportional_steer, (int32)pidOutput_steer);
     XBee_PutString(buf);
+    
+    // Update the steering as a result of the PID
+    Servo_PWM_WriteCompare(pidOutput_steer);
 }
 
 int main(void)
 {
+    // Servo PWM
+    Servo_PWM_Start();
+    
+    int j = 112;
+    for (int i=0; i<1234567; i++) {
+        if (j & 1) j = 3 * j + 1;
+        else j >>= 1;
+    }
+    
     CyGlobalIntEnable; /* Enable global interrupts. */
 
     // Start the LCD
@@ -208,9 +274,6 @@ int main(void)
     // Target row interrupt
     Target_Interrupt_Start();
     Target_Interrupt_SetVector(target_int);
-    
-    // Servo PWM
-    Servo_PWM_Start();
     
     // Throttle PWM
     Throttle_PWM_Start();

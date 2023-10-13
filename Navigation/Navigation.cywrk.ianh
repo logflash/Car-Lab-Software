@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Navigation\Design\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Navigation\Design\TopDesign">
 <ExpandedNodeIds>
 <v>Navigation</v>
 <v>Navigation\Design</v>
@@ -148,51 +148,6 @@
 <VisibleNodeIds>
 <v>Navigation</v>
 <v>Navigation\Design</v>
-<v>Navigation\Design\CortexM3</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Analog_CMP.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Analog_CMP_PM.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\CSync.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\dark_clock.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Dark_Interrupt.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Dark_Timer.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Dark_Timer_PM.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\dc_motor_clock.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Frame_Interrupt.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\hall_clock.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\hall_clock_1.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Hall_Interrupt.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Hall_LED.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Hall_Sensor.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Hall_Timer.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Hall_Timer_PM.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\lcd_functions.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\lp_filter.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\PID_Interrupt.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\PID_Timer.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\PID_Timer_PM.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Reference.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Reference_PM.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Servo.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\servo_clock.lst</v>
-<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Servo_PWM.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -264,8 +219,24 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
-<config v="" />
+<OpenDocs>
+<name v=".\Design.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Design.cydsn\lcd_functions.c" />
+<name v=".\Design.cydsn\Design.cydwr" />
+<name v=".\Design.cydsn\lp_filter.c" />
+<name v=".\Design.cydsn\lp_filter.h" />
+<name v=".\Design.cydsn\lcd_functions.h" />
+<name v=".\Design.cydsn\cyapicallbacks.h" />
+<name v=".\Design.cydsn\main.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1682, 741" SelectedTabbedMdiWindow="4e29da7f-859f-4eb3-a09e-b69b336dc106"><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\Navigation\Design.cydsn\TopDesign\TopDesign.cysch" Guid="685b7e57-b999-4256-b83d-0ff2c6a0a322" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\Navigation\Design.cydsn\lcd_functions.c" Guid="4e29da7f-859f-4eb3-a09e-b69b336dc106" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\Navigation\Design.cydsn\Design.cydwr" Guid="4d2e71ce-46b2-4ea6-8c94-768c2cfb18df" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\Navigation\Design.cydsn\lp_filter.c" Guid="0dabc356-4d21-4f4e-90d3-9209fab06ad0" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\Navigation\Design.cydsn\lp_filter.h" Guid="60c22fea-eba5-41c2-b27d-029caf9b2bb0" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\Navigation\Design.cydsn\lcd_functions.h" Guid="e984d99f-11db-4570-9f3c-584a565d2ca1" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\Navigation\Design.cydsn\cyapicallbacks.h" Guid="631d9267-ac7b-4822-9c3f-7dea3d836297" /><DocumentWindow Key="C:\Users\ianh\Documents\Car Lab\Navigation\Design.cydsn\main.c" Guid="8bba862f-1cda-4eaa-85b8-1d99614e4712" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="Debug" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
 </CyXmlSerializer>
