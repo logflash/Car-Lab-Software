@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Navigation\Design\TopDesign">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Navigation\Design\Design.cydwr">
 <ExpandedNodeIds>
 <v>Navigation</v>
 <v>Navigation\Design</v>
@@ -38,7 +38,30 @@
 <v>Navigation\Design\Source Files\main.c</v>
 <v>Navigation\Design\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>Navigation</v>
+<v>Navigation\Design</v>
+<v>Navigation\Design\TopDesign</v>
+<v>Navigation\Design\Design.cydwr</v>
+<v>Navigation\Design\Design.cydwr\Pins</v>
+<v>Navigation\Design\Design.cydwr\Analog</v>
+<v>Navigation\Design\Design.cydwr\Clocks</v>
+<v>Navigation\Design\Design.cydwr\Interrupts</v>
+<v>Navigation\Design\Design.cydwr\DMA</v>
+<v>Navigation\Design\Design.cydwr\System</v>
+<v>Navigation\Design\Design.cydwr\Directives</v>
+<v>Navigation\Design\Design.cydwr\Flash Security</v>
+<v>Navigation\Design\Design.cydwr\EEPROM</v>
+<v>Navigation\Design\Header Files</v>
+<v>Navigation\Design\Header Files\cyapicallbacks.h</v>
+<v>Navigation\Design\Header Files\lcd_functions.h</v>
+<v>Navigation\Design\Header Files\lp_filter.h</v>
+<v>Navigation\Design\Source Files</v>
+<v>Navigation\Design\Source Files\lcd_functions.c</v>
+<v>Navigation\Design\Source Files\lp_filter.c</v>
+<v>Navigation\Design\Source Files\main.c</v>
+<v>Navigation\Design\Generated_Source</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -47,7 +70,12 @@
 <v>Navigation\Design\TopDesign</v>
 <v>Navigation\Design\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>Navigation</v>
+<v>Navigation\Design</v>
+<v>Navigation\Design\TopDesign</v>
+<v>Navigation\Design\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -117,7 +145,55 @@
 <v>Navigation\Design\Design.rpt</v>
 <v>Navigation\Design\Design_timing.html</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>Navigation</v>
+<v>Navigation\Design</v>
+<v>Navigation\Design\CortexM3</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Analog_CMP.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Analog_CMP_PM.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\CSync.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\dark_clock.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Dark_Interrupt.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Dark_Timer.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Dark_Timer_PM.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\dc_motor_clock.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Frame_Interrupt.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\hall_clock.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\hall_clock_1.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Hall_Interrupt.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Hall_LED.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Hall_Sensor.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Hall_Timer.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Hall_Timer_PM.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\lcd_functions.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\lp_filter.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\PID_Interrupt.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\PID_Timer.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\PID_Timer_PM.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Reference.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Reference_PM.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Servo.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\servo_clock.lst</v>
+<v>Navigation\Design\CortexM3\ARM_GCC_541\Debug\Listing Files\Servo_PWM.lst</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
 <TreeKeysV2>
@@ -143,8 +219,10 @@
 <v>Navigation\Design\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>Navigation\Design\cy_pins_v2_20</v>
 <v>Navigation\Design\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>Navigation\Design\DigitalComp_v1_0.pdf</v>
-<v>Navigation\Design\nand_v1_0.pdf</v>
+<v>Navigation\Design\DigitalComp_v1_0</v>
+<v>Navigation\Design\DigitalComp_v1_0\DigitalComp_v1_0.pdf</v>
+<v>Navigation\Design\nand_v1_0</v>
+<v>Navigation\Design\nand_v1_0\nand_v1_0.pdf</v>
 <v>Navigation\Design\not_v1_0.pdf</v>
 <v>Navigation\Design\PWM_v3_30</v>
 <v>Navigation\Design\PWM_v3_30\PWM_v3_30.pdf</v>
@@ -153,7 +231,36 @@
 <v>Navigation\Design\UART_v2_50.pdf</v>
 <v>Navigation\Design\VDAC8_v1_90.pdf</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>Navigation</v>
+<v>Navigation\Design</v>
+<v>Navigation\Design\PSoC 5LP Architecture TRM</v>
+<v>Navigation\Design\CY8C58LP Family Datasheet</v>
+<v>Navigation\Design\System Reference Guides</v>
+<v>Navigation\Design\System Reference Guides\cy_boot_v6_0</v>
+<v>Navigation\Design\BasicCounter_v1_0.pdf</v>
+<v>Navigation\Design\CharLCD_v2_20.pdf</v>
+<v>Navigation\Design\Comp_v2_0.pdf</v>
+<v>Navigation\Design\cy_clock_v2_20</v>
+<v>Navigation\Design\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>Navigation\Design\cy_constant_v1_0</v>
+<v>Navigation\Design\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>Navigation\Design\cy_isr_v1_70</v>
+<v>Navigation\Design\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>Navigation\Design\cy_pins_v2_20</v>
+<v>Navigation\Design\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Navigation\Design\DigitalComp_v1_0</v>
+<v>Navigation\Design\DigitalComp_v1_0\DigitalComp_v1_0.pdf</v>
+<v>Navigation\Design\nand_v1_0</v>
+<v>Navigation\Design\nand_v1_0\nand_v1_0.pdf</v>
+<v>Navigation\Design\not_v1_0.pdf</v>
+<v>Navigation\Design\PWM_v3_30</v>
+<v>Navigation\Design\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>Navigation\Design\Timer_v2_80</v>
+<v>Navigation\Design\Timer_v2_80\Timer_v2_80.pdf</v>
+<v>Navigation\Design\UART_v2_50.pdf</v>
+<v>Navigation\Design\VDAC8_v1_90.pdf</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
 </CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>

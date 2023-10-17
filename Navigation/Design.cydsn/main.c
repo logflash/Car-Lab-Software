@@ -17,7 +17,9 @@
 volatile int numFrames = 0;
 
 // Low-pass filter of darkness detector (video)
-volatile lpFilter darkFilter;
+volatile lpFilter darkFilter50;
+volatile lpFilter darkFilter100;
+volatile lpFilter darkFilter150;
 
 // Low-pass filter of hall effect sensor speed (mrpm)
 volatile lpFilter hallFilter;
@@ -29,7 +31,10 @@ uint32 lastHallTime = 0-1;
 volatile double avgRpm;
 
 // The number of milliseconds before the video detects a dark pixel
-volatile double darkTime;
+volatile double darkTime50;
+volatile double darkTime100;
+volatile double darkTime150;
+volatile double darkTimeOverall;
 
 // A timeout (if 0.2 seconds pass before a Hall update, clear the rpm)
 uint32 timeOutCounter = 0;
@@ -59,11 +64,6 @@ CY_ISR(hall_int) {
     // Average hall effect mrpm
     avgRpm = (double)((uint64) 12000000000 / (uint64) hallFilter.avg) / 1000.0;
     
-    // Print the time
-    //char buf[128];
-    //sprintf(buf, "%lu\r\n", avgMrpm);
-    //XBee_PutString(buf);
-    
     // Un-capture the hall timer
     Hall_Timer_ReadStatusRegister();
     
@@ -71,37 +71,46 @@ CY_ISR(hall_int) {
     timeOutCounter = 0;
 }
 
-// Dark (falling edge of comparator) interrupt
-CY_ISR(dark_int) {
+// Dark (falling edge of comparator) interrupt - line 50
+CY_ISR(dark_int_50) {
     
     // Get the elapsed time, and if applicable, send it to the lp filter
     uint32 timeElapsed = 0-1-Dark_Timer_ReadCapture();
     if (timeElapsed > 630 || timeElapsed < 70) {
         return;
     }
-    filterPush(&darkFilter, timeElapsed);
+    filterPush(&darkFilter50, timeElapsed);
     
     // Center (median) time
-    darkTime = darkFilter.median;
+    darkTime50 = darkFilter50.median;
+}
 
-    // Write the center elapsed time to the XBee
-    //char buf[128];
-    //sprintf(buf, "%ld\r\n", (int32)darkTime);
+// Dark (falling edge of comparator) interrupt - line 100
+CY_ISR(dark_int_100) {
     
-    /*
-    // Servo PWM Input
-    int servoPWM = darkTime * 2 + 824;
-    
-    // Servo Limits
-    if (servoPWM > 1900) {
-        servoPWM = 1900;
-    } else if (servoPWM < 1100) {
-        servoPWM = 1100;
+    // Get the elapsed time, and if applicable, send it to the lp filter
+    uint32 timeElapsed = 0-1-Dark_Timer_ReadCapture();
+    if (timeElapsed > 630 || timeElapsed < 70) {
+        return;
     }
-    */
+    filterPush(&darkFilter100, timeElapsed);
     
-    // Write the value to the screen
-    //XBee_PutString(buf);
+    // Center (median) time
+    darkTime100 = darkFilter100.median;
+}
+
+// Dark (falling edge of comparator) interrupt - line 150
+CY_ISR(dark_int_150) {
+    
+    // Get the elapsed time, and if applicable, send it to the lp filter
+    uint32 timeElapsed = 0-1-Dark_Timer_ReadCapture();
+    if (timeElapsed > 630 || timeElapsed < 70) {
+        return;
+    }
+    filterPush(&darkFilter150, timeElapsed);
+    
+    // Center (median) time
+    darkTime150 = darkFilter150.median;
 }
 
 // PID (speed) last
@@ -191,7 +200,7 @@ CY_ISR(pid_int) {
     //XBee_PutString(buf);
     
     // Calculate the current steering error
-    double currErr_steer = (darkTime - goalDarkTime);
+    double currErr_steer = (darkTime100 - goalDarkTime);
     
     // Integral calculation (and windup protection)
     sumErr_steer += currErr_steer;
@@ -273,6 +282,7 @@ int main(void)
     // Servo PWM
     Servo_PWM_Start();
     
+    // Stall the MCU with useless operations so that the servo has enough time to set up
     int j = 112;
     for (int i=0; i<1234567; i++) {
         if (j & 1) j = 3 * j + 1;
@@ -291,13 +301,27 @@ int main(void)
     Frame_Interrupt_Start();
     Frame_Interrupt_SetVector(frame_int);
     
-    // Dark interrupt
+    // Dark interrupts
     Analog_CMP_Start();
     Reference_Start();
-    Dark_Timer_Start();
-    Dark_Interrupt_Start();
-    Dark_Interrupt_SetVector(dark_int);
-    filterResize(&darkFilter, 3);
+    
+    // Line 50
+    Dark_Timer_50_Start();
+    Dark_Int_50_Start();
+    Dark_Int_50_SetVector(dark_int_50);
+    filterResize(&darkFilter50, 3);
+    
+    // Line 100
+    Dark_Timer_100_Start();
+    Dark_Int_100_Start();
+    Dark_Int_100_SetVector(dark_int_100);
+    filterResize(&darkFilter100, 3);
+    
+    // Line 150
+    Dark_Timer_150_Start();
+    Dark_Int_150_Start();
+    Dark_Int_150_SetVector(dark_int_150);
+    filterResize(&darkFilter150, 3);
     
     // Hall sensor interrupt
     Hall_Interrupt_Start();
@@ -306,8 +330,12 @@ int main(void)
     filterResize(&hallFilter, 5);
     
     // Target row interrupt
-    Target_Interrupt_Start();
-    Target_Interrupt_SetVector(target_int);
+    Target_Int_50_Start();
+    Target_Int_50_SetVector(target_int);
+    Target_Int_100_Start();
+    Target_Int_100_SetVector(target_int);
+    Target_Int_150_Start();
+    Target_Int_150_SetVector(target_int);
     
     // Throttle PWM
     Throttle_PWM_Start();
