@@ -111,7 +111,7 @@ double lastErr_speed = 0.0;
 double sumErr_speed = 0.0;
 
 // Goal (speed) rpm
-double goalRpm = 410.0;
+double goalRpm = 420.0;
 
 // PID constants (speed)
 double kp_speed = 2.00;
@@ -125,15 +125,16 @@ double lastErr_steer = 0.0;
 double sumErr_steer = 0.0;
 
 // Goal (speed) rpm
-double goalDarkTime = 380.0;
+double goalDarkTime = 330.0;
 
 // PID constants (steering)
-double kp_steer = 1.15; //1.0
+double kp_steer = 1.12; //1.0
 double ki_steer = 0.0;  // 0.8;
-double kd_steer = 0.0; // 02; // 0.0;
+double kd_steer = 0.05; // 02; // 0.0;
 
 // PID period (sec)
 double pid_period = 0.020;
+double cubicProportional_steer;
 
 // PID ISR (every 20 msec)
 CY_ISR(pid_int) {
@@ -143,6 +144,7 @@ CY_ISR(pid_int) {
     if (timeOutCounter >= 10) {
         avgRpm = 0;
     }
+    
     
     // Calculate the current speed error
     double currErr_speed = goalRpm - avgRpm;
@@ -208,18 +210,50 @@ CY_ISR(pid_int) {
     // Proportional calculation
     double proportionalTerm_steer = (kp_steer * currErr_steer);
     
-    double cubicProportional_steer = 0.0; //(kp_steer * 4e-5 * currErr_steer * currErr_steer * currErr_steer);
+    /*if (currErr_steer > 150) {
+        cubicProportional_steer = (kp_steer * 2e-5 * currErr_steer * currErr_steer * currErr_steer); //(kp_steer * 4e-5 * currErr_steer * currErr_steer * currErr_steer);
+    }
+    else {
+        cubicProportional_steer = 0;
+    }*/
     
     // Derivative calculation
     double derivativeTerm_steer = (kd_steer * (currErr_steer - lastErr_steer) / pid_period);
     
     // PID sum
-    double pidOutput_steer = (uint32)(1500 + proportionalTerm_steer + cubicProportional_steer + integralTerm_steer + derivativeTerm_steer);
+    double pidOutput_steer = (int32)(proportionalTerm_steer + cubicProportional_steer + integralTerm_steer + derivativeTerm_steer);
+    
+    double leftSense = 1.3;
+    double leftIntercept = -50;
+    
+    if (pidOutput_steer < leftIntercept) {
+        pidOutput_steer = leftSense * pidOutput_steer - leftIntercept*(leftSense-1)/2;
+    } else if (pidOutput_steer < 0) {
+        pidOutput_steer = ((leftSense-1)/(2*leftIntercept)) * pidOutput_steer * pidOutput_steer + pidOutput_steer;    
+    }
+    /*
+    if (pidOutput_steer < 0) {
+        pidOutput_steer *= leftSense;    
+    }
+    else if (pidOutput_steer > 0) {
+        pidOutput_steer -= rightSense*pidOutput_steer*pidOutput_steer;
+    }*/
+    
+    pidOutput_steer += 1500;
+    
+    goalRpm = 421;
+    goalRpm -= abs((int32)currErr_steer)*1.1;
+    if (goalRpm < 360) {
+        goalRpm = 360;
+    }
+   
     
     // Store the previous error
     lastErr_steer = currErr_steer;
     
-    // Bound the PID output
+    //pidOutput_steer += 1500;
+    
+     // Bound the PID output
     if (pidOutput_steer < 1000) {
         pidOutput_steer = 1000;
     } else if (pidOutput_steer > 2000) {
