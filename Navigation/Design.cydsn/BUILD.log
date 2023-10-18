@@ -1,4 +1,4 @@
---------------- Build Started: 10/17/2023 18:23:24 Project: Design, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 10/17/2023 20:38:30 Project: Design, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 cydsfit.exe -.appdatapath "C:\Users\ianh\AppData\Local\Cypress Semiconductor\PSoC Creator\4.4" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p "C:\Users\ianh\Documents\Car Lab\Navigation\Design.cydsn\Design.cyprj" -d CY8C5868AXI-LP035 -s "C:\Users\ianh\Documents\Car Lab\Navigation\Design.cydsn\Generated_Source\PSoC5" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 Elaborating Design...
 ADD: fit.M0032: warning: Clock Warning: (dark_clock's accuracy range '12 MHz +/- 1%, (11.88 MHz - 12.12 MHz)' is not within the specified tolerance range '10 MHz +/- 5%, (9.5 MHz - 10.5 MHz)'.).
@@ -14,4 +14,4 @@ Error: mpr.M0014: Resource limit: Maximum number of Datapath Cells exceeded (max
 Dependency Generation...
 Cleanup...
 Error: fit.M0050: The fitter aborted due to errors, please address all errors and rebuild. (App=cydsfit)
---------------- Build Failed: 10/17/2023 18:23:29 ---------------
+--------------- Build Failed: 10/17/2023 20:38:39 ---------------
