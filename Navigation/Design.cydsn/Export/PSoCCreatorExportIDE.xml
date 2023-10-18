@@ -106,32 +106,18 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\VSync_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\VSync.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\VSync.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\XBee.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\XBee.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\XBee_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\XBee_INT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\XBee_BOOT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\XBee_IntClock.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\XBee_IntClock.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CSync_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CSync.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CSync.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Target_Interrupt.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Target_Interrupt.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Reference.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Reference.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Reference_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Analog_CMP.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Analog_CMP.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Analog_CMP_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Timer.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Timer.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Timer_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Video_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Video.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Video.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Interrupt.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Interrupt.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Servo_PWM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Servo_PWM.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Servo_PWM_PM.c</File>
@@ -155,8 +141,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Hall_LED_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Hall_LED.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Hall_LED.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\dc_motor_clock.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\dc_motor_clock.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Throttle_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Throttle.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Throttle.h</File>
@@ -166,10 +150,33 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PID_Timer.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PID_Timer.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PID_Timer_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\hall_clock_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\hall_clock_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PID_Interrupt.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PID_Interrupt.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Timer_100.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Timer_100.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Timer_100_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Target_Int_100.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Target_Int_100.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Int_100.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Int_100.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\throttle_clock.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\throttle_clock.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\pid_clock.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\pid_clock.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Timer_150.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Timer_150.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Timer_150_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Int_150.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Int_150.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Timer_50.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Timer_50.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Timer_50_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Int_50.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Dark_Int_50.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Target_Int_50.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Target_Int_50.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Target_Int_150.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Target_Int_150.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\ianh\Documents\Car Lab\Navigation\Design.cydsn\Export\ARM_GCC_Generic">

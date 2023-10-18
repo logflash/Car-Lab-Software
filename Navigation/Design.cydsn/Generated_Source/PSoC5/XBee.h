@@ -28,7 +28,7 @@
 * Conditional Compilation Parameters
 ***************************************/
 
-#define XBee_RX_ENABLED                     (1u)
+#define XBee_RX_ENABLED                     (0u)
 #define XBee_TX_ENABLED                     (1u)
 #define XBee_HD_ENABLED                     (0u)
 #define XBee_RX_INTERRUPT_ENABLED           (0u)
@@ -359,7 +359,7 @@ extern uint8 XBee_initVar;
 #endif /* (XBee_RXHW_ADDRESS_ENABLED) */
 
 #define XBee_INIT_RX_INTERRUPTS_MASK \
-                                  (uint8)((1 << XBee_RX_STS_FIFO_NOTEMPTY_SHIFT) \
+                                  (uint8)((0 << XBee_RX_STS_FIFO_NOTEMPTY_SHIFT) \
                                         | (0 << XBee_RX_STS_MRKSPC_SHIFT) \
                                         | (0 << XBee_RX_STS_ADDR_MATCH_SHIFT) \
                                         | (0 << XBee_RX_STS_PAR_ERROR_SHIFT) \
