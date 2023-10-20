@@ -100,9 +100,9 @@ CY_ISR(dark_int_50) {
     // Center (median) time
     double newDarkTime50 = darkFilter50.median;
     
-    if (newDarkTime50 > darkTime50 - 160) {
+    if (newDarkTime50 > darkTime50 - 600) {
         darkTime50 = newDarkTime50;
-    } else if (newDarkTime50 < darkTime50 + 160) {
+    } else if (newDarkTime50 < darkTime50 + 600) {
         darkTime50 = newDarkTime50;
     }
 }
@@ -120,9 +120,9 @@ CY_ISR(dark_int_100) {
     // Center (median) time
     double newDarkTime100 = darkFilter100.median;
     
-    if (newDarkTime100 > darkTime100 - 120) {
+    if (newDarkTime100 > darkTime100 - 600) {
         darkTime100 = newDarkTime100;
-    } else if (newDarkTime100 < darkTime100 + 120) {
+    } else if (newDarkTime100 < darkTime100 + 600) {
         darkTime100 = newDarkTime100;
     }
 }
@@ -140,9 +140,9 @@ CY_ISR(dark_int_150) {
     // Center (median) time
     double newDarkTime150 = darkFilter150.median;
     
-    if (newDarkTime150 > darkTime150 - 80) {
+    if (newDarkTime150 > darkTime150 - 600) {
         darkTime150 = newDarkTime150;
-    } else if (newDarkTime150 < darkTime150 + 80) {
+    } else if (newDarkTime150 < darkTime150 + 600) {
         darkTime150 = newDarkTime150;
     }
 }
@@ -173,7 +173,7 @@ double goalDarkTime = 330.0;
 // PID constants (steering)
 double kp_steer = 1.12;
 double ki_steer = 0.0;
-double kd_steer = 0.05;
+double kd_steer = 0.06;
 
 // PID period (sec)
 double pid_period = 0.020;
@@ -248,7 +248,7 @@ CY_ISR(pid_int) {
     // PID sum
     double pidOutput_steer = (int32)(proportionalTerm_steer + cubicProportional_steer + integralTerm_steer + derivativeTerm_steer);
     
-    double leftSense = 1.3;
+    double leftSense = 1.4;
     double leftIntercept = -50;
     
     if (pidOutput_steer < leftIntercept) {
@@ -266,12 +266,11 @@ CY_ISR(pid_int) {
     
     pidOutput_steer += 1500;
     
-    goalRpm = 421;
-    goalRpm -= abs((int32)currErr_steer)*1.1;
-    if (goalRpm < 360) {
-        goalRpm = 360;
+    goalRpm = 450;
+    goalRpm -= abs((int32)currErr_steer)*1.2;
+    if (goalRpm < 320) {
+        goalRpm = 320;
     }
-   
     
     // Store the previous error
     lastErr_steer = currErr_steer;
