@@ -17,7 +17,9 @@
 volatile int numFrames = 0;
 
 // Low-pass filter of darkness detector (video)
-volatile lpFilter darkFilter;
+volatile lpFilter darkFilter50;
+volatile lpFilter darkFilter100;
+volatile lpFilter darkFilter150;
 
 // Low-pass filter of hall effect sensor speed (mrpm)
 volatile lpFilter hallFilter;
@@ -29,7 +31,10 @@ uint32 lastHallTime = 0-1;
 volatile double avgRpm;
 
 // The number of milliseconds before the video detects a dark pixel
-volatile double darkTime;
+volatile double darkTime50;
+volatile double darkTime100;
+volatile double darkTime150;
+volatile double darkTimeOverall = 330.0;
 
 // A timeout (if 0.2 seconds pass before a Hall update, clear the rpm)
 uint32 timeOutCounter = 0;
@@ -37,11 +42,27 @@ uint32 timeOutCounter = 0;
 // Camera frame interrupt
 CY_ISR(frame_int) {
     ++numFrames;
+    
+    darkTimeOverall = (darkTime50 + 2 * darkTime100 + darkTime150) / 4.0;
+    
+    //char buf[128];
+    //sprintf(buf, "%5d: %5ld %5ld %5ld -> %5ld\r\n", numFrames, (int32)darkTime50, (int32)darkTime100, (int32)darkTime150, (int32)darkTimeOverall);
+    //XBee_PutString(buf);
 }
 
-// Target interrupt
-CY_ISR(target_int) {
-    Dark_Timer_ReadStatusRegister();
+// Target interrupt (line 50)
+CY_ISR(target_int_50) {
+    Dark_Timer_50_ReadStatusRegister();
+}
+
+// Target interrupt (line 100)
+CY_ISR(target_int_100) {
+    Dark_Timer_100_ReadStatusRegister();
+}
+
+// Target interrupt (line 150)
+CY_ISR(target_int_150) {
+    Dark_Timer_150_ReadStatusRegister();
 }
 
 // Hall sensor interrupt
@@ -59,11 +80,6 @@ CY_ISR(hall_int) {
     // Average hall effect mrpm
     avgRpm = (double)((uint64) 12000000000 / (uint64) hallFilter.avg) / 1000.0;
     
-    // Print the time
-    //char buf[128];
-    //sprintf(buf, "%lu\r\n", avgMrpm);
-    //XBee_PutString(buf);
-    
     // Un-capture the hall timer
     Hall_Timer_ReadStatusRegister();
     
@@ -71,37 +87,64 @@ CY_ISR(hall_int) {
     timeOutCounter = 0;
 }
 
-// Dark (falling edge of comparator) interrupt
-CY_ISR(dark_int) {
+// Dark (falling edge of comparator) interrupt - line 50
+CY_ISR(dark_int_50) {
     
     // Get the elapsed time, and if applicable, send it to the lp filter
-    uint32 timeElapsed = 0-1-Dark_Timer_ReadCapture();
+    uint32 timeElapsed = 0-1-Dark_Timer_50_ReadCapture();
     if (timeElapsed > 630 || timeElapsed < 70) {
         return;
     }
-    filterPush(&darkFilter, timeElapsed);
+    filterPush(&darkFilter50, timeElapsed);
     
     // Center (median) time
-    darkTime = darkFilter.median;
-
-    // Write the center elapsed time to the XBee
-    //char buf[128];
-    //sprintf(buf, "%ld\r\n", (int32)darkTime);
+    double newDarkTime50 = darkFilter50.median;
     
-    /*
-    // Servo PWM Input
-    int servoPWM = darkTime * 2 + 824;
-    
-    // Servo Limits
-    if (servoPWM > 1900) {
-        servoPWM = 1900;
-    } else if (servoPWM < 1100) {
-        servoPWM = 1100;
+    if (newDarkTime50 > darkTime50 - 600) {
+        darkTime50 = newDarkTime50;
+    } else if (newDarkTime50 < darkTime50 + 600) {
+        darkTime50 = newDarkTime50;
     }
-    */
+}
+
+// Dark (falling edge of comparator) interrupt - line 100
+CY_ISR(dark_int_100) {
     
-    // Write the value to the screen
-    //XBee_PutString(buf);
+    // Get the elapsed time, and if applicable, send it to the lp filter
+    uint32 timeElapsed = 0-1-Dark_Timer_100_ReadCapture();
+    if (timeElapsed > 630 || timeElapsed < 70) {
+        return;
+    }
+    filterPush(&darkFilter100, timeElapsed);
+    
+    // Center (median) time
+    double newDarkTime100 = darkFilter100.median;
+    
+    if (newDarkTime100 > darkTime100 - 600) {
+        darkTime100 = newDarkTime100;
+    } else if (newDarkTime100 < darkTime100 + 600) {
+        darkTime100 = newDarkTime100;
+    }
+}
+
+// Dark (falling edge of comparator) interrupt - line 150
+CY_ISR(dark_int_150) {
+    
+    // Get the elapsed time, and if applicable, send it to the lp filter
+    uint32 timeElapsed = 0-1-Dark_Timer_150_ReadCapture();
+    if (timeElapsed > 630 || timeElapsed < 70) {
+        return;
+    }
+    filterPush(&darkFilter150, timeElapsed);
+    
+    // Center (median) time
+    double newDarkTime150 = darkFilter150.median;
+    
+    if (newDarkTime150 > darkTime150 - 600) {
+        darkTime150 = newDarkTime150;
+    } else if (newDarkTime150 < darkTime150 + 600) {
+        darkTime150 = newDarkTime150;
+    }
 }
 
 // PID (speed) last
@@ -128,9 +171,9 @@ double sumErr_steer = 0.0;
 double goalDarkTime = 330.0;
 
 // PID constants (steering)
-double kp_steer = 1.12; //1.0
-double ki_steer = 0.0;  // 0.8;
-double kd_steer = 0.05; // 02; // 0.0;
+double kp_steer = 1.12;
+double ki_steer = 0.0;
+double kd_steer = 0.06;
 
 // PID period (sec)
 double pid_period = 0.020;
@@ -145,7 +188,6 @@ CY_ISR(pid_int) {
         avgRpm = 0;
     }
     
-    
     // Calculate the current speed error
     double currErr_speed = goalRpm - avgRpm;
     
@@ -157,11 +199,6 @@ CY_ISR(pid_int) {
     } else if (integralTerm_speed < -1024) {
         integralTerm_speed = -1024;
     }
-    
-    // Integral reset when the error direction changes
-    //if (currErr_speed * lastErr_speed < 0) {
-    //    sumErr_speed = 0;
-    //}
     
     // Proportional calculation
     double proportionalTerm_speed = (kp_speed * currErr_speed);
@@ -191,7 +228,7 @@ CY_ISR(pid_int) {
     //XBee_PutString(buf);
     
     // Calculate the current steering error
-    double currErr_steer = (darkTime - goalDarkTime);
+    double currErr_steer = (darkTimeOverall - goalDarkTime);
     
     // Integral calculation (and windup protection)
     sumErr_steer += currErr_steer;
@@ -202,28 +239,16 @@ CY_ISR(pid_int) {
         integralTerm_steer = -500;
     }
     
-    // Integral reset when the error direction changes
-    // if (currErr_steer * lastErr_steer < 0) {
-    //     sumErr_steer = 0;
-    // }
-    
     // Proportional calculation
     double proportionalTerm_steer = (kp_steer * currErr_steer);
-    
-    /*if (currErr_steer > 150) {
-        cubicProportional_steer = (kp_steer * 2e-5 * currErr_steer * currErr_steer * currErr_steer); //(kp_steer * 4e-5 * currErr_steer * currErr_steer * currErr_steer);
-    }
-    else {
-        cubicProportional_steer = 0;
-    }*/
-    
+
     // Derivative calculation
     double derivativeTerm_steer = (kd_steer * (currErr_steer - lastErr_steer) / pid_period);
     
     // PID sum
     double pidOutput_steer = (int32)(proportionalTerm_steer + cubicProportional_steer + integralTerm_steer + derivativeTerm_steer);
     
-    double leftSense = 1.3;
+    double leftSense = 1.4;
     double leftIntercept = -50;
     
     if (pidOutput_steer < leftIntercept) {
@@ -241,12 +266,11 @@ CY_ISR(pid_int) {
     
     pidOutput_steer += 1500;
     
-    goalRpm = 421;
-    goalRpm -= abs((int32)currErr_steer)*1.1;
-    if (goalRpm < 360) {
-        goalRpm = 360;
+    goalRpm = 450;
+    goalRpm -= abs((int32)currErr_steer)*1.2;
+    if (goalRpm < 320) {
+        goalRpm = 320;
     }
-   
     
     // Store the previous error
     lastErr_steer = currErr_steer;
@@ -260,9 +284,9 @@ CY_ISR(pid_int) {
         pidOutput_steer = 2000;
     }
     
-    char buf[128];
-    sprintf(buf, "err = %5ld ; cube = %5ld ; output = %4ld\r\n", (int32)currErr_steer, (int32)cubicProportional_steer, (int32)pidOutput_steer);
-    XBee_PutString(buf);
+    // char buf[128];
+    // sprintf(buf, "err = %5ld ; cube = %5ld ; output = %4ld\r\n", (int32)currErr_steer, (int32)cubicProportional_steer, (int32)pidOutput_steer);
+    // XBee_PutString(buf);
     
     // Update the steering as a result of the PID
     Servo_PWM_WriteCompare(pidOutput_steer);
@@ -273,6 +297,7 @@ int main(void)
     // Servo PWM
     Servo_PWM_Start();
     
+    // Stall the MCU with useless operations so that the servo has enough time to set up
     int j = 112;
     for (int i=0; i<1234567; i++) {
         if (j & 1) j = 3 * j + 1;
@@ -284,20 +309,34 @@ int main(void)
     // Start the LCD
     initLCD();
     
-    XBee_Start();
-    XBee_PutString("\r\nStart!\r\n");
+    //XBee_Start();
+    //XBee_PutString("\r\nStart!\r\n");
     
     // Frame interrupt
     Frame_Interrupt_Start();
     Frame_Interrupt_SetVector(frame_int);
     
-    // Dark interrupt
+    // Dark interrupts
     Analog_CMP_Start();
     Reference_Start();
-    Dark_Timer_Start();
-    Dark_Interrupt_Start();
-    Dark_Interrupt_SetVector(dark_int);
-    filterResize(&darkFilter, 3);
+    
+    // Line 50
+    Dark_Timer_50_Start();
+    Dark_Int_50_Start();
+    Dark_Int_50_SetVector(dark_int_50);
+    filterResize(&darkFilter50, 3);
+    
+    // Line 100
+    Dark_Timer_100_Start();
+    Dark_Int_100_Start();
+    Dark_Int_100_SetVector(dark_int_100);
+    filterResize(&darkFilter100, 3);
+    
+    // Line 150
+    Dark_Timer_150_Start();
+    Dark_Int_150_Start();
+    Dark_Int_150_SetVector(dark_int_150);
+    filterResize(&darkFilter150, 3);
     
     // Hall sensor interrupt
     Hall_Interrupt_Start();
@@ -306,8 +345,12 @@ int main(void)
     filterResize(&hallFilter, 5);
     
     // Target row interrupt
-    Target_Interrupt_Start();
-    Target_Interrupt_SetVector(target_int);
+    Target_Int_50_Start();
+    Target_Int_50_SetVector(target_int_50);
+    Target_Int_100_Start();
+    Target_Int_100_SetVector(target_int_100);
+    Target_Int_150_Start();
+    Target_Int_150_SetVector(target_int_150);
     
     // Throttle PWM
     Throttle_PWM_Start();
